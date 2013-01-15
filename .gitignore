@@ -19,7 +19,7 @@ msf-malnutrition/local.properties
 msf-malnutrition-test/local.properties
 
 # Eclipse project files
-msf-malnutrition/.classpath
-msf-malnutrition/.project
-msf-malnutrition-test/.classpath
-msf-malnutrition-test/.project
+#msf-malnutrition/.classpath
+#msf-malnutrition/.project
+#msf-malnutrition-test/.classpath
+#msf-malnutrition-test/.project
