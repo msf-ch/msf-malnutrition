@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+      <item android:id="@+id/view_patient"
+              android:title="@string/view_patient" />
+      <item android:id="@+id/edit_patient"
+          	android:title="@string/edit_patient"/>
+      <item android:id="@+id/delete_patient"
+            android:title="@string/delete_patient" />
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/msf_logo"
+        style="@style/MSFLogo_Header_ImageView_Large" />
+
+    <LinearLayout
+        android:id="@+id/firstLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="60dp" >
+
+        <org.msf.android.fragments.malnutrition.MalnutritionHomeButton
+            android:id="@+id/registerHouseholdButton"
+            style="@style/MalnutritionHome_Button_Bigger"
+            android:drawable="@drawable/add_household_256"
+            android:text="@string/malnutrition_home_addnewhousehold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="50dp" >
+
+        <org.msf.android.fragments.malnutrition.MalnutritionHomeButton
+            android:id="@+id/viewHouseholdsButton"
+            style="@style/MalnutritionHome_Button"
+            android:drawable="@drawable/search256"
+            android:text="@string/malnutrition_home_searchpreviousentries" />
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" >
+        </LinearLayout>
+
+        <org.msf.android.fragments.malnutrition.MalnutritionHomeButton
+            android:id="@+id/export_csv_button"
+            style="@style/MalnutritionHome_Button"
+            android:drawable="@drawable/chart256"
+            android:text="@string/malnutrition_home_export_data" />
+    </LinearLayout>
+
+</LinearLayout>

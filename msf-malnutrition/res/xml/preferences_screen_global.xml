@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:summary="@string/preferences_openmrs_connection_category_summary"
+        android:title="@string/preferences_openmrs_connection_category_title" >
+        <EditTextPreference
+            android:defaultValue="@string/preferences_openmrs_server_default"
+            android:dialogTitle="@string/preferences_openmrs_server_title"
+            android:title="@string/preferences_openmrs_server_title"
+            android:key="@string/preferences_openmrs_server_key" />
+        
+        <EditTextPreference
+            android:defaultValue="@string/preferences_openmrs_login_default"
+            android:dialogTitle="@string/preferences_openmrs_login_title"
+            android:title="@string/preferences_openmrs_login_title"
+            android:key="@string/preferences_openmrs_login_key" />
+        
+        <EditTextPreference
+            android:defaultValue="@string/preferences_openmrs_password_default"
+            android:dialogTitle="@string/preferences_openmrs_password_title"
+            android:title="@string/preferences_openmrs_password_title"
+            android:key="@string/preferences_openmrs_password_key"
+            android:password="true"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

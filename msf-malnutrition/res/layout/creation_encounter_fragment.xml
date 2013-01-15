@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    class="org.msf.android.fragments.EncounterCreationFragment" 
+    android:id="@+id/encounter_creation"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"/>

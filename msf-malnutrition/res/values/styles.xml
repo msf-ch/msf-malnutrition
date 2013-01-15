@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.TransparentMSF" parent="@android:style/Theme.Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@drawable/translucent_background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Theme.MSFStandard" parent="@android:style/Theme.Light.NoTitleBar"></style>
+
+    <style name="LightTabWidget" parent="@android:style/Widget.TabWidget">
+        <item name="android:textColor">#f00</item>
+        <item name="android:background">@drawable/tab_gradient</item>
+    </style>
+
+    <!-- MSF Logo -->
+    
+    <style name="MSFLogo_Header_ImageView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:cropToPadding">true</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/msf_logo_bilingual</item>
+    </style>
+
+    <style name="MSFLogo_Header_ImageView_Land" parent="@style/MSFLogo_Header_ImageView">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:src">@drawable/msf_logo_bilingual_vertical</item>
+    </style>
+    
+    
+    <style name="MSFLogo_Header_ImageView_Large" parent="@style/MSFLogo_Header_ImageView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">120dp</item>
+    </style>
+    
+    <style name="MSFLogo_Header_ImageView_Large_Land" parent="@style/MSFLogo_Header_ImageView_Land">
+        <item name="android:layout_width">120dp</item>
+    </style>
+    
+    
+    <!-- Malnutrition home -->
+    
+    <style name="MalnutritionHome_Button_Text" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="MalnutritionHome_Button">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+    </style>
+    
+    <style name="MalnutritionHome_Button_Bigger" parent="@style/MalnutritionHome_Button">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

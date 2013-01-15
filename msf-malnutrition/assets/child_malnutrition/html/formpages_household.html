@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSF Malnutrition</title>
+
+<link href="../jquery-mobile/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/msf-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/datebox.css"  rel="stylesheet" type="text/css"/> 
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script src="../jquery/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../jquery-mobile/jquery.mobile-1.1.0.js" type="text/javascript"></script>
+
+<script src="../javascript/datebox.core.js" type="text/javascript"></script>
+<script src="../javascript/flipbox.js" type="text/javascript"></script>
+<script src="../javascript/datebox.en.utf8.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!--  PAGE  1-->
+
+<div data-role="page" id="pageone" name="Basic informations / Water Access">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpageone">Household form (1/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="basicform">
+      <h2 id="h2_household_survey_basic_informations">HOUSEHOLD SURVEY BASIC INFORMATION</h2>
+        <label id="lbl_suividat">Survey Date:</label>
+        <input name="suividat" id="suividat" type="text" type="date" data-role="datebox" data-options='{"mode": "flipbox", "headerFormat":"mmm dd, YYYY", "focusMode": true, "beforeToday":true, "useClearButton":true, "collapseButtons": true}' placeholder="Date" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+        
+        <br/>
+        <label id="lbl_zone">Responsibility area:</label>
+        <input name="zone" id="zone" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+         
+         <br/>
+         <table>
+         <tr>
+		<td><label id="lbl_enqnom">Pollster id:</label></td>
+		<td><input name="enqnom" id="enqnom" type="number" size="2" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		<tr>
+		<td><label id="lbl_nozone">Area id:</label></td>
+		<td><input name="nozone" id="nozone" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		<tr>
+		<td> <label id="lbl_menagn">Household id:</label></td>
+		<td> <input name="menagn" id="menagn" type="number"  maxlength="4" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+         </table>
+         <br/>
+         
+        <label id="lbl_villagen">Village name:</label>
+        <input name="villagen" id="villagen" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+         
+         <br/>
+        <table>
+        <tr>
+		<td><label id="lbl_novillage">Village id:</label></td>
+		<td><input name="novillage" id="novillage" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+        <tr>
+		<td><label id="lbl_nenfmen">Number of children in household in this survey:</label></td>
+		<td><input name="nenfmen" id="nenfmen" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		</table>
+		<br/>
+		
+        <label id="lbl_mennom">Household chief's name:</label>
+        <input name="mennom" id="mennom" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+        
+    </form>
+  </div>
+  <div data-role="content">
+  
+    <form id="basicform">
+      <h2 id="h2_household_water_access">WATER ACCESS</h2>
+          <label id="lbl_eauorigi"> Where is the main source of drinking water for family members? </label><br/><br/>
+      
+          <fieldset data-role="controlgroup" data-type="vertical" id="eauorigi">
+          
+          <label id="lbl_rbtn_eauorigi_1" for="radio1"> Drilled well with manual pump </label>
+          <input name="eauorigi" id="radio1" value="drilledwithmanualpomp" type="radio"/>
+        
+          <label id="lbl_rbtn_eauorigi_2" for="radio2"> Tip well or protected </label>
+          <input name="eauorigi" id="radio2" value="tipwellorprotected" type="radio"/>
+        
+          <label id="lbl_rbtn_eauorigi_3" for="radio3"> Not protected well </label>
+          <input name="eauorigi" id="radio3" value="notprotectedwell" type="radio"/>
+        
+          <label id="lbl_rbtn_eauorigi_4" for="radio4">River - Oxbow lake - Pond</label>
+          <input name="eauorigi" id="radio4" value="riveroxbowlakepond" type="radio"/>
+        
+          <label id="lbl_rbtn_eauorigi_5" for="radio5"> Rainwater </label>
+          <input name="eauorigi" id="radio5" value="rainwater" type="radio"/>
+        
+          <label id="lbl_rbtn_eauorigi_6" for="radio6"> Other source</label>
+          <input name="eauorigi" id="radio6" value="othersource" type="radio" />
+         
+        </fieldset>
+        <br/>
+      
+          <label id="lbl_puitnum">How long does it take to go there to take water and come back?</label>
+          <table>
+          <tr>
+		  <td><input name="puitnum" id="puitnum" type="number" maxlength="5" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		  <td>min</td>
+		  </tr>
+		  </table>
+          
+        
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 2 -->
+
+<div data-role="page" id="pagetwo" name="Household organisation">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpagetwo">Household form (2/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="householdorganisation">
+      <h2 id="h2_household_organisation">HOUSEHOLD ORGANISATION</h2>
+          <label id="lbl_cheffam">Who is in charge of the household? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="cheffam">
+          
+          <label id="lbl_rbtn_cheffam_1" for="radio1"> Mother </label>
+          <input name="cheffam" id="radio1" value="mother" type="radio"/>
+        
+          <label id="lbl_rbtn_cheffam_2" for="radio2"> Father </label>
+          <input name="cheffam" id="radio2" value="father" type="radio"/>
+        
+          <label id="lbl_rbtn_cheffam_3" for="radio3">Grand Mother </label>
+          <input name="cheffam" id="radio3" value="grandmother" type="radio"/>
+        
+          <label id="lbl_rbtn_cheffam_4" for="radio4"> Other</label>
+          <input name="cheffam" id="radio4" value="other" type="radio"/>
+         
+        </fieldset>
+        <br/>
+        <label id="lbl_csidista"> Walking time to nearest healthcare center? </label><br/><br/>
+        
+          <fieldset data-role="controlgroup" data-type="vertical" id="csidista">
+          
+	          <label id="lbl_rbtn_csidista_1" for="radio1"> In the village </label>
+	          <input name="csidista" id="radio1" value="inthevillage" type="radio" openmrs-valuecoded="" />
+	          
+	          <label id="lbl_rbtn_csidista_2" for="radio2"> Less than 30 minutes </label>
+	          <input name="csidista" id="radio2" value="lessthanthirtymin" type="radio" openmrs-valuecoded="" />
+	         
+	          <label id="lbl_rbtn_csidista_3" for="radio3"> Between 30 minutes and 1 hour </label>
+	          <input name="csidista" id="radio3" value="betweenthirtyandone" type="radio" openmrs-valuecoded="" />
+	         
+	          <label id="lbl_rbtn_csidista_4" for="radio4"> Between 1 and 2 hours </label>
+	          <input name="csidista" id="radio4" value="betweenoneandtwo" type="radio" openmrs-valuecoded="" />
+	         
+	          <label id="lbl_rbtn_csidista_5" for="radio5"> More than 2 hours </label>
+	          <input name="csidista" id="radio5" value="morethantwo" type="radio" openmrs-valuecoded="" />
+	          
+	          <label id="lbl_rbtn_csidista_6" for="radio6"> Don't know </label>     
+	          <input name="csidista" id="radio6" value="dontknow" type="radio" openmrs-valuecoded="" />
+            
+        </fieldset>
+        <br/>
+        
+       <label id="lbl_educnive">What is the highest education level of the household chief?</label><br/><br/>
+       
+        <fieldset data-role="controlgroup" data-type="vertical" id="educnive">
+          <input name="educnive" id="radio1" value="primary" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educnive_1" for="radio1"> Primary </label>
+          
+          <input name="educnive" id="radio2" value="secondary" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educnive_2" for="radio2"> Secondary </label>
+          
+          <input name="educnive" id="radio3" value="koranicschool" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educnive_3" for="radio3"> Koranic school </label>
+          
+          <input name="educnive" id="radio4" value="university" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educnive_4" for="radio4">University </label>
+         
+          <input name="educnive" id="radio5" value="none" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educnive_5" for="radio5"> None</label>
+          
+          <input name="educnive" id="radio6" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educnive_6" for="radio6"> Don't know </label>        
+        </fieldset>
+        <br/>
+        
+       <label id="lbl_educenf"> Which school do your children attend?</label><br/><br/>
+       
+        <fieldset data-role="controlgroup" data-type="vertical" id="educenf">
+          <input name="educenf" id="radio1" value="primary" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educenf_1" for="radio1"> Private </label>
+          
+          <input name="educenf" id="radio2" value="public" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educenf_2" for="radio2"> Public </label>
+          
+          <input name="educenf" id="radio3" value="koranicschool" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educenf_3" for="radio3"> Koranic school </label>
+          
+          <input name="educenf" id="radio4" value="university" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educenf_4" for="radio4">University </label>
+         
+          <input name="educenf" id="radio5" value="none" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educenf_5" for="radio5"> None</label>
+          
+          <input name="educenf" id="radio6" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_educenf_6" for="radio6"> Don't know </label>        
+        </fieldset>
+      <br/>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!--  PAGE  3-->
+
+<div data-role="page" id="pagethree" name="Household language / Household Demographics">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpagethree">Household form (3/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="householdlanguage">
+      <h2 id="h2_household_language">HOUSEHOLD LANGUAGE</h2>
+          <label id="lbl_menalang"> Which language is spoken in the household? </label><br/><br/>
+         
+         <div id="menalang_checkbox">
+        <fieldset data-role="controlgroup" data-type="vertical" id="menalang">
+          
+          <label id="lbl_rbtn_menalang_1" for="arab"> Arab </label>
+          <input name="arab" id="arab" value="arab" type="checkbox"/>
+        
+          <label id="lbl_rbtn_menalang_2" for="kanembu"> Kanenmbu </label>
+          <input name="kanembu" id="kanembu" value="kanembu" type="checkbox"/>
+        
+          <label id="lbl_rbtn_menalang_3" for="goran"> Goran </label>
+          <input name="goran" id="goran" value="goran" type="checkbox"/>
+        
+          <label id="lbl_rbtn_menalang_4" for="french"> French </label>
+          <input name="french" id="french" value="french" type="checkbox"/>
+        
+          <label id="lbl_rbtn_menalang_5" for="fulbe"> Fulbe </label>
+          <input name="fulbe" id="fulbe" value="fulbe" type="checkbox"/>
+        
+          <label id="lbl_rbtn_menalang_6" for="other"> Other</label>
+          <input name="other" id="other" value="other" type="checkbox" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        </div>
+        <br/>
+          <label id="lbl_menacara"> What is the residential status of your family in the village? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="menacara">
+          
+          <input name="menacara" id="radio1" value="fullnomad" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_menacara_1" for="radio1"> Nomad 100% </label>
+          
+         <input name="menacara" id="radio2" value="nomad_and_sedentary" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_menacara_2" for="radio2"> Nomad & sedentary </label>
+          
+         <input name="menacara" id="radio3" value="fullsedentary" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_menacara_3" for="radio3"> Sedentary 100% </label>  
+          
+          <input name="menacara" id="radio4" value="other" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_menacara_4" for="radio4"> Other </label>
+          
+        </fieldset>
+      <br/>
+      
+      <div data-role="fieldcontain">
+      <h2 id="h2_household_demographics">HOUSEHOLD DEMOGRAPHICS</h2>
+        <div class="ui-grid-b">
+			<div class="ui-block-a"><div class="ui-bar" ></div></div>
+			<div class="ui-block-b"><div class="ui-bar" >MALE</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >FEMALE</div></div>
+			<div class="ui-block-a"><div class="ui-bar" >Total number of persons <strong>in the household</strong></div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbtotmale" id="nbtotmale" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbtotfemale" id="nbtotfemale" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-a"><div class="ui-bar" >Number of children <strong>under 5 years old</strong> present in the household</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbchildmaleunderfive" id="nbchildmaleunderfive" value="" maxlength="2" type="number"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbchildfemaleunderfive" id="nbchildfemaleunderfive" value="" maxlength="2" type="number"/>
+			</div></div>
+			<!--  
+			<div class="ui-block-a"><div class="ui-bar" style="height:180dp">Number of children <strong>under 2 years old</strong></div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbchildmaleundertwo" id="nbchildmaleundertwo" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbchildfemaleundertwo" id="nbchildfemaleundertwo" value="" type="number" maxlength="2"/>
+			</div></div>
+			-->
+			<div class="ui-block-a"><div class="ui-bar" style="height:180dp">Number of persons <strong>who arrived</strong> in the household last 3 months</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbmalecomehousehold" id="nbmalecomehousehold" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbfemalecomehousehold" id="nbfemalecomehousehold" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-a"><div class="ui-bar" style="height:180dp">Number of persons <strong>who left the household</strong> last 3 months</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbmalelefthousehold" id="nbmalelefthousehold" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbfemalelefthousehold" id="nbfemalelefthousehold" value="" type="number" maxlength="2"/>
+			</div></div>	
+			<div class="ui-block-a"><div class="ui-bar" style="height:180dp">Number of persons <strong>who died in the household</strong> last 3 months</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbmalediedhousehold" id="nbmalediedhousehold" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbfemalediedhousehold" id="nbfemalediedhousehold" value="" type="number" maxlength="2"/>
+			</div></div>	
+			<div class="ui-block-a"><div class="ui-bar" style="height:180dp">Number of <strong>children under 24 months who died</strong> last 3 months</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbchildmalediedundertwentyfour" id="nbchildmalediedundertwentyfour" value="" type="number" maxlength="2"/>
+			</div></div>
+			<div class="ui-block-c"><div class="ui-bar" >
+				<input name="nbchildfemalediedundertwentyfour" id="nbchildfemalediedundertwentyfour" value="" type="number" maxlength="2"/>
+			</div></div>
+		</div>
+      </div>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 4 -->
+
+<div data-role="page" id="pagefour" name="Property-land ownership">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpagefour">Household form (4/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="householdpropertyland">
+      <h2 id="h2_property_land_ownership">PROPERTY-LAND OWNERSHIP</h2>
+      
+      <label id="lbl_champ"> Do you own an area of arable land? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" id="champ" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+          
+          <input name="champ" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_champ_1" for="radio1"> Yes </label>
+          
+          <input name="champ" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_champ_2" for="radio2"> No</label>
+          
+          <input name="champ" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_champ_3" for="radio3"> Don't know </label>        
+        </fieldset>
+        <br/>
+        
+        <div id="surfcultfield">
+	         <label id="lbl_surfcult">What is the surface of your arable land?</label>
+	         <div data-role="fieldcontain">
+		         <input name="surfcult" id="surfcult" type="number" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+		   
+		    
+				<select name="select-choice-surfcult" id="select-choice-surfcult">
+					<option value="coro">Coro</option>
+					<option value="hectare">Hectare</option>
+					<option value="mcarre">m²</option>
+				</select> 
+			</div>
+		</div>
+         <br/>
+        
+        <label id="lbl_cutlsm"> Do you cultivate yourself the mand you own? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" id="cutlsm" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+          <input name="cutlsm" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_cutlsm_1" for="radio1"> Yes </label>
+          
+          <input name="cutlsm" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_cutlsm_2" for="radio2"> No</label>
+          
+          <input name="cutlsm" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_cutlsm_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        
+        <br/>
+        <div id="qicultfield">
+	         <label id="lbl_qicult">Who cultivates your land?</label>
+	         <input name="qicult" id="qicult" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+	    </div>    
+        <br/>
+        <label id="lbl_emplch"> Do you occasionnally employ people to help you cultivate your land? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" id="emplch" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+                  
+          <input name="emplch" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_emplch_1" for="radio1"> Yes </label>
+          
+          <input name="emplch" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_emplch_2" for="radio2"> No</label>
+        </fieldset>
+        
+        <br/>
+        
+        <div id="emptimfields">
+	          <label id="lbl_emptim">How regulary do you employ people to help cultivate your land? </label><br/><br/>
+	          
+	         <fieldset data-role="controlgroup" data-type="vertical" id="emptim">
+	          
+	          <input name="emptim" class="emptim_class" id="radio1" value="fromtimetotime" type="radio" openmrs-valuecoded="" />
+	          <label id="lbl_rbtn_emptim_1" for="radio1"> From time to time </label>
+	          
+	          <input name="emptim" class="emptim_class" id="radio2" value="allthetime" type="radio" openmrs-valuecoded="" />
+	          <label id="lbl_rbtn_emptim_2" for="radio2">All the time</label>
+	          
+	          <input name="emptim" class="emptim_class" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+	          <label id="lbl_rbtn_emptim_3" for="radio3"> Don't know </label> 
+	        </fieldset>
+        </div>
+        <br/>
+        
+        <label id="lbl_outils"> Do you or your family own tools to cultivate land? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" id="outils" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+                  
+          <input name="outils" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_outils_1" for="radio1"> Yes </label>
+          
+          <input name="outils" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_outils_2" for="radio2"> No</label>
+          
+          <input name="outils" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_outils_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        <br/>
+        
+        
+         <label id="lbl_machine"> Do you or your family own machines to cultivate land? </label>   
+        <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" id="machine" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+                
+          <input name="machine" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_machine_1" for="radio1"> Yes </label>
+          
+          <input name="machine" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_machine_2" for="radio2"> No</label>
+          
+          <input name="machine" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_machine_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        <br/>
+        <label id="lbl_cheptel">How many livestock do you own?</label>
+        <br/>
+        <br/>
+        <div class="ui-grid-b">
+			<div class="ui-block-a"><div class="ui-bar">Camel</div></div>
+			<div class="ui-block-b"><div class="ui-bar">
+				    <input name="nbcamel" id="nbcamel" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Bull</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbbull" id="nbbull" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Cow</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbcow" id="nbcow" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Sheep</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbsheep" id="nbsheep" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Goat</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbgoat" id="nbgoat" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Poultry</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbpoultry" id="nbpoultry" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Horse</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbhorse" id="nbhorse" value="" type="number"/>
+			</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar" >Other</div></div>
+			<div class="ui-block-b"><div class="ui-bar" >
+				    <input name="nbother" id="nbother" value="" type="number"/>
+			</div></div>
+			
+		</div>
+		</div>
+		
+          <label id="lbl_transp">Does your family own one or several motorized transportation means? </label><br/><br/>
+          
+          <div id="transp_checkbox">
+		<fieldset data-role="controlgroup" data-type="vertical" id="transp">
+          
+          <label id="lbl_rbtn_transp_1" for="motorbike"> Motorbike </label>
+          <input name="motorbike" id="motorbike" value="motorbike" type="checkbox"/>
+        
+          <label id="lbl_rbtn_transp_2" for="vehicle"> Vehicle </label>
+          <input name="vehicle" id="vehicle" value="vehicle" type="checkbox"/>
+        
+          <label id="lbl_rbtn_transp_3" for="truck"> Truck </label>
+          <input name="truck" id="truck" value="truck" type="checkbox"/>
+        
+          <label id="lbl_rbtn_transp_4" for="other"> Other</label>
+          <input name="other" id="other" value="other" type="checkbox" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+          <label id="lbl_rbtn_transp_5" for="nonetransp"> None</label>
+          <input name="nonetransp" id="nonetransp" value="nonetransp" type="checkbox" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+          
+          <label id="lbl_rbtn_transp_6" for="dontknow"> Don't know</label>
+          <input name="dontknow" id="dontknow" value="dontknow" type="checkbox" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        </div>
+        <br/>
+          <label id="lbl_maison">Does your family own your house or are you rental? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="maison">
+          
+          <input name="maison" id="radio1" value="owner" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_maison_1" for="radio1"> Owner </label>
+          
+          <input name="maison" id="radio2" value="tenant" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_maison_2" for="radio2">Tenant</label>
+          
+          <input name="maison" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_maison_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        <br/>
+        
+          <label id="lbl_stock">Does your family own buildings for storage? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="stock">
+          
+          <input name="stock" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_stock_1" for="radio1"> Yes </label>
+          
+          <input name="stock" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_stock_2" for="radio2">No</label>
+          
+          <input name="stock" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_stock_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        <br/>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 5 -->
+
+<div data-role="page" id="pagefive" name="Cash income / Expenditures">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpagefive">Household form (5/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="householdcashexpenditures">
+      <div data-role="fieldcontain">
+      <h2 id="h2_cash_income">CASH INCOME</h2>
+          <label id="lbl_revso">Which main activity is providing your income?</label>          
+	        <table>
+	        <tr>
+			<td id="lbl_td_revso_1">Agricultural production sales</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_1"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_2">Loans</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_2"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_3">Working for money</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_3"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_4">Money for transfer</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_4"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_5">Unskilled labor-manpower</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_5"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_6">Sale of livestock (beef-camel)</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_6"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_7">Sale-exchange of little animals</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_7"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_revso_8">Other</td>
+			<td><input type="button" value="No value" class="revsoButton" id="td_resvo_8"/></td>
+			</tr>
+			</table> 	
+		</div>
+		<br/>
+		<input type="button" value="Reset" id="revsoButtonReset" data-icon="refresh" data-iconpos="right"/>
+		<br/>
+		 <label id="lbl_comerc">Do you or your family trade?</label><br/><br/>
+		 
+		 <fieldset data-role="controlgroup" data-type="vertical" id="comerc">
+          
+          
+          <input name="comerc" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_comerc_1" for="radio1"> Yes </label>
+          
+          <input name="comerc" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_comerc_2" for="radio2">No</label>
+          
+          <input name="comerc" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_comerc_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        <br/>
+           <label id="lbl_emplo">Do you or your family have employees? </label><br/><br/>
+        
+        <fieldset data-role="controlgroup" data-type="vertical" id="emplo">
+          
+          <input name="emplo" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_emplo_1" for="radio1"> Yes </label>
+          
+          <input name="emplo" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_emplo_2" for="radio2">No</label>
+          
+          <input name="emplo" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_emplo_3" for="radio3"> Don't know </label> 
+        </fieldset>
+      <div data-role="fieldcontain">
+      <h2 id="h2_expenditures">EXPENDITURES</h2>
+          <label id="lbl_depens">What are the household expenditures per month by order of priority?</label>
+       <table>
+	        <tr>
+			<td id="lbl_td_depens_1">Food</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_1"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_2">Water</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_2"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_3">Healthcare</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_3"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_4">School fees</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_4"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_5">Repayment of debt</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_5"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_6">Production costs</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_6"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_7">Personnal effect</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_7"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_8">Social obligations</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_8"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_9">Rent</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_9"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_10">Transport</td>
+			<td><input type="button" value="No value"  class="depensButton" id="td_depens_10"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_11">Payment to employee</td>
+			<td><input type="button" value="No value"  class="depensButton"  id="td_depens_11"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_depens_12">Other</td>
+			<td><input type="button" value="No value" class="depensButton" id="td_depens_12"/></td>
+			</tr>
+			</table> 
+		    <br/>
+		    <input type="button" value="Reset" id="depensButtonReset" data-icon="refresh" data-iconpos="right"/>
+		    <br/>	
+      </div>          
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 6 -->
+
+<div data-role="page" id="pagesix" name="Agricultural production">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpagesix">Household form (6/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="agriculturalproduction">
+      <br/>
+      <h2 id="h2_agricultural_production">AGRICULTURAL PRODUCTION</h2>
+          <label id="lbl_cultyp">What do you grow on the land you own? </label>
+         <div id="cultyp_checkbox">
+        <fieldset data-role="controlgroup" data-type="vertical" id="cultyp"><br/>
+          
+          <label id="lbl_rbtn_cultyp_1" for="mil"> Mil </label>
+          <input name="mil" id="mil" value="mil" type="checkbox"/>
+        
+          <label id="lbl_rbtn_cultyp_2" for="niebe"> Niebe </label>
+          <input name="niebe" id="niebe" value="niebe" type="checkbox"/>
+        
+          <label id="lbl_rbtn_cultyp_3" for="otherpeas">Other peas </label>
+          <input name="otherpeas" id="otherpeas" value="otherpeas" type="checkbox"/>
+        
+          <label id="lbl_rbtn_cultyp_4" for="cornmaize"> Corn/Maize</label>
+          <input name="cornmaize" id="cornmaize" value="cornmaize" type="checkbox"/>
+          
+          <label id="lbl_rbtn_cultyp_5" for="vegetables"> Vegetables</label>
+          <input name="vegetables" id="vegetables" value="vegetables" type="checkbox"/>
+         
+          <label id="lbl_rbtn_cultyp_6" for="rice"> Rice</label>
+          <input name="rice" id="rice" value="rice" type="checkbox"/>
+         
+          <label id="lbl_rbtn_cultyp_7" for="peanuts"> Peanuts</label>
+          <input name="peanuts" id="peanuts" value="peanuts" type="checkbox"/>
+         
+          <label id="lbl_rbtn_cultyp_8" for="bean"> Bean</label>
+          <input name="bean" id="bean" value="bean" type="checkbox"/>
+         
+          <label id="lbl_rbtn_cultyp_9" for="berebere"> Bere-bere</label>
+          <input name="berebere" id="berebere" value="berebere" type="checkbox"/>
+         
+         <label id="lbl_rbtn_cultyp_10" for="other"> Other</label>
+         <input name="other" id="other" value="other" type="checkbox"/>
+         
+       </fieldset>
+       </div>
+        <br/>
+        <label id="lbl_recoltem"> Did you have crops last 3 months? </label><br/><br/>
+        <fieldset data-role="controlgroup" id="recoltem" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+          
+          <input name="recoltem" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_recoltem_1" for="radio1"> Yes </label>
+          
+          <input name="recoltem" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_recoltem_2" for="radio2"> No </label>
+          
+          <input name="recoltem" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_recoltem_3" for="radio3"> Don't know </label>  
+        </fieldset>
+        <br/>
+        
+      
+        <div id="rectypemfields">
+	          <label id="lbl_rectypem">Which food did you harvest? </label>
+	         <fieldset data-role="controlgroup" data-type="vertical" id="rectypem"><br/>
+	          
+	          <label id="lbl_rbtn_recytpem_1" for="mil"> Mil </label>
+	          <input name="mil" id="mil" value="mil" class="rectypem_class" type="checkbox"/>
+	        
+	          <label id="lbl_rbtn_recytpem_2" for="niebe"> Niebe </label>
+	          <input name="niebe" id="niebe" value="niebe" class="rectypem_class" type="checkbox"/>
+	        
+	          <label id="lbl_rbtn_recytpem_3" for="otherpeas">Other peas </label>
+	          <input name="otherpeas" id="otherpeas" value="otherpeas" class="rectypem_class" type="checkbox"/>
+	        
+	          <label id="lbl_rbtn_recytpem_4" for="cornmaize"> Corn/Maize</label>
+	          <input name="cornmaize" id="cornmaize" value="cornmaize" class="rectypem_class" type="checkbox"/>
+	          
+	          <label id="lbl_rbtn_recytpem_5" for="vegetables"> Vegetables</label>
+	          <input name="vegetables" id="vegetables" value="vegetables" class="rectypem_class" type="checkbox"/>
+	         
+	          <label id="lbl_rbtn_recytpem_6" for="rice"> Rice</label>
+	          <input name="rice" id="rice" value="rice" class="rectypem_class" type="checkbox"/>
+	         
+	          <label id="lbl_rbtn_recytpem_7" for="peanuts"> Peanuts</label>
+	          <input name="peanuts" id="peanuts" value="peanuts" class="rectypem_class" type="checkbox"/>
+	         
+	          <label id="lbl_rbtn_recytpem_8" for="bean"> Bean</label>
+	          <input name="bean" id="bean" value="bean" class="rectypem_class" type="checkbox"/>
+	         
+	          <label id="lbl_rbtn_recytpem_9" for="berebere"> Bere-bere</label>
+	          <input name="berebere" id="berebere" value="berebere" class="rectypem_class" type="checkbox"/>
+	         
+	         <label id="lbl_rbtn_recytpem_10" for="other"> Other</label>
+	         <input name="other" id="other" value="other" class="rectypem_class" type="checkbox"/>
+	         
+	       </fieldset>
+       </div>
+       <br/>
+       <label id="lbl_cultjad"> Do you cultivate gardens? </label><br/><br/>
+        <fieldset data-role="controlgroup" id="cultjad" data-type="vertical" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+          
+          <input name="cultjad" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_cultjad_1" for="radio1"> Yes </label>
+          
+          <input name="cultjad" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_cultjad_2" for="radio2"> No </label>
+          
+          <input name="cultjad" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_cultjad_3" for="radio3"> Don't know </label>  
+        </fieldset>
+        <br/>
+          <label id="lbl_recuti">What does the household do with its harvest? </label><br/><br/>
+          <div id="recuti_checkbox">
+        <fieldset data-role="controlgroup" data-type="vertical" id="recuti">
+          
+          <label id="lbl_rbtn_recuti_1" for="consumption"> Consumption </label>
+          <input name="consumption" id="consumption" value="consumption" type="checkbox"/>
+        
+          <label id="lbl_rbtn_recuti_2" for="conservation"> Conservation </label>
+          <input name="conservation" id="conservation" value="conservation" type="checkbox"/>
+        
+          <label id="lbl_rbtn_recuti_3" for="saleexchangemarket"> Sale-exchange on the market</label>
+          <input name="saleexchangemarket" id="saleexchangemarket" value="saleexchangemarket" type="checkbox"/>
+        
+          <label id="lbl_rbtn_recuti_4" for="repaymentdebt"> Repayment of debt</label>
+          <input name="repaymentdebt" id="repaymentdebt" value="repaymentdebt" type="checkbox"/>
+          
+          <label id="lbl_rbtn_recuti_5" for="ceremonialcontribution"> Ceremonial contribution</label>
+          <input name="ceremonialcontribution" id="ceremonialcontribution" value="ceremonialcontribution" type="checkbox"/>
+         
+          <label id="lbl_rbtn_recuti_6" for="other"> Other</label>
+          <input name="other" id="other" value="other" type="checkbox"/>
+         
+         </fieldset>
+         </div>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 7 -->
+
+<div data-role="page" id="pageseven" name="Agricultural income and consumption / Alimentary rations">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpageseven">Household form (7/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="householdagriincomecons">
+      <h2 id="h2_agricultural_income_and_consumption">AGRICULTURAL INCOME AND CONSUMPTION</h2>
+          <label id="lbl_consoma">What did your family consumed last 24 hours? </label><br/><br/>
+        <div id="consoma_checkbox">
+        <fieldset data-role="controlgroup" data-type="vertical" id="consoma">
+          
+          <label id="lbl_rbtn_consoma_1" for="cereals"> Cereals </label>
+          <input name="cereals" id="cereals" value="cereals" type="checkbox"/>
+        
+          <label id="lbl_rbtn_consoma_2" for="roottubers"> Root-tubers </label>
+          <input name="roottubers" id="roottubers" value="roottubers" type="checkbox"/>
+        
+          <label id="lbl_rbtn_consoma_3" for="peaslentils">Peas-lentils </label>
+          <input name="peaslentils" id="peaslentils" value="peaslentils" type="checkbox"/>
+        
+          <label id="lbl_rbtn_consoma_4" for="milkdairy"> Milk-dairy</label>
+          <input name="milkdairy" id="milkdairy" value="milkdairy" type="checkbox"/>
+          
+          <label id="lbl_rbtn_consoma_5" for="eggs"> Eggs</label>
+          <input name="eggs" id="eggs" value="eggs" type="checkbox"/>
+         
+          <label id="lbl_rbtn_consoma_6" for="meatgutoffal"> Meat-gut-offal</label>
+          <input name="meatgutoffal" id="meatgutoffal" value="meatgutoffal" type="checkbox"/>
+         
+          <label id="lbl_rbtn_consoma_7" for="fishlakeproducts"> Fish-lake products</label>
+          <input name="fishlakeproducts" id="fishlakeproducts" value="fishlakeproducts" type="checkbox"/>
+         
+          <label id="lbl_rbtn_consoma_8" for="oillipid"> Oil-lipid</label>
+          <input name="oillipid" id="oillipid" value="oillipid" type="checkbox"/>
+         
+          <label id="lbl_rbtn_consoma_9" for="sugarhoney">Sugar-honey</label>
+          <input name="sugarhoney" id="sugarhoney" value="sugarhoney" type="checkbox"/>
+         
+          <label id="lbl_rbtn_consoma_10" for="fruitsvegetables">Fruits-vegetables</label>
+          <input name="fruitsvegetables" id="fruitsvegetables" value="fruitsvegetables" type="checkbox"/>
+         
+         <label id="lbl_rbtn_consoma_11" for="nuts">Nuts</label>
+          <input name="nuts" id="nuts" value="nuts" type="checkbox"/>
+         
+          <label id="lbl_rbtn_consoma_12" for="sorghum">Sorghum</label>
+          <input name="sorghum" id="sorghum" value="sorghum" type="checkbox"/>
+         
+         <label id="lbl_rbtn_consoma_13" for="other"> Other</label>
+         <input name="other" id="other" value="other" type="checkbox"/>
+       
+         <label id="lbl_rbtn_consoma_14" for="dontknowconsoma"> Don't know</label>
+         <input name="dontknowconsoma" id="dontknowconsoma" value="dontknowconsoma" type="checkbox"/>
+          </fieldset>
+          </div>
+          <br/>
+      
+          <label id="lbl_repnum"> How many meals did the family take last 24 hours?</label>
+          <input name="repnum" id="repnum" value="" type="number" maxlength="2" style="width:70px"/>
+         
+      <h2 id="h2_alimentary_rations">ALIMENTARY RATIONS</h2>
+         <label id="lbl_ratgfd"> Did the household receive general meal rations last 3 months? (since 1st July) </label><br/><br/>
+         <fieldset data-role="controlgroup" data-type="vertical"  id="ratgfd" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+          <input name="ratgfd" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_ratgfd_1" for="radio1"> Yes </label>
+          
+          <input name="ratgfd" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_ratgfd_2" for="radio2"> No </label>
+          
+          <input name="ratgfd" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_ratgfd_3" for="radio3"> Don't know </label>  
+        </fieldset>
+        <br/>
+        
+        <div id="ratcompfields">
+          <label id="lbl_ratcomp">What did you receive? </label><br/><br/>
+	        <fieldset data-role="controlgroup" data-type="vertical" id="ratcomp">
+	          
+	          <label id="lbl_rbtn_ratcomp_1" for="cereals"> Cereals </label>
+	          <input name="cereals" id="cereals" value="cereals" type="checkbox"  class="ratcomp_class"/>
+	        
+	          <label id="lbl_rbtn_ratcomp_2" for="peaslentils">Peas-lentils </label>
+	          <input name="peaslentils" id="peaslentils" value="peaslentils" type="checkbox" class="ratcomp_class"/>
+	        
+	          <label id="lbl_rbtn_ratcomp_3" for="csb"> CSB</label>
+	          <input name="csb" id="csb" value="csb" type="checkbox" class="ratcomp_class"/>
+	         
+	         <label id="lbl_rbtn_ratcomp_4" for="oil"> Oil</label>
+	          <input name="oil" id="oil" value="oil" type="checkbox" class="ratcomp_class"/>
+	         
+	          <label id="lbl_rbtn_ratcomp_5" for="sugar">Sugar</label>
+	          <input name="sugar" id="sugar" value="sugar" type="checkbox" class="ratcomp_class"/>
+	         
+	          <label id="lbl_rbtn_ratcomp_6" for="salt">Salt</label>
+	          <input name="salt" id="salt" value="salt" type="checkbox" class="ratcomp_class"/>
+	         
+	         <label id="lbl_rbtn_ratcomp_7" for="other"> Other</label>
+	         <input name="other" id="other" value="other" type="checkbox" class="ratcomp_class"/>
+	       
+	         <label id="lbl_rbtn_ratcomp_8" for="dontknowratcomp"> Don't know</label>
+	         <input name="dontknowratcomp" id="dontknowratcomp" value="dontknowratcomp" type="checkbox" class="ratcomp_class"/>
+	          
+	       </fieldset>
+       </div>
+       
+       <br/>
+        <label id="lbl_supnut"> Did family member receive nutriotionnal supplements? </label><br/><br/>
+         <fieldset data-role="controlgroup" data-type="vertical" id="supnut" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+           <input name="supnut" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_supnut_1" for="radio1"> Yes </label>
+          
+          <input name="supnut" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_supnut_2" for="radio2"> No </label>
+          
+          <input name="supnut" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_supnut_3" for="radio3"> Don't know </label>  
+        </fieldset>
+       <br/>
+       
+       <div id="supnutypfields">
+         <label id="lbl_supnutyp">What type of supplement did they receive? </label><br/><br/>
+        <fieldset data-role="controlgroup" data-type="vertical" id="supnutyp">
+          
+          <label id="lbl_rbtn_supnutyp_1" for="cereals"> Cereals </label>
+          <input name="cereals" id="cereals" value="cereals" type="checkbox" class="supnutyp_class"/>
+        
+          <label id="lbl_rbtn_supnutyp_2" for="csb"> CSB</label>
+          <input name="csb" id="csb" value="csb" type="checkbox" class="supnutyp_class"/>
+         
+         <label id="lbl_rbtn_supnutyp_3" for="ppdoz"> PPDOZ</label>
+          <input name="ppdoz" id="ppdoz" value="ppdoz" type="checkbox" class="supnutyp_class"/>
+         
+          <label id="lbl_rbtn_supnutyp_4" for="sugar">Sugar</label>
+          <input name="sugar" id="sugar" value="sugar" type="checkbox" class="supnutyp_class"/>
+         
+          <label id="lbl_rbtn_supnutyp_5" for="supplumpy">Supplumpy/SPP</label>
+          <input name="supplumpy" id="supplumpy" value="supplumpy" type="checkbox" class="supnutyp_class"/>
+         
+         <label id="lbl_rbtn_supnutyp_6" for="oil"> Oil</label>
+          <input name="oil" id="oil" value="oil" type="checkbox" class="supnutyp_class"/>
+         
+         <label id="lbl_rbtn_supnutyp_7" for="other"> Other</label>
+         <input name="other" id="other" value="other" type="checkbox" class="supnutyp_class"/>
+        
+       </fieldset>
+       </div>
+       
+        <br/>
+          <label id="lbl_ratvente"> Did you have to sell part of rations received? </label><br/><br/>
+          <fieldset data-role="controlgroup" data-type="vertical" id="ratvente" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+         <input name="ratvente" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_ratvente_1" for="radio1"> Yes </label>
+          
+          <input name="ratvente" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_ratvente_2" for="radio2"> No </label>
+          
+          <input name="ratvente" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_ratvente_3" for="radio3"> Don't know </label>  
+        </fieldset>
+        <br/>
+        
+        <div id="ratupartfields">
+	        <label id="lbl_ratupart">Which food? </label><br/><br/>
+	         <fieldset data-role="controlgroup" data-type="vertical" id="ratupart">
+	          
+	          <label id="lbl_rbtn_ratupart_1" for="cereals"> Cereals </label>
+	          <input name="cereals" id="cereals" value="cereals" type="checkbox" class="ratupart_class"/>
+	        
+	          <label id="lbl_rbtn_ratupart_2" for="peaslentils">Peas-lentils </label>
+	          <input name="peaslentils" id="peaslentils" value="peaslentils" type="checkbox" class="ratupart_class"/>
+	        
+	          <label id="lbl_rbtn_ratupart_3"for="csb"> CSB</label>
+	          <input name="csb" id="csb" value="csb" type="checkbox" class="ratupart_class"/>
+	         
+	         <label id="lbl_rbtn_ratupart_4" for="oil"> Oil</label>
+	          <input name="oil" id="oil" value="oil" type="checkbox" class="ratupart_class"/>
+	         
+	          <label id="lbl_rbtn_ratupart_5" for="sugar">Sugar</label>
+	          <input name="sugar" id="sugar" value="sugar" type="checkbox" class="ratupart_class"/>
+	         
+	          <label id="lbl_rbtn_ratupart_6" for="salt">Salt</label>
+	          <input name="salt" id="salt" value="salt" type="checkbox" class="ratupart_class"/>
+	         
+	         <label id="lbl_rbtn_ratupart_7" for="other"> Other</label>
+	         <input name="other" id="other" value="other" type="checkbox" class="ratupart_class"/>
+	       
+	         <label id="lbl_rbtn_ratupart_8" for="dontknow"> Don't know</label>
+	         <input name="dontknow" id="dontknow" value="dontknow" type="checkbox" class="ratupart_class"/>
+	          
+	       </fieldset>
+        </div>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 8 -->
+
+<div data-role="page" id="pageeight" name="Issues regarding supplying/debts">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdpageeight">Household form (8/8)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="householdissuesupplydebts">
+      
+      <h2 id="h2_issues_regarding_supplying_debts">ISSUES REGARDING SUPPLYING/DEBTS</h2>
+       
+       <label id="lbl_mecadapt">What do you do in priority when you experience stockouts ?</label><br/>
+        <textarea name="mecadapt" id="mecadapt" openmrs-datatype="" openmrs-class="" openmrs-concept=""></textarea>
+         <br/>
+         <label id="lbl_aprodiff"> Did you have difficulties supplying yourself last 3 months? </label><br/><br/>
+          <fieldset data-role="controlgroup" data-type="vertical" id="aprodiff" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="">
+          
+          <input name="aprodiff" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_aprodiff_1" for="radio1"> Yes </label>
+          
+          <input name="aprodiff" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_aprodiff_2" for="radio2"> No </label>
+          
+          <input name="aprodiff" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_aprodiff_3" for="radio3"> Don't know </label>  
+        </fieldset>
+        <br/>
+        
+        <div id="revsoSupplyfields">
+	        <div data-role="fieldcontain">
+	          <label id="lbl_revsoSupply">If you had issues regarding the supply, what did you do?</label><br/>
+	          <table>
+		        <tr>
+				<td id="lbl_td_supply_1">Count on cheaper food or less appreciated</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_1"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_2">Borrow food, with help from parents</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_2"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_3">Collect wild foods that I do not consume usually</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_3"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_4">Harvest immature cultures</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_4"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_5">Consume seed stocks held for future agricultural season</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_5"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_6">Reduce meal portions</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_6"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_7">Reduce number of daily meals</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_7"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_8">Reduce adults consumption so that children can eat</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_8"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_9">Reduce spending on health and education</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_9"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_10">Use savings to buy food</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_10"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_11">Beg</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_11"/></td>
+				</tr>
+		        <tr>
+				<td id="lbl_td_supply_12">Other</td>
+				<td><input type="button" value="No value" class="revsoSupplyButton" id="td_supply_12"/></td>
+				</tr>
+				</table> 
+				<br/>
+			<input type="button" value="Reset" id="revsoSupplyButtonReset" data-icon="refresh" data-iconpos="right"/>
+			</div>		
+		</div>
+		
+		<br/>
+		  <label id="lbl_aprodiffMeans">Did your family adopt other means last days/weeks?</label><br/><br/>
+         <table>
+	        <tr>
+			<td id="lbl_td_aprodiff_1">Sell household articles (kitchen utensil, blanket)</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_1"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_2">Sell household supplies</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_2"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_3">Sell poultry</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_3"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_4">Sell little animals,goats, sheeps</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_4"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_5">Sell large animals, herd</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_5"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_6">Sell breeding livestock</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_6"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_7">Borrow money from parents or neighbors</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_7"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_8">Family member moving to seek work</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_8"/></td>
+			</tr>
+	        <tr>
+			<td id="lbl_td_aprodiff_9">Other</td>
+			<td><input type="button" value="No value" class="aprodiffMeansButton" id="td_aprodiff_9"/></td>
+			</tr>
+	        </table>
+        
+			<br/>
+		<input type="button" value="Reset" id="aprodiffMeansButtonReset" data-icon="refresh" data-iconpos="right"/>
+		<br/>
+		
+		 <label id="lbl_dette">Does the household currently have debts? </label><br/><br/>
+          <fieldset data-role="controlgroup" data-type="vertical" id="dette">
+          
+          <input name="dette" id="radio1" value="yes" type="radio"/>
+          <label id="lbl_rbtn_dette_1" for="radio1"> Yes </label>
+          
+          <input name="dette" id="radio2" value="no" type="radio" />
+          <label id="lbl_rbtn_dette_2" for="radio2">No</label>
+          
+          <input name="dette" id="radio3" value="dontknow" type="radio" />
+          <label id="lbl_rbtn_dette_3" for="radio3"> Don't know </label> 
+        </fieldset>
+        <br/>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 9 -->
+
+<div data-role="page" id="submitpage" name="Submit page">
+  <div data-role="header"data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_householdsubmitpage">Household form - Summary</h1>
+  </div>
+  <div data-role="content">
+    <div class="formintro">
+      <h1 id="h1_householdsubmitpage_2">Household form completed</h1>
+      <div id="lbl_submitpage_review_household" data-theme="e" class="ui-body ui-body-e">Please review your answers for accuracy before storing the household's datas</div><br/>
+	  <ul data-role="listview" id="datareviewlist" data-divider-theme="d">
+      </ul>
+    </div>
+  </div>
+ <div data-role="footer" data-theme="c">
+    <div id="submitnav" data-role="navbar" data-iconpos="top">
+      <ul>
+        <li> <a action="prev" id="submitPagePreviousButton" data-theme="a" data-icon="arrow-l"> Previous </a> </li>
+        <li> <a action="jumptostart" id="jumptostartButton" data-theme="a" data-icon="back"> Jump to Start </a> </li>
+        <li> <a action="submit" id="submithouseholdButton" data-theme="e" data-icon="plus"> <b>Store household</b> </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="footernav" data-role="navbar" data-theme="a" data-iconpos="top">
+  <ul>
+    <li> <a action="prev" class="previousButton" data-theme="a" data-icon="arrow-l"> Previous </a> </li>
+    <li> <a action="help" class="helpButton" data-theme="a" data-icon="info"> Help </a> </li>
+    <li> <a action="next" class="nextButton" data-theme="a" data-icon="arrow-r"> Next </a> </li>
+  </ul>
+</div>
+<script src="../javascript/msf-debug.js" type="text/javascript"></script>
+<script src="../javascript/msf-householdScript.js" type="text/javascript"></script>
+<script src="../javascript/msf-serialize.js" type="text/javascript"></script>
+</body>
+</html>

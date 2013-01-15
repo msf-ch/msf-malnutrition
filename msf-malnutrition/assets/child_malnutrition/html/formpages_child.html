@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSF Malnutrition</title>
+<link href="../jquery-mobile/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="../css/msf-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/datebox.css"  rel="stylesheet" type="text/css"/> 
+
+
+<script src="../jquery/jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../jquery-mobile/jquery.mobile-1.1.0.js" type="text/javascript"></script>
+
+
+<script src="../javascript/datebox.core.js" type="text/javascript"></script>
+<script src="../javascript/flipbox.js" type="text/javascript"></script>
+<script src="../javascript/datebox.en.utf8.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!--  PAGE  1-->
+
+<div data-role="page" id="pageone" name="Basic informations">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_pageone">Child form (1/5)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="formpageone">
+      <h2 id="h2_child_survey_basic_informations">CHILD SURVEY BASIC INFORMATION</h2>
+        <label id="lbl_suividat">Survey Date:</label>
+        <input name="suividat" id="suividat" type="text" type="date" data-role="datebox" data-options='{"mode": "flipbox", "headerFormat":"mmm dd, YYYY", "focusMode": true, "beforeToday":true, "useClearButton":true, "collapseButtons": true}' placeholder="Date" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+        
+        <br/>
+        <label id="lbl_zone">Responsibility area:</label>
+        <input name="zone" id="zone" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+         
+         <br/>
+         <table>
+         <tr>
+		<td><label id="lbl_enqnom">Pollster id:</label></td>
+		<td><input name="enqnom" id="enqnom" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		<tr>
+		<td><label id="lbl_nozone">Area id:</label></td>
+		<td><input name="nozone" id="nozone" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		<tr>
+		<td> <label id="lbl_menagn">Household id:</label></td>
+		<td> <input name="menagn" id="menagn" type="number"  maxlength="4" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+         </table>
+         <br/>
+         
+        <label id="lbl_villagen">Village name:</label>
+        <input name="villagen" id="villagen" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+         
+         <br/>
+        <table>
+        <tr>
+		<td><label id="lbl_novillage">Village id:</label></td>
+		<td><input name="novillage" id="novillage" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+        <tr>
+		<td><label id="lbl_enfantid">Child id : </label></td>
+		<td><input name="enfantid" id="enfantid" type="number" maxlength="1" style="width:40px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		</table>
+		<br/>
+		
+		<label id="lbl_enfnom">Child's name:</label>
+        <input name="enfnom" id="enfnom" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+        <br/> 
+        
+        <label id="lbl_enfprenom">Child's first name:</label>
+        <input name="enfprenom" id="enfprenom" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+        <br/>
+        
+         <table>
+         <tr>
+		<td><label id="lbl_enfage">Age of the child (in months):</label></td>
+		<td><input name="enfage" id="enfage" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		</table>
+		<br/>
+         <label id="lbl_naissor"> How did you get the age? </label><br/><br/>
+         
+         
+        <fieldset data-role="controlgroup" data-type="vertical" id="naissor">
+          
+          <label for="radio1">Birth certificate</label>
+          <input name="naissor" id="radio1" value="birthcertificate" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label for="radio2"> Calendar local events </label>
+          <input name="naissor" id="radio2" value="calendarlocalevents" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        </fieldset>
+        <br/>
+        
+         <label id="lbl_enfsex"> Child's sex </label><br/><br/>
+      
+        <fieldset data-role="controlgroup" data-type="vertical" id="enfsex">
+          
+          <label for="radio1"> Male </label>
+          <input name="enfsex" id="radio1" value="male" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label for="radio2"> Female </label>
+          <input name="enfsex" id="radio2" value="female" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        </fieldset>
+        <br/>
+        
+        <label id="lbl_mennom">Household chief's name:</label>
+        <input name="mennom" id="mennom" type="text" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+        
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 2 -->
+
+<div data-role="page" id="pagetwo" name="Information about the child and his family">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_pagetwo">Child form (2/5)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="formpagetwo">
+      <h2 id="h2_informations_about_child_family">INFORMATION ABOUT THE CHILD AND HIS FAMILY</h2>
+      
+      <label id="lbl_localis">Location of child's house define where is the house in the village ?</label><br/>
+       <br/> <textarea name="localis" id="localis" openmrs-datatype="" openmrs-class="" openmrs-concept=""></textarea>
+         <br/>
+         
+          <label id="lbl_vitavec">With whom does the child live usually?</label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="vitavec">
+          
+          <label id="lbl_rbtn_vitavec_1"  for="radio1"> Mother </label>
+          <input name="vitavec" id="radio1" value="mother" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label  id="lbl_rbtn_vitavec_2"  for="radio2"> Father </label>
+          <input name="vitavec" id="radio2" value="father" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_vitavec_3"  for="radio3">Grand Mother </label>
+          <input name="vitavec" id="radio3" value="grandmother" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label  id="lbl_rbtn_vitavec_4"  for="radio4"> Other</label>
+          <input name="vitavec" id="radio4" value="other" type="radio" openmrs-fieldtype="" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        <br/>
+        
+          <label id="lbl_orphan">Is the child orphan?</label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="orphan">
+          
+          <label id="lbl_rbtn_orphan_1"  for="radio1"> Of Mother </label>
+          <input name="orphan" id="radio1" value="mother" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_orphan_2"  for="radio2"> Of Father </label>
+          <input name="orphan" id="radio2" value="father" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_orphan_3"  for="radio3">No </label>
+          <input name="orphan" id="radio3" value="no" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+        </fieldset>
+        <br/>
+        
+        <label id="lbl_coepouse">Number of concubines of the mother:</label>
+		<input name="coepouse" id="coepouse" type="number" maxlength="3" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/>
+		
+       <br/>
+        
+          <label id="lbl_maritstat">Marital status of the mother:</label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="maritstat">
+          
+          <label id="lbl_rbtn_maritstat_1"  for="radio1"> Maried </label>
+          <input name="maritstat" id="radio1" value="maried" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_maritstat_2"  for="radio2"> Divorced </label>
+          <input name="maritstat" id="radio2" value="divorced" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_maritstat_3"  for="radio3"> Widowed </label>
+          <input name="maritstat" id="radio3" value="widowed" type="radio" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_maritstat_4"  for="radio4"> Separated</label>
+          <input name="maritstat" id="radio4" value="separated" type="radio" openmrs-fieldtype="" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        <br/>
+        
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!--  PAGE  3-->
+
+<div data-role="page" id="pagethree" name="Informations about breastfeeding">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_pagethree">Child form (3/5)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="formpagethree">
+      <h2 id="h2_informations_about_breastfeeding">INFORMATION ABOUT BREASTFEEDING</h2>
+      
+         <label id="lbl_allaitna"> Is the child being breastfed since birth? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="allaitna">
+          
+          <input name="allaitna" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_allaitna_1"  for="radio1"> Yes </label>
+          
+         <input name="allaitna" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_allaitna_2"  for="radio2"> No </label>
+          
+         <input name="allaitna" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_allaitna_3"  for="radio3"> Don't know </label>  
+        </fieldset>
+      <br/>
+      
+       <table>
+         <tr>
+		<td><label id="lbl_allaitag">Until which age has the child been exclusively breastfed? (in months)</label></td>
+		<td><input name="allaitag" id="allaitag" type="number" maxlength="2" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		</table>
+		<br/>
+ 
+  	<label id="lbl_laitcont"> Is the child currently breastfed? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="laitcont">
+          
+          <input name="laitcont" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_laitcont_1"  for="radio1"> Yes </label>
+          
+         <input name="laitcont" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_laitcont_2"  for="radio2"> No </label>
+          
+         <input name="laitcont" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_laitcont_3"  for="radio3"> Don't know </label>  
+        </fieldset>
+      <br/>
+      
+      <label id="lbl_vaccinat"> Has the child been vaccinated? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="vaccinat">
+          
+          <input name="vaccinat" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_vaccinat_1"  for="radio1"> Yes </label>
+          
+         <input name="vaccinat" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_vaccinat_2"  for="radio2"> No </label>
+          
+         <input name="vaccinat" id="radio3" value="dontknow" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_vaccinat_3"  for="radio3"> Don't know </label>  
+        </fieldset>
+      <br/>
+      
+       <div id="typvaccfields">
+       <label id="lbl_typvacc">Which vaccine did he receive? (see vaccination card if it exists) </label><br/><br/>
+         
+		<fieldset data-role="controlgroup" data-type="vertical" id="typvacc">
+          
+          <label id="lbl_rbtn_polio_1"  for="polio"> Polio </label>
+          <input name="polio" id="polio" value="polio" type="checkbox" class="typvacc_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_polio_2"  for="measles"> Measles </label>
+          <input name="measles" id="measles" value="measles" type="checkbox" class="typvacc_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_polio_3"  for="pentalavent"> Pentalavent (2-3 injections) </label>
+          <input name="pentalavent" id="pentalavent" value="pentalavent" type="checkbox" class="typvacc_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_polio_4"  for="other"> Other</label>
+          <input name="other" id="other" value="other" type="checkbox" class="typvacc_class" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        </div>
+        <br/>
+        <br/><br/><br/>
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 4 -->
+
+<div data-role="page" id="pagefour" name="Anthropometric measurement">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_pagefour">Child form (4/5)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="formpagefour">
+      <h2 id="h2_anthropometric_measurment">ANTHROPOMETRIC MEASUREMENT</h2>
+      <table>
+         <tr>
+		<td><label id="lbl_pbmesure">Muac (mm)</label></td>
+		<td><input name="pbmesure" id="pbmesure" type="number" maxlength="4" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		</table>
+		<br/>
+		
+		  <label id="lbl_oedem"> Bilateral feet oedema: </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="oedem">
+          
+          <input name="oedem" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_oedem_1"  for="radio1"> Yes </label>
+          
+         <input name="oedem" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_oedem_2"  for="radio2"> No </label>
+        </fieldset>
+      <br/>
+		
+		<table>
+         <tr>
+		<td><label id="lbl_poids">Weight (in kg):</label></td>
+		<td><input name="poids" id="poids" type="number" maxlength="4" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+         <tr>
+		<td><label id="lbl_taille">Height (in cm)</label></td>
+		<td><input name="taille" id="taille" type="number" maxlength="3" style="width:70px" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept=""/></td>
+		</tr>
+		</table>
+		<br/>
+		
+		<h2 id="h2_morbidity_illness">MORBIDITY / ILLNESS</h2>
+		<br/>
+		
+		<label id="lbl_malad"> Has the child been sick since last visit ?</label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="malad">
+          
+          <input name="malad" id="radio1" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_malad_1"  for="radio1"> Yes </label>
+          
+         <input name="malad" id="radio2" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_malad_2"  for="radio2"> No </label>
+        </fieldset>
+    </form>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 5 -->
+
+<div data-role="page" id="pagefive" name="Morbidity / Illness">
+  <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_pagefive">Child form (5/5)</h1>
+  </div>
+  <div data-role="content">
+  
+    <form id="formpagefive">
+      <div data-role="fieldcontain">
+      <h2 id="h2_morbidity_illness_2">MORBIDITY / ILLNESS</h2>
+      
+        <label id="lbl_epcause">What were the symptoms/signs ?</label>
+        <p id="p_epcause">Write the signs that the person has described and then tick the cases</p>
+        <textarea name="epcause" id="epcause" openmrs-datatype="" openmrs-class="" openmrs-concept=""></textarea>
+         <br/>
+         <br/>
+         <div id="epcause_checkbox">
+		<fieldset data-role="controlgroup" data-type="vertical" id="epcause_choice">
+          <div class="ui-grid-a">
+          
+                    <!--  LINE 1 -->
+					<div class="ui-block-a">
+						<label id="lbl_rbtn_epcause_choice_1" for="cough"> Cough </label>
+					    <input name="cough" id="cough" value="cough" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+                    </div>
+					<div class="ui-block-b">
+						<label id="lbl_rbtn_epcause_choice_2" for="diarrhea"> Diarrhea </label>
+                		<input name="diarrhea" id="diarrhea" value="diarrhea" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					<div class="ui-block-a">										
+					     <label id="lbl_rbtn_epcause_choice_3" for="convulsion"> Convulsion </label>
+					     <input name="convulsion" id="convulsion" value="convulsion" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					
+					 <!--  LINE 2 -->
+					<div class="ui-block-b">
+						 <label id="lbl_rbtn_epcause_choice_4" for="weightloss"> Weight Loss </label>
+					     <input name="weightloss" id="weightloss" value="weightloss" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+                    </div>
+					<div class="ui-block-a">
+						<label id="lbl_rbtn_epcause_choice_5" for="abdominalpain"> Abdominal Pain </label>
+                		<input name="abdominalpain" id="abdominalpain" value="abdominalpain" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					<div class="ui-block-b">										
+					     <label id="lbl_rbtn_epcause_choice_6" for="vomiting"> Vomiting </label>
+					     <input name="vomiting" id="vomiting" value="vomiting" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					
+					 <!--  LINE 3 -->
+					<div class="ui-block-a">
+						 <label id="lbl_rbtn_epcause_choice_7" for="breathingdifficulties"> Breathing difficulties </label>
+          				 <input name="breathingdifficulties" id="breathingdifficulties" value="breathingdifficulties" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+          			</div>
+					<div class="ui-block-b">
+						<label id="lbl_rbtn_epcause_choice_8" for="problemtourinate"> Problem/Pain To Urinate </label>
+                		<input name="problemtourinate" id="problemtourinate" value="problemtourinate" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					<div class="ui-block-a">										
+					     <label id="lbl_rbtn_epcause_choice_9" for="headache"> Headache </label>
+					     <input name="headache" id="headache" value="headache" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					
+					 <!--  LINE 4 -->
+					<div class="ui-block-b">
+						 <label id="lbl_rbtn_epcause_choice_10" for="constipation"> Constipation </label>
+          				 <input name="constipation" id="constipation" value="constipation" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+          			</div>
+					<div class="ui-block-a">
+						<label id="lbl_rbtn_epcause_choice_11" for="earproblems"> Ear problems </label>
+                		<input name="earproblems" id="earproblems" value="earproblems" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					<div class="ui-block-b">										
+					     <label id="lbl_rbtn_epcause_choice_12" for="eyeproblems"> Eye problems </label>
+					     <input name="eyeproblems" id="eyeproblems" value="eyeproblems" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					
+					 <!--  LINE 5 -->
+					<div class="ui-block-a">
+						 <label id="lbl_rbtn_epcause_choice_13" for="appetiteloss"> Appetite loss </label>
+          				 <input name="appetiteloss" id="appetiteloss" value="appetiteloss" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+          			</div>
+					<div class="ui-block-b">
+						<label id="lbl_rbtn_epcause_choice_14" for="burn"> Burn </label>
+                		<input name="burn" id="burn" value="burn" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					<div class="ui-block-a">										
+					     <label id="lbl_rbtn_epcause_choice_15" for="bleeding"> Bleeding </label>
+					     <input name="bleeding" id="bleeding" value="bleeding" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					
+					 <!--  LINE 6 -->
+					<div class="ui-block-b">
+						 <label id="lbl_rbtn_epcause_choice_16" for="trauma"> Trauma </label>
+          				 <input name="trauma" id="trauma" value="trauma" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+          			</div>
+					<div class="ui-block-a">
+						<label id="lbl_rbtn_epcause_choice_17" for="throatproblems"> Throat problems </label>
+                		<input name="throatproblems" id="throatproblems" value="throatproblems" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					<div class="ui-block-b">										
+					     <label id="lbl_rbtn_epcause_choice_18" for="notspecified"> Not Specified </label>
+					     <input name="notspecified" id="notspecified" value="notspecified" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+					</div>
+					
+					 <!--  LINE 6 -->
+					<div class="ui-block-a">
+						 <label id="lbl_rbtn_epcause_choice_19" for="fever"> Fever</label>
+          				 <input name="fever" id="fever" value="fever" type="checkbox" class="epcause_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+          			</div>
+					<div class="ui-block-b">
+				          <label id="lbl_rbtn_epcause_choice_20" for="otherepcause"> Other</label>
+				          <input name="otherepcause" id="otherepcause" value="otherepcause" type="checkbox" class="epcause_class" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+				    </div>
+		 </div>
+        </fieldset>
+        </div>
+        
+        <br/>
+		<label id="lbl_eptemps"> How long did the episod last? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="eptemps">
+          
+          <input name="eptemps" id="radio1" value="onetwodays" type="radio" class="eptemps_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_eptemps_1"  for="radio1"> 1-2 days</label>
+          
+          <input name="eptemps" id="radio2" value="threefivedays" type="radio" class="eptemps_class"  openmrs-valuecoded="" />
+          <label id="lbl_rbtn_eptemps_2"  for="radio2"> 3-5 days </label>
+          
+          <input name="eptemps" id="radio3" value="superiorfivedays" type="radio" class="eptemps_class"  openmrs-valuecoded="" />
+          <label id="lbl_rbtn_eptemps_3"  for="radio3"> > 5 days </label>
+        </fieldset>
+        
+        <br/>
+		<label id="lbl_epsoin"> Has something been done as the sickness appeared by you or one family member? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="epsoin">
+          
+          <input name="epsoin" id="radio1" value="yes" type="radio" class="epsoin_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epsoin_1"  for="radio1"> Yes</label>
+          
+          <input name="epsoin" id="radio2" value="no" type="radio" class="epsoin_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epsoin_2"  for="radio2"> No </label>
+          
+          <input name="epsoin" id="radio3" value="dontknow" type="radio" class="epsoin_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epsoin_3"  for="radio3"> Don't know </label>
+        </fieldset>
+        
+        <br/>
+        
+      <div id="epnoraifields">
+       <label id="lbl_epnorai">What were the reasons for doing nothing? </label><br/><br/>
+          
+         <div id="epnorai_checkbox">
+		<fieldset data-role="controlgroup" data-type="vertical" id="epnorai">
+          
+          <label id="lbl_rbtn_epnorai_1"  for="financial"> Financial </label>
+          <input name="financial" id="financial" value="financial" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_2"  for="notransportationmeans"> No transportation means </label>
+          <input name="notransportationmeans" id="notransportationmeans" value="notransportationmeans" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_3"  for="seriousillness"> Too serious illness </label>
+          <input name="seriousillness" id="seriousillness" value="seriousillness" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_4"  for="notime"> No time </label>
+          <input name="notime" id="notime" value="notime" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_5"  for="healthcenterfar"> Health center too far </label>
+          <input name="healthcenterfar" id="healthcenterfar" value="healthcenterfar" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_6"  for="securityproblems"> Security Problems </label>
+          <input name="securityproblems" id="securityproblems" value="securityproblems" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_7"  for="notserioussickness"> Not serious enough a sickness </label>
+          <input name="notserioussickness" id="notserioussickness" value="notserioussickness" type="checkbox" class="epnorai_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_epnorai_8"  for="other"> Other</label>
+          <input name="other" id="other" value="other" type="checkbox" openmrs-fieldtype="checkbox-coded" class="epnorai_class" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        </div>
+       </div>
+        
+        <br/>
+       <div id="eprecoufields">
+       <label id="lbl_eprecou">What was undertaken? </label><br/><br/>
+          
+         <div id="eprecou_checkbox">
+		<fieldset data-role="controlgroup" data-type="vertical" id="eprecou">
+          
+          <label id="lbl_rbtn_eprecou_1"  for="consulthealthcenter"> Consult Health Center </label>
+          <input name="consulthealthcenter" id="consulthealthcenter" value="consulthealthcenter" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_2"  for="gotohospital"> Go to hospital </label>
+          <input name="gotohospital" id="gotohospital" value="gotohospital" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_3"  for="consultprivatedoctor"> Consult private doctor </label>
+          <input name="consultprivatedoctor" id="consultprivatedoctor" value="consultprivatedoctor" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_4"  for="consultchw"> Consult community health worker</label>
+          <input name="consultchw" id="consultchw" value="consultchw" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_5"  for="consultparamedical"> Consulting paramedical </label>
+          <input name="consultparamedical" id="consultparamedical" value="consultparamedical" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_6"  for="usingdrugshome"> Using drugs already at home </label>
+          <input name="usingdrugshome" id="usingdrugshome" value="usingdrugshome" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_7"  for="buydrugs"> Buy drugs at market/private pharmacy </label>
+          <input name="buydrugs" id="buydrugs" value="buydrugs" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_8"  for="consulthealer"> Consult healer </label>
+          <input name="consulthealer" id="consulthealer" value="consulthealer" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_9"  for="consultmarabut"> Consult marabut </label>
+          <input name="consultmarabut" id="consultmarabut" value="consultmarabut" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_10"  for="buytraditionnaldrugs"> Buy traditionnal drugs on the market</label>
+          <input name="buytraditionnaldrugs" id="buytraditionnaldrugs" value="buytraditionnaldrugs" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+          <label id="lbl_rbtn_eprecou_11"  for="consultdrchoco"> Consult Dr Choco</label>
+          <input name="consultdrchoco" id="consultdrchoco" value="consultdrchoco" type="checkbox" class="eprecou_class" openmrs-fieldtype="" openmrs-datatype="" openmrs-class="" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept=""/>
+        
+         <label id="lbl_rbtn_eprecou_12"  for="other"> Other</label>
+          <input name="other" id="other" value="other" type="checkbox" class="eprecou_class" openmrs-fieldtype="checkbox-coded" openmrs-datatype="coded" openmrs-class="obs" openmrs-concept="" openmrs-checked-concept="" openmrs-unchecked-concept="" />
+         
+        </fieldset>
+        </div>
+        </div>
+        <br/>
+        
+        <label id="lbl_admiss"> Has the child been admitted to a hospital in a nutritionnal program for his disease? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="admiss">
+          
+          <input name="admiss" id="radio1" value="yes" type="radio" class="admiss_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_admiss_1"  for="radio1"> Yes</label>
+          
+          <input name="admiss" id="radio2" value="no" type="radio" class="admiss_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_admiss_2"  for="radio2"> No </label>
+          
+          <input name="admiss" id="radio3" value="dontknow" type="radio" class="admiss_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_admiss_3"  for="radio3"> Don't know </label>
+        </fieldset>
+        <br/>
+        
+        <div id="progadmepevolfields">
+        <label id="lbl_progadm"> In which program has he been admitted? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="progadm">
+          
+          <input name="progadm" id="radio1" class="progadmepevol_class" value="nutricentermassakoryhospital" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_1"  for="radio1"> At nutritionnal center of Massakory's hospital</label>
+          
+          <input name="progadm" id="radio2" class="progadmepevol_class" value="nutricenterhealthcenter" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_2"  for="radio2"> At nutritionnal center of health center </label>
+          
+          <input name="progadm" id="radio3" class="progadmepevol_class" value="followedbychw" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_3"  for="radio3"> Followed by community healthcare worker </label>
+          
+          <input name="progadm" id="radio4" class="progadmepevol_class" value="other" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_4"  for="radio4"> Other </label>
+        </fieldset>
+         <br/>   
+        </div>
+        <label id="lbl_epevol"> How did the chlid evolved after this process? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="epevol">
+          
+          <input name="epevol" id="radio1" class="progadmepevol_class" value="healed" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epevol_1"  for="radio1"> He healed</label>
+          
+          <input name="epevol" id="radio2" class="progadmepevol_class" value="ongoingtreatment" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epevol_2"  for="radio2"> On going treatment </label>
+          
+          <input name="epevol" id="radio3" class="progadmepevol_class" value="improved" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epevol_3"  for="radio3"> He improved </label>
+          
+          <input name="epevol" id="radio4" class="progadmepevol_class" value="statusworsened" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epevol_4"  for="radio4"> His status has worsened </label>
+          
+          <input name="epevol" id="radio5" class="progadmepevol_class" value="nochange" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_epevol_5"  for="radio5"> No change </label>
+        </fieldset>     
+        <br/>
+        
+        <label id="lbl_eprest"> Is the child still sick today? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="eprest">
+          
+          <input name="eprest" id="radio1" value="yes" type="radio" class="eprest_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_eprest_1"  for="radio1"> Yes</label>
+          
+          <input name="eprest" id="radio2" value="no" type="radio" class="eprest_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_eprest_2"  for="radio2"> No </label>
+          
+          <input name="eprest" id="radio3" value="dontknow" type="radio" class="eprest_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_eprest_3"  for="radio3"> Don't know </label>
+        </fieldset>        
+        <br/>
+        
+        <div id="decisionsfields">
+        <label id="lbl_decision_1"> Did you have to refer the child? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="decision_1">
+          
+          <input name="decision_1" id="radio1" class="decisions_class" value="yes" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_decision_1_1"  for="radio1"> Yes</label>
+          
+          <input name="decision_1" id="radio2" class="decisions_class" value="no" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_decision_1_2"  for="radio2"> No </label>
+        </fieldset>        
+        <br/>
+        
+        <label id="lbl_decision_2"> To which center did you refer him? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="decision_2">
+          
+          <input name="decision_2" id="radio1" class="decisions_class" value="healthcenter" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_decision_2_1"  for="radio1"> Health center</label>
+          
+          <input name="decision_2" id="radio2" class="decisions_class" value="chw" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_decision_2_2"  for="radio2"> Community healthcare worker </label>
+          
+          <input name="decision_2" id="radio3" class="decisions_class" value="hospital" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_decision_2_3"  for="radio3"> Hospital </label>
+        </fieldset>        
+        <br/>
+       </div> 
+        <label id="lbl_progadm_2"> Has the child been admitted in a nutriotionnal program since last visit? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="progadm_2">
+          
+          <input name="progadm_2" id="radio1" value="yes" type="radio" class="progadm_2_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_2_1"  for="radio1"> Yes</label>
+          
+          <input name="progadm_2" id="radio2" value="no" type="radio" class="progadm_2_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_2_2"  for="radio2"> No </label>
+          
+          <input name="progadm_2" id="radio3" value="dontknow" type="radio" class="progadm_2_class" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_progadm_2_3"  for="radio3"> Don't know </label>
+        </fieldset>        
+        <br/>
+        
+        <div id="typprogfields">
+        <label id="lbl_typprog"> In which type of program? </label><br/><br/>
+          
+        <fieldset data-role="controlgroup" data-type="vertical" id="typprog">
+          
+          <input name="typprog" id="radio1" class="typprog_class" value="monitoringhealthcenter" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_typprog_1" for="radio1"> Monitoring at health center</label>
+          
+          <input name="typprog" id="radio2" class="typprog_class" value="monitoringchw" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_typprog_2" for="radio2"> Monitoring by community healthcare worker </label>
+          
+          <input name="typprog" id="radio3" class="typprog_class" value="therapeutichospitalcentermassakory" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_typprog_3" for="radio3"> Hospitalized of therapeutic hospital center of Massakory </label>
+          
+          <input name="typprog" id="radio4" class="typprog_class" value="other" type="radio" openmrs-valuecoded="" />
+          <label id="lbl_rbtn_typprog_4" for="radio4"> Other </label>
+        </fieldset>        
+        <br/>
+        </div>
+        
+      </div>          
+    </form>
+  </div>
+  <div data-role="footer" data-tap-toggle="false"></div>
+</div>
+
+<!-- PAGE 9 -->
+
+<div data-role="page" id="submitpage" name="Submit page">
+  <div data-role="header"data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <h1 id="h1_submitpage">Child form - Summary</h1>
+  </div>
+  <div data-role="content">
+    <div class="formintro">
+      <h1 id="h1_submitpage_2">Child form completed</h1>
+      <div id="lbl_submitpage_review_child" data-theme="e" class="ui-body ui-body-e">Please review your answers for accuracy before storing the child's datas</div><br/>
+	  <ul data-role="listview" id="datareviewlist" data-divider-theme="d">
+      </ul>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="c">
+    <div id="submitnav" data-role="navbar" data-iconpos="top">
+      <ul>
+        <li> <a action="prev" id="submitPagePreviousButton" data-theme="a" data-icon="arrow-l"> Previous </a> </li>
+        <li> <a action="jumptostart" id="jumptostartButton" data-theme="a" data-icon="back"> Jump to Start </a> </li>
+        <li> <a action="submit" id="submitchildButton" data-theme="e" data-icon="plus" > <b>Store child</b> </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="footernav" data-role="navbar" data-theme="a" data-iconpos="top">
+  <ul>
+    <li> <a action="prev" class="previousButton" data-theme="a" data-icon="arrow-l"> Previous </a> </li>
+    <li> <a action="help" class="helpButton" data-theme="a" data-icon="info"> Help </a> </li>
+    <li> <a action="next" class="nextButton" data-theme="a" data-icon="arrow-r"> Next </a> </li>
+  </ul>
+</div>
+<script src="../javascript/msf-debug.js" type="text/javascript"></script>
+<script src="../javascript/msf-childScript.js" type="text/javascript"></script>
+<script src="../javascript/msf-serialize.js" type="text/javascript"></script>
+</body>
+</html>

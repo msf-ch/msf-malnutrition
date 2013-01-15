@@ -1,0 +1,102 @@
+<?xml version='1.0' ?>
+<form id="18" name="Cholera CTC/CTU" version="0.1"
+	xmlns:xd="http://schemas.microsoft.com/office/infopath/2003"
+	xmlns:openmrs="/moduleServlet/formentry/forms/schema/18-1">
+	<header>
+		<enterer />
+		<date_entered />
+		<session />
+		<uid />
+	</header>
+	<patient>
+		<patient.birthdate openmrs_attribute="birthdate"
+			openmrs_table="patient">2011-09-27</patient.birthdate>
+		<patient.patient_id openmrs_attribute="patient_id"
+			openmrs_table="patient">1086</patient.patient_id>
+	</patient>
+	<encounter>
+		<encounter.encounter_datetime
+			openmrs_attribute="encounter_datetime" openmrs_table="encounter">2011-09-30</encounter.encounter_datetime>
+		<encounter.location_id openmrs_attribute="location_id"
+			openmrs_table="encounter">3</encounter.location_id>
+		<encounter.provider_id openmrs_attribute="provider_id"
+			openmrs_table="encounter">1</encounter.provider_id>
+	</encounter>
+	<obs>
+		<person_image openmrs_concept="6123^Person Image^99DCT"
+			openmrs_datatype="ST">
+			<date n0:nil="true" xmlns:n0="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n1:nil="true" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n2:nil="true" xmlns:n2="http://www.w3.org/2001/XMLSchema-instance" />
+		</person_image>
+		<cholera multiple="0" openmrs_concept="198^CHOLERA^99DCT"
+			openmrs_datatype="CWE">
+			<date n3:nil="true" xmlns:n3="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n4:nil="true" xmlns:n4="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n5:nil="true" xmlns:n5="http://www.w3.org/2001/XMLSchema-instance">6101^Moderate Cholera^99DCT</value>
+		</cholera>
+		<place_of_origin openmrs_concept="6102^Place of Origin^99DCT"
+			openmrs_datatype="ST">
+			<date n6:nil="true" xmlns:n6="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n7:nil="true" xmlns:n7="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n8:nil="true" xmlns:n8="http://www.w3.org/2001/XMLSchema-instance">Mill Valley</value>
+		</place_of_origin>
+		<referral_origin multiple="0" openmrs_concept="6103^Referral origin^99DCT"
+			openmrs_datatype="CWE">
+			<date n9:nil="true" xmlns:n9="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n10:nil="true" xmlns:n10="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n11:nil="true" xmlns:n11="http://www.w3.org/2001/XMLSchema-instance">6119^Referred by CTU^99DCT</value>
+		</referral_origin>
+		<date_of_first_symptoms openmrs_concept="6107^Date of First Symptoms^99DCT"
+			openmrs_datatype="DT">
+			<date n12:nil="true" xmlns:n12="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n13:nil="true" xmlns:n13="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n14:nil="true" xmlns:n14="http://www.w3.org/2001/XMLSchema-instance">2011-09-30</value>
+		</date_of_first_symptoms>
+		<cholera_treatment_plan multiple="0"
+			openmrs_concept="6109^Cholera Treatment Plan^99DCT" openmrs_datatype="CWE">
+			<date n15:nil="true" xmlns:n15="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n16:nil="true" xmlns:n16="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n17:nil="true" xmlns:n17="http://www.w3.org/2001/XMLSchema-instance">6111^Cholera Treatment Plan
+				B^99DCT</value>
+		</cholera_treatment_plan>
+		<ringer_solution openmrs_concept="6113^Ringer Solution (L)^99DCT"
+			openmrs_datatype="NM">
+			<date n18:nil="true" xmlns:n18="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n19:nil="true" xmlns:n19="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n20:nil="true" xmlns:n20="http://www.w3.org/2001/XMLSchema-instance">5.0</value>
+		</ringer_solution>
+		<current_pregnancy_status multiple="0"
+			openmrs_concept="6125^Current Pregnancy Status^99DCT"
+			openmrs_datatype="CWE">
+			<date n21:nil="true" xmlns:n21="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n22:nil="true" xmlns:n22="http://www.w3.org/2001/XMLSchema-instance" />
+		</current_pregnancy_status>
+		<date_of_discharge openmrs_concept="6114^Date of Discharge^99DCT"
+			openmrs_datatype="DT">
+			<date n23:nil="true" xmlns:n23="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n24:nil="true" xmlns:n24="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n25:nil="true" xmlns:n25="http://www.w3.org/2001/XMLSchema-instance">2011-09-27</value>
+		</date_of_discharge>
+		<outcome_of_cholera multiple="0"
+			openmrs_concept="6115^Outcome of Cholera^99DCT" openmrs_datatype="CWE">
+			<date n26:nil="true" xmlns:n26="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n27:nil="true" xmlns:n27="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n28:nil="true" xmlns:n28="http://www.w3.org/2001/XMLSchema-instance">6118^Cholera Resolved with
+				Sequelae^99DCT</value>
+		</outcome_of_cholera>
+		<weight_kg openmrs_concept="5089^WEIGHT (KG)^99DCT"
+			openmrs_datatype="NM">
+			<date n29:nil="true" xmlns:n29="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n30:nil="true" xmlns:n30="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n31:nil="true" xmlns:n31="http://www.w3.org/2001/XMLSchema-instance">90.0</value>
+		</weight_kg>
+		<free_text_entry openmrs_concept="6126^Free Text Entry^99DCT"
+			openmrs_datatype="ST">
+			<date n32:nil="true" xmlns:n32="http://www.w3.org/2001/XMLSchema-instance" />
+			<time n33:nil="true" xmlns:n33="http://www.w3.org/2001/XMLSchema-instance" />
+			<value n34:nil="true" xmlns:n34="http://www.w3.org/2001/XMLSchema-instance">30/09/11</value>
+		</free_text_entry>
+	</obs>
+	<other />
+</form>

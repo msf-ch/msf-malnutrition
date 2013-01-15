@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="128dip"
+    android:orientation="horizontal"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip" >
+
+    <RelativeLayout
+        android:layout_width="128dip"
+        android:layout_height="128dip" >
+
+        <ImageView
+            android:id="@+id/malnutrition_child_summary_square_gender_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/male128" />
+
+        <TextView
+            android:id="@+id/malnutrition_child_summary_square_identifier_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/translucent_gray_accent"
+            android:gravity="center"
+            android:paddingBottom="1dip"
+            android:paddingTop="1dip"
+            android:text="MSF-24601"
+            android:textColor="@android:color/white"
+            android:textSize="12dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/malnutrition_child_summary_square_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nicholas Wilkie"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/malnutrition_child_summary_square_child_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/malnutrition_child_summary_square_child_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dip"
+                android:text="29"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/deleteChildButton"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/close256" />
+
+</LinearLayout>

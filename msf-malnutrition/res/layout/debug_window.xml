@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/debug_rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView android:id="@+id/textView1" android:gravity="center" android:text="DEBUG WINDOW" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_width="fill_parent"></TextView>
+    <ScrollView
+        android:id="@+id/debugtextscroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true">
+        <TextView android:id="@+id/textView2" android:layout_width="fill_parent" android:text="" android:layout_height="fill_parent" ></TextView>
+    </ScrollView>
+</RelativeLayout>

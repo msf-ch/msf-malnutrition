@@ -1,0 +1,25 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+msf-malnutrition/bin/**
+msf-malnutrition/gen/
+msf-malnutrition-test/bin/**
+msf-malnutrition-test/gen/
+
+# Local configuration file (sdk path, etc)
+msf-malnutrition/local.properties
+msf-malnutrition-test/local.properties
+
+# Eclipse project files
+msf-malnutrition/.classpath
+msf-malnutrition/.project
+msf-malnutrition-test/.classpath
+msf-malnutrition-test/.project

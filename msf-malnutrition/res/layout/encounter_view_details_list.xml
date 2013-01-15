@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/patient_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        layout="@layout/patient_list_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="6dip" >
+
+            <ImageButton
+                android:id="@+id/navigateLeftButton"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:layout_gravity="center"
+                android:src="@drawable/navigate_left48"
+                android:onClick="leftButtonClicked"  />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/encounterDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="05-06-2012"
+                    android:textSize="22dip" />
+
+                <TextView
+                    android:id="@+id/secondLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2/5" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/navigateRightButton"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:layout_gravity="center"
+                android:src="@drawable/navigate_right48"
+                android:onClick="rightButtonClicked" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

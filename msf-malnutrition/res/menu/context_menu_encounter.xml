@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+      <item android:id="@+id/view_encounter"
+              android:title="@string/view_encounter" />
+      <item android:id="@+id/edit_encounter"
+              android:title="@string/edit_encounter" />
+      <item android:id="@+id/delete_encounter"
+            android:title="@string/delete_encounter" />
+</menu>

@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/encounter" 
+     android:title="Encounter tools"
+     android:icon="@drawable/distributor_report24" >
+     
+     <menu android:id="@+id/submenu2">      
+	 
+	 <item android:id="@+id/create_encounter"
+	       android:title="Create an encounter"  /> 
+	       
+	 <item android:id="@+id/send_encounter"
+	       android:title="Send all the encounters"  />	
+     </menu>    
+</item>
+
+<item android:id="@+id/patient" 
+      android:title="Patient tools"
+      android:icon="@drawable/edit_user24">
+ 
+     <menu android:id="@+id/submenu">
+         
+	 <item android:id="@+id/add_patient"
+	       android:title="Send this patient"  />	
+           
+      <item android:id="@+id/edit_patient"
+	       android:title="Edit this patient" />	
+ 
+	 <item android:id="@+id/delete_patient"
+	       android:title="Delete this patient"  />
+     </menu>
+</item>
+</menu>

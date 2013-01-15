@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2009 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations under
+the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+<!-- Preferences -->
+    <string name="preferences_openmrs_connection_category_title">Connexion OpenMRS</string>
+    <string name="preferences_openmrs_connection_category_summary">Settings to configure connection to OpenMRS</string>
+    <string name="preferences_openmrs_server_title">OpenMRS URL du serveur</string>
+    <string name="preferences_openmrs_webservices_path_title">OpenMRS Webservices Path</string>
+    <string name="preferences_openmrs_login_title">OpenMRS Login</string>
+    <string name="preferences_openmrs_password_title">OpenMRS Mot de passe</string>
+    <string name="preferences_openmrs_server_key">openmrs_server</string>
+    <string name="preferences_openmrs_webservices_path_key">openmrs_webservices_path</string>
+    <string name="preferences_openmrs_login_key">openmrs_login</string>
+    <string name="preferences_openmrs_password_key">openmrs_password</string>
+    <string name="preferences_openmrs_server_default">http://ks11.ocg.msf.org:8080/openmrs/</string>
+    <string name="preferences_openmrs_webservices_path_default">ws/rest/</string>
+    <string name="preferences_openmrs_login_default">testPhoneAccount</string>
+    <string name="preferences_openmrs_password_default">Geneva9090</string>
+    <!-- Alexis fix -->
+    <!-- Thsese are for emptim -->
+    <string name="from_time_to_time">De temps en temps</string>
+    <string name="all_the_time">Tout le temps</string>
+    
+    <!-- Launch Screen -->
+    <string name="report_problem">Reporter un problème/suggestion</string>
+    <string name="global_preferences_label">Préférences générales</string>
+    <string name="resetDatabaseButton">Réinitialiser la base de données du téléphone</string>
+
+    <!-- Malnutrition -->
+    <string name="malnutrition_workflow_households">Ménages</string>
+    <string name="malnutrition_workflow_occupants">Occupants</string>
+    <string name="malnutrition_workflow_observations">Observations</string>
+    <string name="malnutrition_home_help">Aide!</string>
+    <string name="malnutrition_workflow_addnewchild">Nouvel enfant</string>
+    <string name="malnutrition_workflow_addnewchildmale">New male child</string>
+    <string name="malnutrition_workflow_addnewchildfemale">New female child</string>
+    
+    <string name="malnutrition_months_old">âge en mois</string>
+    <string name="malnutrition_verify_back_buttton">Retour</string>
+    <string name="malnutrition_verify_complete_buttton">Fin</string>
+    <string name="malnutrition_verify_instructions1">Vérifiez que vous avez entré toutes les informations sur les enfants du ménage avant de finir (opération irréversible)</string>
+    <string name="malnutrition_verify_males">Garçons enregistrés: </string>
+    <string name="malnutrition_verify_females">Filles enregistrées: </string>
+    <string name="malnutrition_verify_confirmation_title">Confirmation de l\'envoi</string>
+    <string name="malnutrition_verify_confirmation_message">Êtes-vous sûr de vouloir supprimer cet enregistrement?</string>
+    <string name="malnutrition_verify_form_saved">Formulaire sauvegardé !</string>
+    <string name="malnutrition_home_add_new_household_button">Ajouter un nouveau ménage</string>
+    <string name="malnutrition_home_search_previous_entries_button">Chercher données</string>
+    <string name="malnutrition_home_export_data">Exporter les données (CSV)</string>
+    <string name="malnutrition_home_addnewhousehold">Ajouter un nouveau ménage</string>
+    <string name="malnutrition_home_searchpreviousentries">Chercher données</string>
+    <string name="malnutrition_workflow_open_malnutrition_home">Projet Malnutrition</string>
+    <string name="malnutrition_home_tab_1">Malnutrition</string>
+    <string name="malnutrition_home_tab_2">En ligne</string>
+    <string name="malnutrition_home_tab_3">Administration</string>
+    <string name="malnutrition_pollster_id_key">malnutrition_id_enquêteur</string>
+    <string name="form_value_true">Vrai</string>
+    <string name="form_value_false">Faux</string>
+
+    <!-- Application global -->
+    <string name="app_name">MSF Malnutrition</string>
+    <string name="MSF_title">MSF Malnutrition</string>
+    <string name="form_loading">Patientez pendant le chargement du formulaire</string>
+    <string name="exit_form">Quitter le formulaire</string>
+    <string name="quit_form">Êtes-vous sur de vouloir quitter le formulaire? (toutes les données remplies ne seront pas sauvegardées)</string>
+    <string name="feature_unavailable">Fonction non disponible</string>
+    <string name="no_network_connection">Pas de connexion internet</string>
+    <string name="reset_database">Êtes-vous sûr de vouloir réinitialiser la base de données du téléphone?</string>
+    <string name="reset_database_confirmation">Êtes-vous vraiment sûr de vouloir supprimer TOUTE la base de données ? (vous allez perdre TOUTES les données stockées sur le téléphone)\n\nMot de passe :</string>
+    <string name="all_datas_deleted">Toutes les données ont été supprimées avec succès !</string>
+    <string name="password">Mot de passe :</string>
+    <string name="wrong_password" >Mot de passe incorrect</string>   
+    <!-- Old, for reference -->
+    <!--
+         <string name="change_password">Change Password</string>
+    <string name="change_server">Change URL</string>
+    <string name="default_password">Geneva9090</string>
+    <string name="default_server">http://ks11.ocg.msf.org:8080/openmrs</string>
+    <string name="default_username">testPhoneAccount</string>
+    -->
+
+
+    <!--
+    <string name="debug_settings_category">Debug Settings</string>
+    <string name="reload_data_every_startup_pref">reload_data_every_startup</string>
+    <string name="reload_data_on_first_startup_pref">reload_data_on_first_startup</string>
+    -->
+
+
+    <!-- VALUES FOR THE CHILD HTML FORM -->
+    <!-- Values for h1 titles -->
+    <string name="h1_pageone">Questionnaire enfant (1/5)</string>
+    <string name="h1_pagetwo">Questionnaire enfant (2/5)</string>
+    <string name="h1_pagethree">Questionnaire enfant (3/5)</string>
+    <string name="h1_pagefour">Questionnaire enfant (4/5)</string>
+    <string name="h1_pagefive">Questionnaire enfant (5/5)</string>
+    <string name="h1_submitpage">Questionnaire enfant  - Résumé</string>
+    <string name="h1_submitpage_2">Questionnaire enfant terminé</string>
+
+    <!-- Values for h2 titles -->
+    <string name="h2_child_survey_basic_informations">Questionnaire enfant -  Informations basiques</string>
+    <string name="h2_informations_about_child_family">Informations à propos de l\'enfant et de sa famille</string>
+    <string name="h2_informations_about_breastfeeding">Informations à propos de l\'allaitement</string>
+    <string name="h2_anthropometric_measurment">Mesure anthopométrique</string>
+    <string name="h2_morbidity_illness">Morbidité/Maladie</string>
+    <string name="h2_morbidity_illness_2">Morbidité/Maladie</string>
+
+    <!-- Values for the labels -->
+    <string name="lbl_suividat">Date de l\'enquête</string>
+    <string name="lbl_under_suividat">Précisez une date</string>
+    <string name="lbl_zone">Zone de responsabilité</string>
+    <string name="lbl_under_zone">Entrez le nom de la zone de responsabilité</string>
+    <string name="lbl_enqnom">Id de l\'enquêteur</string>
+    <string name="lbl_under_enqnom">Précisez un id correct</string>
+    <string name="lbl_nozone">Id de la zone</string>
+    <string name="lbl_under_nozone">Précisez un id correct</string>
+    <string name="lbl_menagn">Id du ménage</string>
+    <string name="lbl_under_menagn">Précisez un id correct</string>
+    <string name="lbl_villagen">Nom du village</string>
+    <string name="lbl_under_villagen">Entrez le nom du village</string>
+    <string name="lbl_novillage">Id du village</string>
+    <string name="lbl_under_novillage">Précisez un id correct</string>
+    <string name="lbl_enfantid">Id de l\'enfant</string>
+    <string name="lbl_under_enfantid">Précisez un id correct</string>
+    <string name="lbl_enfnom">Nom de l\'enfant</string>
+    <string name="lbl_under_enfnom">Entrez le nom de l\'enfant</string>
+    <string name="lbl_enfprenom">Prénom de l\'enfant</string>
+    <string name="lbl_under_enfprenom">Entrez le prénom de l\'enfant</string>
+    <string name="lbl_enfage">Âge de l\'enfant (en mois)</string>
+    <string name="lbl_under_enfage">Entrez un âge correct (doit être entre 5 et 25 mois)</string>
+    <string name="lbl_naissor">Comment avez-vous obtenu l\' âge?</string>
+    <string name="lbl_under_naissor">Vous devez spécifier une réponse</string>
+    <string name="lbl_enfsex">Sexe de l\'enfant</string>
+    <string name="lbl_under_enfsex">Vous devez spécifier une réponse</string>
+    <string name="lbl_mennom">Nom du chef de ménage</string>
+    <string name="lbl_under_mennom">Entrez le nom du chef de ménage</string>
+    <string name="lbl_localis">Location du domicile de l\'enfant. Définir où se trouve le domicile dans le village:</string>
+    <string name="lbl_under_localis">Renseignez ce champ</string>
+    <string name="lbl_vitavec">Avec qui l\'enfant vit-il habituellement?</string>
+    <string name="lbl_under_vitavec">Vous devez spécifier une réponse</string>
+    <string name="lbl_orphan">Est-ce que l\'enfant est orphelin?</string>
+    <string name="lbl_under_orphan">Vous devez spécifier une réponse</string>
+    <string name="lbl_coepouse">Nombre de co-épouse de la mère</string>
+    <string name="lbl_under_coepouse">Entrez un nombre correct de co-épouse.</string>
+    <string name="lbl_maritstat">Statut marital de la mère</string>
+    <string name="lbl_under_maritstat">Vous devez spécifier une réponse</string>
+    <string name="lbl_allaitna">L\'enfant a t-il allaité depuis la naissance?</string>
+    <string name="lbl_under_allaitna">Vous devez spécifier une réponse</string>
+    <string name="lbl_allaitag">Jusqu\'à quel âge l\'enfant a t\'il été exclusivement allaité? (en mois)</string>
+    <string name="lbl_under_allaitag">Vous devez spécifier une réponse</string>
+    <string name="lbl_laitcont">L\'enfant continue-t\'il d\'être allaité?</string>
+    <string name="lbl_under_laitcont">Vous devez spécifier une réponse</string>
+    <string name="lbl_vaccinat">L\'enfant a t\'il été vacciné?</string>
+    <string name="lbl_under_vaccinat">Vous devez spécifier une réponse</string>
+    <string name="lbl_typvacc">Quel vaccin a t\'il reçu? Voir carte de vaccination si possible</string>
+    <string name="lbl_under_typvacc">Vous devez spécifier une réponse</string>
+    <string name="lbl_pbmesure">Mesure périmètre brachial (mm)</string>
+    <string name="lbl_under_pbmesure">La valeur doit être comprise entre 50 et 180mm</string>
+    <string name="lbl_oedem">Oedeme bilatéraux aux pieds</string>
+    <string name="lbl_under_oedem">Vous devez spécifier une réponse</string>
+    <string name="lbl_poids">Poids de l\'enfant (en kg)</string>
+    <string name="lbl_under_poids">Le poids doit être compris entre 2 et 20kg</string>
+    <string name="lbl_taille">Taille de l\'enfant (en cm)</string>
+    <string name="lbl_under_taille">La taille de l\'enfant doit être entre 60 et 90cm</string>
+    <string name="lbl_malad">L\'enfant a t\'il été malade depuis la dernière visite?</string>
+    <string name="lbl_under_malad">Vous devez spécifier une réponse</string>
+    <string name="lbl_epcause">Quels étaient les symptomes/signes?</string>
+    <string name="lbl_under_epcause">Vous devez spécifier une réponse</string>
+    <string name="p_epcause">Ecrire les signes que la personne décrit et cocher les cases correspondantes</string>
+    <string name="lbl_eptemps">Combien de temps a duré l\'épisode de maladie?</string>
+    <string name="lbl_under_eptemps">Vous devez spécifier une réponse</string>
+    <string name="lbl_epsoin">Quelque chose a t\'il été fait à l\'apparition de la maladie par vous ou quelqu\'un de la famille?</string>
+    <string name="lbl_under_epsoin">Vous devez spécifier une réponse</string>
+    <string name="lbl_epnorai">Quelles sont les raisons de n\'avoir rien entrepris?</string>
+    <string name="lbl_under_epnorai">Vous devez spécifier une réponse</string>
+    <string name="lbl_eprecou">Quelle a été la démarche entreprise?</string>
+    <string name="lbl_under_eprecou">Vous devez spécifier une réponse</string>
+    <string name="lbl_admiss">L\'enfant a t\'il du être admis à l\'hopital ou dans un programme nutritionnel pour sa maladie?</string>
+    <string name="lbl_under_admiss">Vous devez spécifiez une réponse</string>
+    <string name="lbl_progadm">Dans quel programme a t\'il été admis?</string>
+    <string name="lbl_under_progadm">Vous devez spécifiez une réponse</string>
+    <string name="lbl_epevol">Comment l\'enfant a t-il évolué après cette démarche?</string>
+    <string name="lbl_under_epevol">Vous devez spécifiez une réponse</string>
+    <string name="lbl_eprest">L\'enfant est t\'il toujours malade aujourd\'hui?</string>
+    <string name="lbl_under_eprest">Vous devez spécifiez une réponse</string>
+    <string name="lbl_decision_1">Avez-vous du référer l\'enfant?</string>
+    <string name="lbl_under_decision_1">Vous devez spécifiez une réponse</string>
+    <string name="lbl_decision_2">À quel centre l\'avez vous référé?</string>
+    <string name="lbl_under_decision_2">Vous devez spécifiez une réponse</string>
+    <string name="lbl_progadm_2">L\'enfant a t\'il été admis dans un programme nutrition depuis notre dernière visite?</string>
+    <string name="lbl_under_progadm_2">Vous devez spécifiez une réponse</string>
+    <string name="lbl_typprog">Dans quel type de programme?</string>
+    <string name="lbl_under_typprog">Vous devez spécifiez une réponse</string>
+
+    <!-- Values for radiobuttons inside fieldsets -->
+
+
+    <!-- Values who are buggy -->
+    <string name="birth_certificate">Certificat de naissance</string>
+    <string name="calendar_local_events">Calendrier événements locaux</string>
+    <string name="male">Garçon</string>
+    <string name="female">Fille</string>
+
+    <!-- Values who are not buggy -->
+    <string name="at_nutritionnal_center_of_health_center">Au centre nutritionnel du centre de santé</string>
+    <string name="at_nutritionnal_center_of_massakorys_hospital">Au centre nutritionnel de l\'hôpital Massakory</string>
+    <string name="buy_drugs_at_market_private_pharmacy">Achat de médicaments au marché/Pharmacie privée</string>
+    <string name="buy_traditionnal_drugs_on_the_market">Achat de médicaments traditionnels sur le marché</string>
+    <string name="community_healthcare_worker">Agent de santé communautaire</string>
+    <string name="consult_community_health_worker">Consulter un agent de santé communautaire</string>
+    <string name="consult_dr_choco">Consulter Dr Choco</string>
+    <string name="consult_healer">Consulter un guérisseur</string>
+    <string name="consult_health_center">Consulter un centre de santé</string>
+    <string name="consult_marabut">Consulter un marabout</string>
+    <string name="consult_private_doctor">Consulter un médecin privé</string>
+    <string name="consulting_paramedical">Consulter un paramédical</string>
+    <string name="divorced">Divorcé</string>
+    <string name="dont_know">Ne sait pas</string>
+    <string name="father">Père</string>
+    <string name="financial">Financier</string>
+    <string name="followed_by_community_healthcare_worker">Suivi par un agent de santé communautaire</string>
+    <string name="go_to_hospital">Aller à l\'hôpital</string>
+    <string name="grand_mother">Grand-mère</string>
+    <string name="health_center">Centre de santé</string>
+    <string name="health_center_too_far">Centre de santé trop loin</string>
+    <string name="he_healed">Il a guéri</string>
+    <string name="he_improved">Il s\'est amélioré</string>
+    <string name="his_status_has_worsened">Son état s\'est aggravé</string>
+    <string name="hospital">Hôpital</string>
+    <string name="hospitalized_of_therapeutic_hospital_center_of_massakory">Hospitalisé au centre thérapeutique de l\'hôpital Massakory</string>
+    <string name="maried">Marié</string>
+    <string name="measles">Rougeole</string>
+    <string name="monitoring_at_health_center">Suivi au centre de santé</string>
+    <string name="monitoring_by_community_healthcare_worker">Suivi par un agent de santé communautaire</string>
+    <string name="mother">Mère</string>
+    <string name="no">Non</string>
+    <string name="no_change">Pas de changements</string>
+    <string name="no_time">Pas de temps</string>
+    <string name="no_transportation_means">Pas de moyens de transport</string>
+    <string name="not_serious_enough_a_sickness">Maladie pas suffisament grave</string>
+    <string name="of_father">De père</string>
+    <string name="of_mother">De mère</string>
+    <string name="one_two_days">1-2 jours</string>
+    <string name="on_going_treatment">Traitement en cours</string>
+    <string name="other">Autre</string>
+    <string name="pentalavent_two_three_injections">Pentavalent (2-3 injections)</string>
+    <string name="polio">Polio</string>
+    <string name="security_problems">Problèmes de sécurité</string>
+    <string name="separated">Séparé</string>
+    <string name="superior_five_days">> 5 jours</string>
+    <string name="three_five_days">3-5 jours</string>
+    <string name="too_serious_illness">Maladie trop grave</string>
+    <string name="using_drugs_already_at_home">Utilisation de médicaments pré-existant à la maison</string>
+    <string name="widowed">Veuf</string>
+    <string name="yes">Oui</string>
+
+    <!-- Values for the grid view -->
+    <string name="abdominal_pain">Douleur abdominale</string>
+    <string name="appetite_loss">Perte d\'appétit</string>
+    <string name="bleeding">Saignements</string>
+    <string name="breathing_difficulties">Difficultés à respirer</string>
+    <string name="burn">Brûlures</string>
+    <string name="constipation">Constipation</string>
+    <string name="convulsion">Convulsion</string>
+    <string name="cough">Toux</string>
+    <string name="diarrhea">Diarrhée</string>
+    <string name="ear_problems">Problèmes d\'oreilles</string>
+    <string name="eye_problems">Problèmes des yeux</string>
+    <string name="fever">Fièvre</string>
+    <string name="headache">Maux de tête</string>
+    <string name="not_specified">Non spécifié</string>
+    <string name="problem_pain_to_urinate">Problème/douleur pour uriner</string>
+    <string name="throat_problems">Problèmes de gorge</string>
+    <string name="trauma">Trauma</string>
+    <string name="vomiting">Vomissement</string>
+    <string name="weight_loss">Perte de poids</string>
+
+    <!-- Values for buttons -->
+    <string name="previousButton">Précédent</string>
+    <string name="helpButton">Aide</string>
+    <string name="nextButton">Suivant</string>
+    <string name="jumptostartButton">Retour au début</string>
+    <string name="submitchildButton">Enregistrer l\'enfant</string>
+    <string name="submithouseholdButton">Enregistrer le ménage</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="novalue">Pas de valeur</string>
+
+    <!-- Error messages -->
+    <string name="titleError">Erreur</string>
+    <string name="titleHelp">Aide</string>
+    <string name="messageCorrectAnswers">Corriger vos réponses avant d\'aller à la page suivante.</string>
+    <string name="messageNumberChildrenIncorrect">Le nombre total d\'enfants inférieur à 5 ans doit être inférieur ou égal au nombre total de personnes présentes dans le ménage.</string>
+    <string name="messageNumberChildrenSexIncorrect">Le nombre total d\'enfants de sexe masculin ou féminin inférieur à 5 ans doit être inférieur ou égal au nombre total de personnes du même sexe présentes dans le ménage.</string>
+    <string name="messageHelp">Pas de message d\'aide pour cette page. Si vous avez une question spécifique, demandez directement à France Broillet.</string>
+    <string name="noanswergiven">Pas de réponse</string>
+
+    <!-- Values Submit page -->
+    <string name="lbl_submitpage_review_child">Vérifiez l\'exactitude de vos réponses avant d\'enregistrer les données de l\'enfant</string>
+
+    <!-- VALUES FOR THE HOUSEHOLD HTML FORM (WHO AREN'T IN THE CHLID FORM YET) -->
+    <!-- Values for h1 titles -->
+    <string name="h1_householdpageone">Questionnaire ménage (1/8)</string>
+    <string name="h1_householdpagetwo">Questionnaire ménage (2/8)</string>
+    <string name="h1_householdpagethree">Questionnaire ménage (3/8)</string>
+    <string name="h1_householdpagefour">Questionnaire ménage (4/8)</string>
+    <string name="h1_householdpagefive">Questionnaire ménage (5/8)</string>
+    <string name="h1_householdpagesix">Questionnaire ménage (6/8)</string>
+    <string name="h1_householdpageseven">Questionnaire ménage (7/8)</string>
+    <string name="h1_householdpageeight">Questionnaire ménage (8/8)</string>
+    <string name="h1_householdsubmitpage">Questionnaire ménage - Résumé</string>
+    <string name="h1_householdsubmitpage_2">Questionnaire ménage terminé</string>
+
+    <!-- Values for h2 titles -->
+    <string name="h2_household_survey_basic_informations">Questionnaire ménage - Informations basiques</string>
+    <string name="h2_household_water_access">Accès à l\'eau</string>
+    <string name="h2_household_organisation">Organisation du ménage</string>
+    <string name="h2_household_language">Langage du ménage</string>
+    <string name="h2_household_demographics">Démographie du ménage</string>
+    <string name="h2_property_land_ownership">Propriété - Terres possédées</string>
+    <string name="h2_cash_income">Source de revenu en argent</string>
+    <string name="h2_expenditures">Source de dépenses</string>
+    <string name="h2_agricultural_production">Production agricole</string>
+    <string name="h2_agricultural_income_and_consumption">Revenu alimentaire et consommation</string>
+    <string name="h2_alimentary_rations">Rations alimentaires</string>
+    <string name="h2_issues_regarding_supplying_debts">Difficultés d\'approvisionnement / Dettes</string>
+
+    <!-- Values for the labels -->
+    <string name="lbl_nenfmen">Nombre d\'enfants du ménage dans cette enquête:</string>
+    <string name="lbl_under_nenfmen">Entrez un nombre correct</string>
+    <string name="lbl_eauorigi">D\'où vient principalement l\'eau que boivent les membres de la famille?</string>
+    <string name="lbl_under_eauorigi">Vous devez spécifier une réponse</string>
+    <string name="lbl_puitnum">Combien de temps faut-il pour aller là-bas?(prendre l\'eau et revenir)</string>
+    <string name="lbl_under_puitnum">Entrez un nombre correct de minutes</string>
+    <string name="lbl_cheffam">Qui est responsable du ménage?</string>
+    <string name="lbl_under_cheffam">Vous devez spécifier une réponse</string>
+    <string name="lbl_csidista">À combien de temps de marche est localisé le centre de santé le plus proche?</string>
+    <string name="lbl_under_csidista">Vous devez spécifier une réponse</string>
+    <string name="lbl_educnive">Quel est le plus haut niveau d\'études que le responsable du ménage a atteint?</string>
+    <string name="lbl_under_educnive">Vous devez spécifier une réponse</string>
+    <string name="lbl_educenf">À quelle école vont vos enfants?</string>
+    <string name="lbl_under_educenf">Vous devez spécifier une réponse</string>
+    <string name="lbl_menalang">Quel langage est parlé au sein du ménage?</string>
+    <string name="lbl_under_menalang">Vous devez spécifier une réponse</string>
+    <string name="lbl_menacara">Quel est le statut résidentiel de votre famille dans ce village?</string>
+    <string name="lbl_under_menacara">Vous devez spécifier une réponse</string>
+    <string name="lbl_champ">Posséder vous une surface de champs cultivable?</string>
+    <string name="lbl_under_champ">Vous devez spécifier une réponse</string>
+    <string name="lbl_surfcult">Quelle surface cultivable avez-vous?</string>
+    <string name="lbl_under_surfcult">Vous devez spécifier une réponse</string>
+    <string name="lbl_cutlsm">Cultivez vous vous même la terre que vous possédez?</string>
+    <string name="lbl_under_cutlsm">Vous devez spécifier une réponse</string>
+    <string name="lbl_qicult">Qui cultive votre terre?</string>
+    <string name="lbl_under_qicult">Vous devez spécifier une réponse</string>
+    <string name="lbl_emplch">Employez-vous des fois des personnes pour vous aider dans vos champs?</string>
+    <string name="lbl_under_emplch">Vous devez spécifier une réponse</string>
+    <string name="lbl_emptim">À quelle régularite employez-vous des personnes pour vous aider au champ?</string>
+    <string name="lbl_under_emptim">Vous devez spécifier une réponse</string>
+    <string name="lbl_outils">Avez-vous des outils pour cultiver?</string>
+    <string name="lbl_under_outils">Vous devez spécifier une réponse</string>
+    <string name="lbl_machine">Avez-vous des machines pour cultiver?</string>
+    <string name="lbl_under_machine">Vous devez spécifier une réponse</string>
+    <string name="lbl_cheptel">Pouvez-vous nous dire à peu près le nombre de cheptel que vous avez?</string>
+    <string name="lbl_under_cheptel">Vous devez spécifier une réponse</string>
+    <string name="lbl_transp">Votre famille possède t-elle un ou des moyens de transports motorisés?</string>
+    <string name="lbl_under_transp">Vous devez spécifier une réponse</string>
+    <string name="lbl_maison">Votre famille possède t-elle sa maison ou êtes-vous en en location?</string>
+    <string name="lbl_under_maison">Vous devez spécifier une réponse</string>
+    <string name="lbl_stock">Votre famille possède t-elle des bâtiments pour stocks?</string>
+    <string name="lbl_under_stock">Vous devez spécifier une réponse</string>
+    <string name="lbl_revso">Pouvez-vous nous dire de quelles activités votre revenu provient essentiellement?</string>
+    <string name="lbl_under_revso">Vous devez spécifier une réponse</string>
+    <string name="lbl_comerc">Vous ou votre famille fait elle du commerce?</string>
+    <string name="lbl_under_comerc">Vous devez spécifier une réponse</string>
+    <string name="lbl_emplo">Vous ou votre famille a t-elle des employés?</string>
+    <string name="lbl_under_emplo">Vous devez spécifier une réponse</string>
+    <string name="lbl_depens">Quelles sont les dépenses du ménage dans le mois par ordre de priorité?</string>
+    <string name="lbl_under_depens">Vous devez spécifier une réponse</string>
+    <string name="lbl_cultyp">Pouvez-vous nous dire ce que vous cultivez sur la surface que vous avez?</string>
+    <string name="lbl_under_cultyp">Vous devez spécifier une réponse</string>
+    <string name="lbl_recoltem">Avez-vous eu des récoltes dans les trois derniers mois?</string>
+    <string name="lbl_under_recoltem">Vous devez spécifier une réponse</string>
+    <string name="lbl_rectypem">Quel aliment avez-vous récolté?</string>
+    <string name="lbl_under_rectypem">Vous devez spécifier une réponse</string>
+    <string name="lbl_cultjad"> Avez-vous des cultures de jardin?</string>
+    <string name="lbl_under_cultjad">Vous devez spécifier une réponse</string>
+    <string name="lbl_recuti">Pouvez-vous nous dire ce que le ménage a fait de sa récolte?</string>
+    <string name="lbl_under_recuti">Vous devez spécifier une réponse</string>
+    <string name="lbl_consoma">Pouvez-vous nous dire ce que la famille a consommé dans les dernières 24 heures?</string>
+    <string name="lbl_under_consoma">Vous devez spécifier une réponse</string>
+    <string name="lbl_repnum">Pouvez-vous nous dire combien de repas la famille a pris durant les dernières 24 heures?</string>
+    <string name="lbl_under_repnum">Vous devez spécifier une réponse</string>
+    <string name="lbl_ratgfd">Pouvez-vous nous dire si le ménage a bénéficié de rations généralesde nourriture dans les derniers trois mois?(depuis le 1er Juillet)</string>
+    <string name="lbl_under_ratgfd">Vous devez spécifier une réponse</string>
+    <string name="lbl_ratcomp">Qu\'avez-vous reçu?</string>
+    <string name="lbl_under_ratcomp">Vous devez spécifier une réponse</string>
+    <string name="lbl_supnut">Des membres de votre famille ont-ils bénéficié de suppléments nutritionnels?</string>
+    <string name="lbl_under_supnut">Vous devez spécifier une réponse</string>
+    <string name="lbl_supnutyp">Quel type de supplément ont-ils reçu?</string>
+    <string name="lbl_under_supnutyp">Vous devez spécifier une réponse</string>
+    <string name="lbl_ratvente">Pouvez-vous nous dire si vous avez du vendre une partie de votre ration reçue?</string>
+    <string name="lbl_under_ratvente">Vous devez spécifier une réponse</string>
+    <string name="lbl_ratupart">Quels aliments?</string>
+    <string name="lbl_under_ratupart">Vous devez spécifier une réponse</string>
+    <string name="lbl_mecadapt">Que faîtes vous en priorité quand vous avez des ruptures de stock?</string>
+    <string name="lbl_under_mecadapt">Vous devez spécifier une réponse</string>
+    <string name="lbl_aprodiff">Avez-vous eu des difficultés a vous approvisionner ces 3 derniers mois?</string>
+    <string name="lbl_under_aprodiff">Vous devez spécifier une réponse</string>
+    <string name="lbl_revsoSupply">Qu\'avez vous fait?</string>
+    <string name="lbl_under_revsoSupply">Vous devez spécifier une réponse</string>
+    <string name="lbl_aprodiffMeans">Y\'a t\'il d\'autre moyens que votre famille a du adopter dans ces derniers jours/semaines?</string>
+    <string name="lbl_under_aprodiffMeans">Vous devez spécifier une réponse</string>
+    <string name="lbl_dette">Le ménage a t-il aujourd\'hui des dettes?</string>
+    <string name="lbl_under_dette">Vous devez spécifier une réponse</string>
+
+    <!-- Values for radiobuttons inside fieldsets -->
+    <string name="drilled_well_with_manual_pump">Puits avec forage (pompe manuelle)</string>
+    <string name="tip_well_or_protected">Puits buse ou protégé</string>
+    <string name="not_protected_well">Puits non protégé</string>
+    <string name="river__oxbow_lake__pond">Rivière / Marigot / Mare</string>
+    <string name="rainwater">Eau de pluie</string>
+    <string name="other_source">Autre source</string>
+    <string name="in_the_village">Dans le village</string>
+    <string name="less_than_thirty_minutes">Moins de 30 minutes</string>
+    <string name="between_thirty_minutes_and_one_hour">Entre 30 minutes et 1 heure</string>
+    <string name="between_one_and_two_hours">Entre 1 et 2 heures</string>
+    <string name="more_than_two_hours">Plus que 2 heures</string>
+    <string name="primary">Primaire</string>
+    <string name="secondary">Secondaire</string>
+    <string name="koranic_school">Ecole coranique</string>
+    <string name="university">Université</string>
+    <string name="none">Aucun</string>
+    <string name="private_school">Privée</string>
+    <string name="public_school">Publique</string>
+    <string name="arab">Arabe</string>
+    <string name="kanenmbu">Kanenmbu</string>
+    <string name="goran">Goran</string>
+    <string name="french">Français</string>
+    <string name="fulbe">Fulbe</string>
+    <string name="nomad_onehundred_percent">Nomade 100%</string>
+    <string name="nomad_and_sedentary">Nomade et sédentaire</string>
+    <string name="sedentary_onehundred_percent">Sédentaire 100%</string>
+    <string name="motorbike">Moto</string>
+    <string name="vehicle">Véhicule</string>
+    <string name="truck">Camion</string>
+    <string name="owner">Propriétaire</string>
+    <string name="tenant">Locataire</string>
+    <string name="mil">Mil</string>
+    <string name="niebe">Niebe</string>
+    <string name="other_peas">Autre pois</string>
+    <string name="corn_maize">Maïs</string>
+    <string name="vegetables">Culture maraichère</string>
+    <string name="rice">Riz</string>
+    <string name="peanuts">Arachide</string>
+    <string name="bean">Haricot</string>
+    <string name="bere_bere">Bere-bere</string>
+    <string name="consumption">Consommation</string>
+    <string name="conservation">Conservation</string>
+    <string name="sale_exchange_on_the_market">Vente/Echange sur le marché</string>
+    <string name="repayment_of_debt">Remboursement de dettes</string>
+    <string name="ceremonial_contribution">Cotisation cérémoniale</string>
+    <string name="cereals">Céréales</string>
+    <string name="root_tubers">Racines/Tubercules</string>
+    <string name="peas_lentils">Pois/Lentilles</string>
+    <string name="milk_dairy">Lait/Produits laitiers</string>
+    <string name="eggs">Oeufs</string>
+    <string name="meat_gut_offal">Viandes/Abats-intestin</string>
+    <string name="fish_lake_products">Poissons/Produit du lac</string>
+    <string name="oil_lipid">Huile/Lipide</string>
+    <string name="sugar_honey">Sucre/Miel</string>
+    <string name="fruits_vegetables">Fruits/Légumes</string>
+    <string name="nuts">Noix</string>
+    <string name="sorghum">Sorgho</string>
+    <string name="csb">CSB</string>
+    <string name="oil">Huile</string>
+    <string name="sugar">Sucre</string>
+    <string name="salt">Sel</string>
+    <string name="ppdoz">PPDOZ</string>
+    <string name="supplumpy_spp">Supplumpy/SPP</string>
+
+    <!-- Values for the grid view -->
+    <string name="total_number_of_persons_in_the_household">Nombre total de personnes dans le ménage</string>
+    <string name="number_of_children_under_five_years_old_present_in_the_household">Nombre d\'enfants inférieurs à 5 ans présent dans le ménage</string>
+    <string name="number_of_persons_who_arrived_in_the_household_last_three_months">Nombre de personnes qui sont arrivées dans le ménage dans les 3 derniers mois</string>
+    <string name="number_of_persons_who_left_the_household_last_three_months">Nombre de personnes qui ont quittés le ménage ces 3 derniers mois</string>
+    <string name="number_of_persons_who_died_in_the_household_last_three_months">Nombre de personnes qui sont mortes dans le ménage ces 3 derniers mois</string>
+    <string name="number_of_children_under_twofour_months_who_died_last_three_months">Nombre d\'enfants inférieurs à 24 mois qui sont morts ces 3 derniers mois</string>
+    <string name="camel">Chameau</string>
+    <string name="bull">Taureau</string>
+    <string name="cow">Vache</string>
+    <string name="sheep">Mouton</string>
+    <string name="goat">Chèvre</string>
+    <string name="poultry">Volaille</string>
+    <string name="horse">Cheval</string>
+
+    <!-- Values for tds -->
+    <string name="agricultural_production_sales">Vente de la production agricole</string>
+    <string name="loans">Emprunts</string>
+    <string name="working_for_money">Travail contre argent</string>
+    <string name="money_for_transfer">Transfert d\'argent</string>
+    <string name="unskilled_labor_manpower">Travail non qualifié / Main d\'oeuvre</string>
+    <string name="sale_of_livestock_beef_camel">Vente de bétail (boeuf-chameau)</string>
+    <string name="sale_exchange_of_little_animals">Vente-échange de petits animaux</string>
+    <string name="food">Nourriture</string>
+    <string name="water">Eau</string>
+    <string name="healthcare">Santé</string>
+    <string name="school_fees">Frais scolaires</string>
+    <string name="production_costs">Coûts de production</string>
+    <string name="personnal_effect">Effet personnel</string>
+    <string name="social_obligations">Obligations sociales</string>
+    <string name="rent">Loyer</string>
+    <string name="transport">Transport</string>
+    <string name="payment_to_employee">Paiement employé</string>
+    <string name="count_on_cheaper_food_or_less_appreciated">Compter sur la nourriture moins chère ou moins appreciée</string>
+    <string name="borrow_food_with_help_from_parents">Emprunter de la nourriture, aidé par des parents</string>
+    <string name="collect_wild_foods_that_i_do_not_consume_usually">Collecter des aliments sauvages qu\'habituellement je ne consomme pas</string>
+    <string name="harvest_immature_cultures">Recolter des cultures immatures</string>
+    <string name="consume_seed_stocks_held_for_future_agricultural_season">Consommer les stocks de semences conservés pour la future saison agricole</string>
+    <string name="reduce_meal_portions">Réduire les portions des repas </string>
+    <string name="reduce_number_of_daily_meals">Réduire le nombre de repas par jour</string>
+    <string name="reduce_adults_consumption_so_that_children_can_eat">Reduction de la consommation pour les adultes afin que les enfants puissent manger </string>
+    <string name="reduce_spending_on_health_and_education">Reduire les dépenses pour la santé et l\'éducation</string>
+    <string name="use_savings_to_buy_food">Utiliser les économies pour acheter de la nourriture</string>
+    <string name="beg">Mendier</string>
+    <string name="sell_household_articles_kitchen_utensil_blanket">Vente articles de ménage (ustensiles, couverture)</string>
+    <string name="sell_household_supplies">Vente de fournitures de ménage </string>
+    <string name="sell_poultry">Vente de volaille</string>
+    <string name="sell_little_animalsgoats_sheeps">Vente de petits animaux(chèvres, moutons)</string>
+    <string name="sell_large_animals_herd">Vente de grand animaux, troupeau</string>
+    <string name="sell_breeding_livestock">Vente du bétail de reproduction</string>
+    <string name="borrow_money_from_parents_or_neighbors">Emprunt d\'argent à des parents ou voisins</string>
+    <string name="family_member_moving_to_seek_work">Déplacement d\'un membre famille pour aller chercher du travail</string>
+
+    <!-- Values Submit page -->
+    <string name="lbl_submitpage_review_household">Vérifiez l\'exactitude de vos réponses avant d\'enregistrer les données du ménage</string>
+    <string name="malnutrition_continue_from_child_entry">Questionnaire terminé</string>
+    <string name="malnutrition_child_entry_form_household_chief_label">Chef du ménage:</string>
+    <string name="malnutrition_child_entry_form_household_id">ID du ménage:</string>
+    <string name="malnutrition_child_entry_form_village_label">Village:</string>
+</resources>

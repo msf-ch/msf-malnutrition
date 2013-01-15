@@ -1,0 +1,263 @@
+package org.msf.android.htmlforms.malnutrition;
+
+import org.msf.android.R;
+import org.msf.android.activities.malnutrition.MalnutritionWorkflowActivity;
+import org.msf.android.fragments.malnutrition.MalnutritionChildSummaryFragment;
+import org.msf.android.fragments.malnutrition.MalnutritionFormFragment;
+import org.msf.android.fragments.malnutrition.MalnutritionVerifySubmissionFragment;
+import org.msf.android.openmrs.malnutrition.MalnutritionHousehold;
+
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.os.Looper;
+import android.support.v4.app.FragmentTransaction;
+import android.widget.Toast;
+
+public class MalnutritionWorkflowManager implements LocationListener {
+
+	public static String HOUSEHOLD_FORM_URL = "file:///android_asset/child_malnutrition/html/formpages_household.html";
+	public static String CHILD_FORM_URL = "file:///android_asset/child_malnutrition/html/formpages_child.html";
+
+	public static String TAG_WORKFLOW_CONTENT = "WORKFLOW_CONTENT";
+	public static String TAG_HOUSEHOLD_ENTRY_FRAGMENT = "HOUSEHOLD_ENTRY_FRAGMENT";
+	public static String TAG_CHILD_SUMMARY_FRAGMENT = "CHILD_SUMMARY_FRAGMENT";
+	public static String TAG_CHILD_ENTRY_FRAGMENT = "CHILD_ENTRY_FRAGMENT";
+
+	private MalnutritionWorkflowActivity workflowActivity;
+
+	private HouseholdInterface householdInterface;
+	private ChildInterface childInterface;
+
+	private MalnutritionHousehold household;
+
+	private LocationManager mLocationManager;
+
+	private boolean householdFormStarted = false;
+	private boolean householdFormFinished = false;
+	private boolean childSummaryStarted = false;
+	private boolean childSummaryFinished = false;
+
+	private boolean fillingChildSummary = false;
+
+	public MalnutritionWorkflowManager(MalnutritionWorkflowActivity activity) {
+		// access all layers
+		this.workflowActivity = activity;
+	}
+
+	public void initialize() {
+		mLocationManager = (LocationManager) workflowActivity
+				.getSystemService(Context.LOCATION_SERVICE);
+		mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+				0, 0, this);
+
+		startHouseholdForm();
+	}
+
+	public void startHouseholdForm() {
+		if (getHouseholdInterface() == null) {
+			setHouseholdInterface(new HouseholdInterface(this));
+		}
+
+		MalnutritionFormFragment formFragment = new MalnutritionFormFragment();
+		FragmentTransaction transaction = workflowActivity
+				.getSupportFragmentManager().beginTransaction();
+		transaction.add(R.id.malnutrition_workflow_content, formFragment,
+				TAG_HOUSEHOLD_ENTRY_FRAGMENT);
+		transaction.disallowAddToBackStack();
+		transaction.commit();
+
+		formFragment.initializeWebView(HOUSEHOLD_FORM_URL,
+				getHouseholdInterface());
+
+		householdFormStarted = true;
+	}
+
+	public void finishHouseholdForm() {
+		if (getHouseholdInterface().getHousehold() != null) {
+			setHousehold(getHouseholdInterface().getHousehold());
+		}
+		householdFormFinished = true;
+
+		startChildSummary();
+	}
+
+	public void startChildSummary() {
+		MalnutritionChildSummaryFragment frag = new MalnutritionChildSummaryFragment();
+		FragmentTransaction transaction = workflowActivity
+				.getSupportFragmentManager().beginTransaction();
+
+		transaction.replace(R.id.malnutrition_workflow_content, frag, TAG_CHILD_SUMMARY_FRAGMENT);
+		transaction.addToBackStack(null);
+
+		transaction.commit();
+
+		setChildSummaryStarted(true);
+	}
+
+	public void finishChildSummary() {
+		setChildSummaryFinished(true);
+
+		startReview();
+		// finishReview();
+	}
+
+	public void startNewChildForm() {
+		setChildInterface(new ChildInterface(this, getHouseholdInterface()
+				.getHousehold()));
+		MalnutritionFormFragment childFormFragment = new MalnutritionFormFragment();
+		FragmentTransaction transaction = workflowActivity
+				.getSupportFragmentManager().beginTransaction();
+
+		transaction.replace(R.id.malnutrition_workflow_content,
+				childFormFragment, TAG_CHILD_ENTRY_FRAGMENT);
+		// transaction.disallowAddToBackStack();
+		transaction.addToBackStack(null);
+
+		transaction.commit();
+
+		childFormFragment
+				.initializeWebView(CHILD_FORM_URL, getChildInterface());
+		setFillingChildSummary(true);
+	}
+
+	public void finishNewChildForm() {
+		workflowActivity.getSupportFragmentManager().popBackStack();
+		setFillingChildSummary(false);
+	}
+
+	public void startReview() {
+		MalnutritionVerifySubmissionFragment verifyFragment = new MalnutritionVerifySubmissionFragment();
+
+		FragmentTransaction transaction = workflowActivity
+				.getSupportFragmentManager().beginTransaction();
+		transaction.add(R.id.malnutrition_workflow_content, verifyFragment, "");
+		transaction.addToBackStack(null);
+
+		transaction.commit();
+	}
+
+	public void finishReview() {
+		workflowActivity.finish();
+
+		Toast.makeText(
+				workflowActivity,
+				workflowActivity
+						.getString(R.string.malnutrition_verify_form_saved),
+				Toast.LENGTH_LONG).show();
+	}
+
+	public void onActivityDestroy() {
+		if (mLocationManager != null) {
+			mLocationManager.removeUpdates(this);
+		}
+	}
+
+	public void backFromReview() {
+		workflowActivity.getSupportFragmentManager().popBackStack();
+
+		setChildSummaryFinished(false);
+	}
+
+	public MalnutritionHousehold getHousehold() {
+		return household;
+	}
+
+	public void setHousehold(MalnutritionHousehold household) {
+		this.household = household;
+	}
+
+	public boolean isHouseholdFormStarted() {
+		return householdFormStarted;
+	}
+
+	public void setHouseholdFormStarted(boolean householdFormStarted) {
+		this.householdFormStarted = householdFormStarted;
+	}
+
+	public boolean isHouseholdFormFinished() {
+		return householdFormFinished;
+	}
+
+	public void setHouseholdFormFinished(boolean householdFormFinished) {
+		this.householdFormFinished = householdFormFinished;
+	}
+
+	public boolean isChildSummaryStarted() {
+		return childSummaryStarted;
+	}
+
+	public void setChildSummaryStarted(boolean childSummaryStarted) {
+		this.childSummaryStarted = childSummaryStarted;
+	}
+
+	public boolean isChildSummaryFinished() {
+		return childSummaryFinished;
+	}
+
+	public void setChildSummaryFinished(boolean childSummaryFinished) {
+		this.childSummaryFinished = childSummaryFinished;
+	}
+
+	public HouseholdInterface getHouseholdInterface() {
+		return householdInterface;
+	}
+
+	public void setHouseholdInterface(HouseholdInterface householdInterface) {
+		this.householdInterface = householdInterface;
+	}
+
+	public ChildInterface getChildInterface() {
+		return childInterface;
+	}
+
+	public void setChildInterface(ChildInterface childInterface) {
+		this.childInterface = childInterface;
+	}
+
+	public boolean isFillingChildSummary() {
+		return fillingChildSummary;
+	}
+
+	public void setFillingChildSummary(boolean fillingChildSummary) {
+		this.fillingChildSummary = fillingChildSummary;
+	}
+
+	/* LocationListener functions */
+
+	@Override
+	public void onLocationChanged(Location location) {
+		// Toast.makeText(workflowActivity,
+		// "Longitude: " + location.getLongitude() + ", Latitude: "
+		// + location.getLatitude(), Toast.LENGTH_LONG).show();
+		try {
+
+			getHouseholdInterface().setLatitude(location.getLatitude());
+			getHouseholdInterface().setLongitude(location.getLongitude());
+
+			mLocationManager.removeUpdates(this);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void onProviderDisabled(String provider) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onProviderEnabled(String provider) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onStatusChanged(String provider, int status, Bundle extras) {
+		// TODO Auto-generated method stub
+
+	}
+}

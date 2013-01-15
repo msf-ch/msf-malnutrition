@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms">
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
+		<h:title ref="jr:itext('cholera_ctc_slash_ctu')">Cholera CTC/CTU</h:title>
+		<xf:model id="openmrs_model">
+			<xf:instance id="openmrs_model_instance">
+				<form xmlns:xd="http://schemas.microsoft.com/office/infopath/2003"
+					xmlns:openmrs="/moduleServlet/formentry/forms/schema/18-1" id="18"
+					name="Cholera CTC/CTU" version="0.1">
+					<header>
+						<enterer></enterer>
+						<date_entered></date_entered>
+						<session></session>
+						<uid></uid>
+					</header>
+					<patient>
+						<patient.birthdate openmrs_attribute="birthdate"
+							openmrs_table="patient"></patient.birthdate>
+						<patient.patient_id openmrs_attribute="patient_id"
+							openmrs_table="patient"></patient.patient_id>
+					</patient>
+					<encounter>
+						<encounter.encounter_datetime
+							openmrs_attribute="encounter_datetime" openmrs_table="encounter">'today()'
+						</encounter.encounter_datetime>
+						<encounter.location_id openmrs_attribute="location_id"
+							openmrs_table="encounter"></encounter.location_id>
+						<encounter.provider_id openmrs_attribute="provider_id"
+							openmrs_table="encounter"></encounter.provider_id>
+					</encounter>
+					<obs>
+						<person_image openmrs_concept="6123^Person Image^99DCT"
+							openmrs_datatype="ST">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</person_image>
+
+
+						<cholera multiple="0" openmrs_concept="198^CHOLERA^99DCT"
+							openmrs_datatype="CWE">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</cholera>
+
+
+						<place_of_origin openmrs_concept="6102^Place of Origin^99DCT"
+							openmrs_datatype="ST">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</place_of_origin>
+
+
+						<referral_origin multiple="0"
+							openmrs_concept="6103^Referral origin^99DCT" openmrs_datatype="CWE">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</referral_origin>
+
+
+						<date_of_first_symptoms openmrs_concept="6107^Date of First Symptoms^99DCT"
+							openmrs_datatype="DT">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</date_of_first_symptoms>
+
+
+						<cholera_treatment_plan multiple="0"
+							openmrs_concept="6109^Cholera Treatment Plan^99DCT"
+							openmrs_datatype="CWE">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</cholera_treatment_plan>
+
+
+						<ringer_solution openmrs_concept="6113^Ringer Solution (L)^99DCT"
+							openmrs_datatype="NM">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</ringer_solution>
+
+
+						<current_pregnancy_status multiple="0"
+							openmrs_concept="6125^Current Pregnancy Status^99DCT"
+							openmrs_datatype="CWE">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</current_pregnancy_status>
+
+
+						<date_of_discharge openmrs_concept="6114^Date of Discharge^99DCT"
+							openmrs_datatype="DT">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</date_of_discharge>
+
+
+						<outcome_of_cholera multiple="0"
+							openmrs_concept="6115^Outcome of Cholera^99DCT" openmrs_datatype="CWE">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</outcome_of_cholera>
+
+
+						<weight_kg openmrs_concept="5089^WEIGHT (KG)^99DCT"
+							openmrs_datatype="NM">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</weight_kg>
+
+
+						<free_text_entry openmrs_concept="6126^Free Text Entry^99DCT"
+							openmrs_datatype="ST">
+
+
+							<date xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></date>
+
+
+							<time xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></time>
+
+
+							<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+								xsi:nil="true"></value>
+
+
+						</free_text_entry>
+
+
+					</obs>
+					<other></other>
+				</form>
+			</xf:instance>
+			<xf:bind id="patient.patient_id" jr:preload="patient"
+				jr:preloadParams="patientId" locked="true()"
+				nodeset="/form/patient/patient.patient_id" type="xsd:int"></xf:bind>
+
+
+			<xf:bind id="cholera" nodeset="/form/obs/cholera/value" type="xsd:string"></xf:bind>
+
+
+			<xf:bind format="image" id="person_image" nodeset="/form/obs/person_image/value"
+				type="binary"></xf:bind>
+
+
+			<xf:bind id="place_of_origin" nodeset="/form/obs/place_of_origin/value"
+				type="xsd:string"></xf:bind>
+
+
+			<xf:bind id="referral_origin" nodeset="/form/obs/referral_origin/value"
+				type="xsd:string"></xf:bind>
+
+
+			<xf:bind id="date_of_first_symptoms" nodeset="/form/obs/date_of_first_symptoms/value"
+				type="xsd:date"></xf:bind>
+
+
+			<xf:bind id="cholera_treatment_plan" nodeset="/form/obs/cholera_treatment_plan/value"
+				type="xsd:string"></xf:bind>
+
+
+			<xf:bind id="ringer_solution" nodeset="/form/obs/ringer_solution/value"
+				type="xsd:decimal"></xf:bind>
+
+
+			<xf:bind id="date_of_discharge" nodeset="/form/obs/date_of_discharge/value"
+				type="xsd:date"></xf:bind>
+
+
+			<xf:bind id="outcome_of_cholera" nodeset="/form/obs/outcome_of_cholera/value"
+				type="xsd:string"></xf:bind>
+
+
+			<xf:bind id="patient.birthdate" jr:preload="patient"
+				jr:preloadParams="birthDate" locked="true()"
+				nodeset="/form/patient/patient.birthdate" type="xsd:date"></xf:bind>
+
+
+			<xf:bind calculate="today()" id="free_text_entry"
+				nodeset="/form/obs/free_text_entry/value" type="xsd:string"></xf:bind>
+
+
+			<xf:bind constraint=". &gt;= 0.0 and . &lt;= 250.0" id="weight_kg"
+				jr:constraintMsg="value should be between 0.0 and 250.0 inclusive"
+				nodeset="/form/obs/weight_kg/value"
+				ref="jr:itext('value_should_be_between_0.0_and_250.0_inclusive')"
+				type="xsd:decimal"></xf:bind>
+
+
+			<xf:bind action="show" id="current_pregnancy_status"
+				nodeset="/form/obs/current_pregnancy_status/value" relevant="/form/obs/weight_kg/value = 20"
+				required="false()" type="xsd:string" visible="false()"></xf:bind>
+
+
+			<xf:bind constraint=". &lt;= today()" id="encounter.encounter_datetime"
+				jr:constraintMsg="Encounter date cannot be after today" nodeset="/form/encounter/encounter.encounter_datetime"
+				ref="jr:itext('encounter_date_cannot_be_after_today')" required="true()"
+				type="xsd:date"></xf:bind>
+
+
+			<xf:bind id="encounter.location_id" nodeset="/form/encounter/encounter.location_id"
+				required="true()" type="xsd:string"></xf:bind>
+
+
+			<xf:bind id="encounter.provider_id" nodeset="/form/encounter/encounter.provider_id"
+				required="true()" type="xsd:string"></xf:bind>
+
+
+			<itext>
+
+
+				<translation lang="en" lang-name="English">
+
+
+					<text id="cholera_ctc_slash_ctu">
+
+
+						<value>Cholera CTC/CTU</value>
+
+
+					</text>
+
+
+					<text id="page1">
+
+
+						<value>Page1</value>
+
+
+					</text>
+
+
+					<text id="patient_id">
+
+
+						<value>PATIENT ID</value>
+
+
+					</text>
+
+
+					<text id="cholera">
+
+
+						<value>CHOLERA</value>
+
+
+					</text>
+
+
+					<text
+						id="vibrio_infection_of_the_colon_causing_massive_watery_diarrhea.">
+
+
+						<value>Vibrio infection of the colon causing massive watery
+							diarrhea.
+						</value>
+
+
+					</text>
+
+
+					<text id="mild_cholera">
+
+
+						<value>Mild Cholera</value>
+
+
+					</text>
+
+
+					<text id="moderate_cholera">
+
+
+						<value>Moderate Cholera</value>
+
+
+					</text>
+
+
+					<text id="severe_cholera">
+
+
+						<value>Severe Cholera</value>
+
+
+					</text>
+
+
+					<text id="not_cholera">
+
+
+						<value>Not cholera</value>
+
+
+					</text>
+
+
+					<text id="person_image">
+
+
+						<value>Person Image</value>
+
+
+					</text>
+
+
+					<text id="take_a_picture_bang">
+
+
+						<value>Take a picture!</value>
+
+
+					</text>
+
+
+					<text id="place_of_origin">
+
+
+						<value>Place of Origin</value>
+
+
+					</text>
+
+
+					<text id="the_home_town_of_the_patient">
+
+
+						<value>The home town of the patient</value>
+
+
+					</text>
+
+
+					<text id="referral_origin">
+
+
+						<value>Referral origin</value>
+
+
+					</text>
+
+
+					<text id="the_clinic_type_from_which_the_patient_was_referred">
+
+
+						<value>The clinic type from which the patient was referred</value>
+
+
+					</text>
+
+
+					<text id="spontaneous_admission">
+
+
+						<value>Spontaneous Admission</value>
+
+
+					</text>
+
+
+					<text id="referred_by_ctu">
+
+
+						<value>Referred by CTU</value>
+
+
+					</text>
+
+
+					<text id="referred_by_ors_point">
+
+
+						<value>Referred by ORS Point</value>
+
+
+					</text>
+
+
+					<text id="referred_by_third_party_healthcare_provider">
+
+
+						<value>Referred by Third Party Healthcare Provider</value>
+
+
+					</text>
+
+
+					<text id="date_of_first_symptoms">
+
+
+						<value>Date of First Symptoms</value>
+
+
+					</text>
+
+
+					<text id="cholera_treatment_plan">
+
+
+						<value>Cholera Treatment Plan</value>
+
+
+					</text>
+
+
+					<text id="cholera_treatment_plan_a">
+
+
+						<value>Cholera Treatment Plan A</value>
+
+
+					</text>
+
+
+					<text id="cholera_treatment_plan_b">
+
+
+						<value>Cholera Treatment Plan B</value>
+
+
+					</text>
+
+
+					<text id="cholera_treatment_plan_c">
+
+
+						<value>Cholera Treatment Plan C</value>
+
+
+					</text>
+
+
+					<text id="ringer_solution_l">
+
+
+						<value>Ringer Solution (L)</value>
+
+
+					</text>
+
+
+					<text id="date_of_discharge">
+
+
+						<value>Date of Discharge</value>
+
+
+					</text>
+
+
+					<text id="outcome_of_cholera">
+
+
+						<value>Outcome of Cholera</value>
+
+
+					</text>
+
+
+					<text id="cholera_resolved">
+
+
+						<value>Cholera Resolved</value>
+
+
+					</text>
+
+
+					<text id="cholera_resolved_with_sequelae">
+
+
+						<value>Cholera Resolved with Sequelae</value>
+
+
+					</text>
+
+
+					<text id="death_from_cholera">
+
+
+						<value>Death from Cholera</value>
+
+
+					</text>
+
+
+					<text id="birthdate">
+
+
+						<value>BIRTHDATE</value>
+
+
+					</text>
+
+
+					<text id="free_text_entry">
+
+
+						<value>Free Text Entry</value>
+
+
+					</text>
+
+
+					<text id="enter_in_any_additional_comments_here">
+
+
+						<value>Enter in any additional comments here</value>
+
+
+					</text>
+
+
+					<text id="weight_kg">
+
+
+						<value>WEIGHT (KG)</value>
+
+
+					</text>
+
+
+					<text id="patients_weight_in_kilograms.">
+
+
+						<value>Patient's weight in kilograms.</value>
+
+
+					</text>
+
+
+					<text id="current_pregnancy_status">
+
+
+						<value>Current Pregnancy Status</value>
+
+
+					</text>
+
+
+					<text id="is_the_patient_pregnant">
+
+
+						<value>Is the patient pregnant?</value>
+
+
+					</text>
+
+
+					<text id="no">
+
+
+						<value>NO</value>
+
+
+					</text>
+
+
+					<text id="yes">
+
+
+						<value>YES</value>
+
+
+					</text>
+
+
+					<text id="not_recorded">
+
+
+						<value>Not Recorded</value>
+
+
+					</text>
+
+
+					<text id="encounter_datetime">
+
+
+						<value>ENCOUNTER DATETIME</value>
+
+
+					</text>
+
+
+					<text id="location_id">
+
+
+						<value>LOCATION ID</value>
+
+
+					</text>
+
+
+					<text id="chulaimbo_4">
+
+
+						<value>Chulaimbo [4]</value>
+
+
+					</text>
+
+
+					<text id="mosoriot_hospital_3">
+
+
+						<value>Mosoriot Hospital [3]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_1">
+
+
+						<value>Unknown Location [1]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_10_11">
+
+
+						<value>Unknown Location 10 [11]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_11_12">
+
+
+						<value>Unknown Location 11 [12]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_12_13">
+
+
+						<value>Unknown Location 12 [13]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_13_14">
+
+
+						<value>Unknown Location 13 [14]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_14_15">
+
+
+						<value>Unknown Location 14 [15]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_15_16">
+
+
+						<value>Unknown Location 15 [16]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_16_17">
+
+
+						<value>Unknown Location 16 [17]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_17_18">
+
+
+						<value>Unknown Location 17 [18]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_18_19">
+
+
+						<value>Unknown Location 18 [19]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_4_5">
+
+
+						<value>Unknown Location 4 [5]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_5_6">
+
+
+						<value>Unknown Location 5 [6]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_6_7">
+
+
+						<value>Unknown Location 6 [7]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_7_8">
+
+
+						<value>Unknown Location 7 [8]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_8_9">
+
+
+						<value>Unknown Location 8 [9]</value>
+
+
+					</text>
+
+
+					<text id="unknown_location_9_10">
+
+
+						<value>Unknown Location 9 [10]</value>
+
+
+					</text>
+
+
+					<text id="wishard_hospital_2">
+
+
+						<value>Wishard Hospital [2]</value>
+
+
+					</text>
+
+
+					<text id="provider_id">
+
+
+						<value>PROVIDER ID</value>
+
+
+					</text>
+
+
+					<text id="msf_geneva_test_9347">
+
+
+						<value>MSF Geneva Test [9347]</value>
+
+
+					</text>
+
+
+					<text id="super_user_1">
+
+
+						<value>Super User [1]</value>
+
+
+					</text>
+
+
+					<text id="value_should_be_between_0.0_and_250.0_inclusive">
+
+
+						<value>value should be between 0.0 and 250.0 inclusive</value>
+
+
+					</text>
+
+
+					<text id="encounter_date_cannot_be_after_today">
+
+
+						<value>Encounter date cannot be after today</value>
+
+
+					</text>
+
+
+				</translation>
+
+
+			</itext>
+
+
+		</xf:model>
+
+
+	</h:head>
+
+
+	<h:body>
+
+
+		<xf:group id="1">
+
+
+			<xf:label ref="jr:itext('page1')"></xf:label>
+
+
+			<xf:input bind="patient.patient_id">
+
+
+				<xf:label ref="jr:itext('patient_id')"></xf:label>
+
+
+			</xf:input>
+
+
+			<xf:select1 bind="cholera">
+
+
+				<xf:label ref="jr:itext('cholera')"></xf:label>
+
+
+				<xf:hint
+					ref="jr:itext('vibrio_infection_of_the_colon_causing_massive_watery_diarrhea.')"></xf:hint>
+
+
+				<xf:item id="6100^Mild Cholera^99DCT">
+
+
+					<xf:label ref="jr:itext('mild_cholera')"></xf:label>
+
+
+					<xf:value>6100^Mild Cholera^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6101^Moderate Cholera^99DCT">
+
+
+					<xf:label ref="jr:itext('moderate_cholera')"></xf:label>
+
+
+					<xf:value>6101^Moderate Cholera^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6099^Severe Cholera^99DCT">
+
+
+					<xf:label ref="jr:itext('severe_cholera')"></xf:label>
+
+
+					<xf:value>6099^Severe Cholera^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6127^Not cholera^99DCT">
+
+
+					<xf:label ref="jr:itext('not_cholera')"></xf:label>
+
+
+					<xf:value>6127^Not cholera^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+			</xf:select1>
+
+
+			<xf:upload bind="person_image" mediatype="image/*">
+
+
+				<xf:label ref="jr:itext('person_image')"></xf:label>
+
+
+				<xf:hint ref="jr:itext('take_a_picture_bang')"></xf:hint>
+
+
+			</xf:upload>
+
+
+			<xf:input bind="place_of_origin">
+
+
+				<xf:label ref="jr:itext('place_of_origin')"></xf:label>
+
+
+				<xf:hint ref="jr:itext('the_home_town_of_the_patient')"></xf:hint>
+
+
+			</xf:input>
+
+
+			<xf:select1 bind="referral_origin">
+
+
+				<xf:label ref="jr:itext('referral_origin')"></xf:label>
+
+
+				<xf:hint
+					ref="jr:itext('the_clinic_type_from_which_the_patient_was_referred')"></xf:hint>
+
+
+				<xf:item id="6104^Spontaneous Admission^99DCT">
+
+
+					<xf:label ref="jr:itext('spontaneous_admission')"></xf:label>
+
+
+					<xf:value>6104^Spontaneous Admission^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6119^Referred by CTU^99DCT">
+
+
+					<xf:label ref="jr:itext('referred_by_ctu')"></xf:label>
+
+
+					<xf:value>6119^Referred by CTU^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6120^Referred by ORS Point^99DCT">
+
+
+					<xf:label ref="jr:itext('referred_by_ors_point')"></xf:label>
+
+
+					<xf:value>6120^Referred by ORS Point^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6121^Referred by Third Party Healthcare Provider^99DCT">
+
+
+					<xf:label ref="jr:itext('referred_by_third_party_healthcare_provider')"></xf:label>
+
+
+					<xf:value>6121^Referred by Third Party Healthcare Provider^99DCT
+					</xf:value>
+
+
+				</xf:item>
+
+
+			</xf:select1>
+
+
+			<xf:input bind="date_of_first_symptoms">
+
+
+				<xf:label ref="jr:itext('date_of_first_symptoms')"></xf:label>
+
+
+			</xf:input>
+
+
+			<xf:select1 bind="cholera_treatment_plan">
+
+
+				<xf:label ref="jr:itext('cholera_treatment_plan')"></xf:label>
+
+
+				<xf:item id="6110^Cholera Treatment Plan A^99DCT">
+
+
+					<xf:label ref="jr:itext('cholera_treatment_plan_a')"></xf:label>
+
+
+					<xf:value>6110^Cholera Treatment Plan A^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6111^Cholera Treatment Plan B^99DCT">
+
+
+					<xf:label ref="jr:itext('cholera_treatment_plan_b')"></xf:label>
+
+
+					<xf:value>6111^Cholera Treatment Plan B^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6112^Cholera Treatment Plan C^99DCT">
+
+
+					<xf:label ref="jr:itext('cholera_treatment_plan_c')"></xf:label>
+
+
+					<xf:value>6112^Cholera Treatment Plan C^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+			</xf:select1>
+
+
+			<xf:input bind="ringer_solution">
+
+
+				<xf:label ref="jr:itext('ringer_solution_l')"></xf:label>
+
+
+			</xf:input>
+
+
+			<xf:input bind="date_of_discharge">
+
+
+				<xf:label ref="jr:itext('date_of_discharge')"></xf:label>
+
+
+			</xf:input>
+
+
+			<xf:select1 bind="outcome_of_cholera">
+
+
+				<xf:label ref="jr:itext('outcome_of_cholera')"></xf:label>
+
+
+				<xf:item id="6117^Cholera Resolved^99DCT">
+
+
+					<xf:label ref="jr:itext('cholera_resolved')"></xf:label>
+
+
+					<xf:value>6117^Cholera Resolved^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6118^Cholera Resolved with Sequelae^99DCT">
+
+
+					<xf:label ref="jr:itext('cholera_resolved_with_sequelae')"></xf:label>
+
+
+					<xf:value>6118^Cholera Resolved with Sequelae^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6116^Death from Cholera^99DCT">
+
+
+					<xf:label ref="jr:itext('death_from_cholera')"></xf:label>
+
+
+					<xf:value>6116^Death from Cholera^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+			</xf:select1>
+
+
+			<xf:input bind="patient.birthdate">
+
+
+				<xf:label ref="jr:itext('birthdate')"></xf:label>
+
+
+			</xf:input>
+
+
+			<xf:input bind="free_text_entry">
+
+
+				<xf:label ref="jr:itext('free_text_entry')"></xf:label>
+
+
+				<xf:hint ref="jr:itext('enter_in_any_additional_comments_here')"></xf:hint>
+
+
+			</xf:input>
+
+
+			<xf:input bind="weight_kg">
+
+
+				<xf:label ref="jr:itext('weight_kg')"></xf:label>
+
+
+				<xf:hint ref="jr:itext('patients_weight_in_kilograms.')"></xf:hint>
+
+
+			</xf:input>
+
+
+			<xf:select1 bind="current_pregnancy_status">
+
+
+				<xf:label ref="jr:itext('current_pregnancy_status')"></xf:label>
+
+
+				<xf:hint ref="jr:itext('is_the_patient_pregnant')"></xf:hint>
+
+
+				<xf:item id="1066^NO^99DCT">
+
+
+					<xf:label ref="jr:itext('no')"></xf:label>
+
+
+					<xf:value>1066^NO^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="1065^YES^99DCT">
+
+
+					<xf:label ref="jr:itext('yes')"></xf:label>
+
+
+					<xf:value>1065^YES^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6124^Not Recorded^99DCT">
+
+
+					<xf:label ref="jr:itext('not_recorded')"></xf:label>
+
+
+					<xf:value>6124^Not Recorded^99DCT</xf:value>
+
+
+				</xf:item>
+
+
+			</xf:select1>
+
+
+			<xf:input bind="encounter.encounter_datetime">
+
+
+				<xf:label ref="jr:itext('encounter_datetime')"></xf:label>
+
+
+			</xf:input>
+
+
+			<xf:select1 bind="encounter.location_id">
+
+
+				<xf:label ref="jr:itext('location_id')"></xf:label>
+
+
+				<xf:item id="4">
+
+
+					<xf:label ref="jr:itext('chulaimbo_4')"></xf:label>
+
+
+					<xf:value>4</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="3">
+
+
+					<xf:label ref="jr:itext('mosoriot_hospital_3')"></xf:label>
+
+
+					<xf:value>3</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="1">
+
+
+					<xf:label ref="jr:itext('unknown_location_1')"></xf:label>
+
+
+					<xf:value>1</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="11">
+
+
+					<xf:label ref="jr:itext('unknown_location_10_11')"></xf:label>
+
+
+					<xf:value>11</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="12">
+
+
+					<xf:label ref="jr:itext('unknown_location_11_12')"></xf:label>
+
+
+					<xf:value>12</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="13">
+
+
+					<xf:label ref="jr:itext('unknown_location_12_13')"></xf:label>
+
+
+					<xf:value>13</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="14">
+
+
+					<xf:label ref="jr:itext('unknown_location_13_14')"></xf:label>
+
+
+					<xf:value>14</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="15">
+
+
+					<xf:label ref="jr:itext('unknown_location_14_15')"></xf:label>
+
+
+					<xf:value>15</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="16">
+
+
+					<xf:label ref="jr:itext('unknown_location_15_16')"></xf:label>
+
+
+					<xf:value>16</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="17">
+
+
+					<xf:label ref="jr:itext('unknown_location_16_17')"></xf:label>
+
+
+					<xf:value>17</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="18">
+
+
+					<xf:label ref="jr:itext('unknown_location_17_18')"></xf:label>
+
+
+					<xf:value>18</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="19">
+
+
+					<xf:label ref="jr:itext('unknown_location_18_19')"></xf:label>
+
+
+					<xf:value>19</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="5">
+
+
+					<xf:label ref="jr:itext('unknown_location_4_5')"></xf:label>
+
+
+					<xf:value>5</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="6">
+
+
+					<xf:label ref="jr:itext('unknown_location_5_6')"></xf:label>
+
+
+					<xf:value>6</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="7">
+
+
+					<xf:label ref="jr:itext('unknown_location_6_7')"></xf:label>
+
+
+					<xf:value>7</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="8">
+
+
+					<xf:label ref="jr:itext('unknown_location_7_8')"></xf:label>
+
+
+					<xf:value>8</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="9">
+
+
+					<xf:label ref="jr:itext('unknown_location_8_9')"></xf:label>
+
+
+					<xf:value>9</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="10">
+
+
+					<xf:label ref="jr:itext('unknown_location_9_10')"></xf:label>
+
+
+					<xf:value>10</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="2">
+
+
+					<xf:label ref="jr:itext('wishard_hospital_2')"></xf:label>
+
+
+					<xf:value>2</xf:value>
+
+
+				</xf:item>
+
+
+			</xf:select1>
+
+
+			<xf:select1 bind="encounter.provider_id">
+
+
+				<xf:label ref="jr:itext('provider_id')"></xf:label>
+
+
+				<xf:item id="9347">
+
+
+					<xf:label ref="jr:itext('msf_geneva_test_9347')"></xf:label>
+
+
+					<xf:value>9347</xf:value>
+
+
+				</xf:item>
+
+
+				<xf:item id="1">
+
+
+					<xf:label ref="jr:itext('super_user_1')"></xf:label>
+
+
+					<xf:value>1</xf:value>
+
+
+				</xf:item>
+
+
+
+			</xf:select1>
+
+
+		</xf:group>
+
+
+	</h:body>
+
+
+</h:html>

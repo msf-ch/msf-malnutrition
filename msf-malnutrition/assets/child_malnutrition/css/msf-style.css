@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+.center-wrapper {
+	text-align: center;
+	margin-left: auto;
+	margin-rignt: auto;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.ui-content {
+	background-color: white;
+}
+.center-wrapper * {
+	
+}
+
+.missing  {
+  color:#FF0000;
+  font-weight:bold;
+}
+
+.fifty-percent {
+	width: 90%;
+}
+
+.formintro {
+	text-align: center;
+}
+
+.footer-wrapper {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.red-text-bold {
+	color: red;
+	font-weight: bold;
+}
+
+.red-text {
+	color: red;
+	font-size: 70%;
+}
+
+.error {
+    border: solid 2px #FF0000;  
+}
+
+.datefield {
+	width: 70% !important;
+	text-align: center;
+}
+
+#today {
+	width: 50%;
+}
+
+#age {
+	width: 50%;
+}
+
+#addquarantinelocation {
+	width: 50%;
+}
+
+#namelocationquarantine {
+	width: 50%;
+}
+
+label {
+   font-weight: bold;
+}
+td {
+	width: 50%;
+}
+/* .ui-page {
+	-webkit-backface-visibility: hidden;
+} */

@@ -1,0 +1,1126 @@
+#
+# generated on 2012/09/09 10:25:12
+#
+# --table-start--
+dataClass=org.msf.android.openmrs.Cohort
+tableName=cohorts
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Concept
+tableName=concepts
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=datatype
+dataPersister=ENUM_STRING
+# --field-end--
+# --field-start--
+fieldName=conceptClass
+# --field-end--
+# --field-start--
+fieldName=set
+# --field-end--
+# --field-start--
+fieldName=version
+# --field-end--
+# --field-start--
+fieldName=retired
+# --field-end--
+# --field-start--
+fieldName=answers
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.ConceptClass
+tableName=conceptClasses
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=retired
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Drug
+tableName=drug
+# --table-fields-start--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Encounter
+tableName=encounters
+# --table-fields-start--
+# --field-start--
+fieldName=encounterDatetime
+# --field-end--
+# --field-start--
+fieldName=encounterType
+# --field-end--
+# --field-start--
+fieldName=patientUuid
+# --field-end--
+# --field-start--
+fieldName=dbPatient
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=location
+# --field-end--
+# --field-start--
+fieldName=form
+# --field-end--
+# --field-start--
+fieldName=provider
+# --field-end--
+# --field-start--
+fieldName=patientName
+# --field-end--
+# --field-start--
+fieldName=obs
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.EncounterType
+tableName=encounterTypes
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=retired
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Field
+tableName=fields
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=fieldType
+# --field-end--
+# --field-start--
+fieldName=concept
+# --field-end--
+# --field-start--
+fieldName=tableName
+# --field-end--
+# --field-start--
+fieldName=attributeName
+# --field-end--
+# --field-start--
+fieldName=defaultValue
+# --field-end--
+# --field-start--
+fieldName=selectMultiple
+# --field-end--
+# --field-start--
+fieldName=answers
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.FieldType
+tableName=fieldtypes
+# --table-fields-start--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Form
+tableName=forms
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=version
+# --field-end--
+# --field-start--
+fieldName=published
+# --field-end--
+# --field-start--
+fieldName=encounterType
+# --field-end--
+# --field-start--
+fieldName=formFields
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.FormField
+tableName=formfields
+# --table-fields-start--
+# --field-start--
+fieldName=fieldNumber
+# --field-end--
+# --field-start--
+fieldName=fieldPart
+# --field-end--
+# --field-start--
+fieldName=pageNumber
+# --field-end--
+# --field-start--
+fieldName=minOccurs
+# --field-end--
+# --field-start--
+fieldName=maxOccurs
+# --field-end--
+# --field-start--
+fieldName=required
+# --field-end--
+# --field-start--
+fieldName=sortWeight
+# --field-end--
+# --field-start--
+fieldName=fieldType
+# --field-end--
+# --field-start--
+fieldName=fieldName
+# --field-end--
+# --field-start--
+fieldName=conceptUuid
+# --field-end--
+# --field-start--
+fieldName=tableName
+# --field-end--
+# --field-start--
+fieldName=attributeName
+# --field-end--
+# --field-start--
+fieldName=defaultValue
+# --field-end--
+# --field-start--
+fieldName=selectMultiple
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Location
+tableName=location
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=address1
+# --field-end--
+# --field-start--
+fieldName=address2
+# --field-end--
+# --field-start--
+fieldName=cityVillage
+# --field-end--
+# --field-start--
+fieldName=stateProvince
+# --field-end--
+# --field-start--
+fieldName=country
+# --field-end--
+# --field-start--
+fieldName=postalCode
+# --field-end--
+# --field-start--
+fieldName=latitude
+# --field-end--
+# --field-start--
+fieldName=longitude
+# --field-end--
+# --field-start--
+fieldName=countyDistrict
+# --field-end--
+# --field-start--
+fieldName=address3
+# --field-end--
+# --field-start--
+fieldName=address4
+# --field-end--
+# --field-start--
+fieldName=address5
+# --field-end--
+# --field-start--
+fieldName=address6
+# --field-end--
+# --field-start--
+fieldName=tags
+# --field-end--
+# --field-start--
+fieldName=parentLocation
+# --field-end--
+# --field-start--
+fieldName=childLocations
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.LocationTag
+tableName=locationtag
+# --table-fields-start--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.malnutrition.MalnutritionChild
+tableName=malnutritionchild
+# --table-fields-start--
+# --field-start--
+fieldName=givenName
+# --field-end--
+# --field-start--
+fieldName=familyName
+# --field-end--
+# --field-start--
+fieldName=birthDate
+# --field-end--
+# --field-start--
+fieldName=age
+# --field-end--
+# --field-start--
+fieldName=idNumber
+# --field-end--
+# --field-start--
+fieldName=gender
+# --field-end--
+# --field-start--
+fieldName=household
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=obs
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=exportedToFile
+# --field-end--
+# --field-start--
+fieldName=exportedToOpenMrs
+# --field-end--
+# --field-start--
+fieldName=entryCompleted
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.malnutrition.MalnutritionHousehold
+tableName=malnutritionhousehold
+# --table-fields-start--
+# --field-start--
+fieldName=householdChief
+# --field-end--
+# --field-start--
+fieldName=village
+# --field-end--
+# --field-start--
+fieldName=surveyDate
+# --field-end--
+# --field-start--
+fieldName=householdId
+# --field-end--
+# --field-start--
+fieldName=longitude
+# --field-end--
+# --field-start--
+fieldName=latitude
+# --field-end--
+# --field-start--
+fieldName=children
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=obs
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=exportedToFile
+# --field-end--
+# --field-start--
+fieldName=exportedToOpenMrs
+# --field-end--
+# --field-start--
+fieldName=entryCompleted
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.malnutrition.MalnutritionObject
+tableName=malnutritionobject
+# --table-fields-start--
+# --field-start--
+fieldName=exportedToFile
+# --field-end--
+# --field-start--
+fieldName=exportedToOpenMrs
+# --field-end--
+# --field-start--
+fieldName=entryCompleted
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.malnutrition.MalnutritionObservation
+tableName=malnutritionobservation
+# --table-fields-start--
+# --field-start--
+fieldName=concept
+# --field-end--
+# --field-start--
+fieldName=value
+# --field-end--
+# --field-start--
+fieldName=child
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=household
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=exportedToFile
+# --field-end--
+# --field-start--
+fieldName=exportedToOpenMrs
+# --field-end--
+# --field-start--
+fieldName=entryCompleted
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.MobileConfig
+tableName=mobileconfig
+# --table-fields-start--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Observation
+tableName=obs
+# --table-fields-start--
+# --field-start--
+fieldName=person
+# --field-end--
+# --field-start--
+fieldName=obsDatetime
+# --field-end--
+# --field-start--
+fieldName=concept
+# --field-end--
+# --field-start--
+fieldName=encounter
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=encounterDate
+# --field-end--
+# --field-start--
+fieldName=fieldName
+# --field-end--
+# --field-start--
+fieldName=voided
+# --field-end--
+# --field-start--
+fieldName=stringValue
+# --field-end--
+# --field-start--
+fieldName=dateValue
+# --field-end--
+# --field-start--
+fieldName=intValue
+# --field-end--
+# --field-start--
+fieldName=floatValue
+# --field-end--
+# --field-start--
+fieldName=booleanValue
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.OpenMRSObject
+tableName=openmrsobject
+# --table-fields-start--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Patient
+tableName=patient
+# --table-fields-start--
+# --field-start--
+fieldName=serializedIdentifiers
+# --field-end--
+# --field-start--
+fieldName=serializedAddresses
+# --field-end--
+# --field-start--
+fieldName=preferredPatientIdentifier
+# --field-end--
+# --field-start--
+fieldName=gender
+# --field-end--
+# --field-start--
+fieldName=birthdate
+# --field-end--
+# --field-start--
+fieldName=birthdateEstimated
+# --field-end--
+# --field-start--
+fieldName=dead
+# --field-end--
+# --field-start--
+fieldName=deathDate
+# --field-end--
+# --field-start--
+fieldName=givenName
+# --field-end--
+# --field-start--
+fieldName=middleName
+# --field-end--
+# --field-start--
+fieldName=familyName
+# --field-end--
+# --field-start--
+fieldName=familyName2
+# --field-end--
+# --field-start--
+fieldName=familyNameSuffix
+# --field-end--
+# --field-start--
+fieldName=encounters
+foreignCollection=true
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Person
+tableName=person
+# --table-fields-start--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.PersonAddress
+tableName=addresses
+# --table-fields-start--
+# --field-start--
+fieldName=patient
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=preferred
+# --field-end--
+# --field-start--
+fieldName=address1
+# --field-end--
+# --field-start--
+fieldName=address2
+# --field-end--
+# --field-start--
+fieldName=cityVillage
+# --field-end--
+# --field-start--
+fieldName=stateProvince
+# --field-end--
+# --field-start--
+fieldName=country
+# --field-end--
+# --field-start--
+fieldName=postalCode
+# --field-end--
+# --field-start--
+fieldName=countyDistrict
+# --field-end--
+# --field-start--
+fieldName=address3
+# --field-end--
+# --field-start--
+fieldName=address4
+# --field-end--
+# --field-start--
+fieldName=address5
+# --field-end--
+# --field-start--
+fieldName=address6
+# --field-end--
+# --field-start--
+fieldName=startDate
+# --field-end--
+# --field-start--
+fieldName=endDate
+# --field-end--
+# --field-start--
+fieldName=latitude
+# --field-end--
+# --field-start--
+fieldName=longitude
+# --field-end--
+# --field-start--
+fieldName=voided
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.Ref
+tableName=refs
+# --table-fields-start--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=org.msf.android.openmrs.User
+tableName=users
+# --table-fields-start--
+# --field-start--
+fieldName=username
+# --field-end--
+# --field-start--
+fieldName=systemId
+# --field-end--
+# --field-start--
+fieldName=person
+# --field-end--
+# --field-start--
+fieldName=secretQuestion
+# --field-end--
+# --field-start--
+fieldName=retired
+# --field-end--
+# --field-start--
+fieldName=databaseId
+columnName=_id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=uuid
+# --field-end--
+# --field-start--
+fieldName=eTag
+# --field-end--
+# --field-start--
+fieldName=lastSyncedDate
+# --field-end--
+# --field-start--
+fieldName=locallyCreatedDate
+# --field-end--
+# --field-start--
+fieldName=display
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

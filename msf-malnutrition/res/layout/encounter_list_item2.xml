@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/encounter_list_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/encounter_left_icon"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/encounter_icon" />
+
+    <RelativeLayout
+        android:id="@+id/encounter_top_row"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@id/encounter_left_icon" >
+
+        <TextView
+            android:id="@+id/formNameField"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Form name?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/encounter_date_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/formNameField"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:maxLines="1"
+            android:text="01/01/2000"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/blue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/encounter_row_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/encounter_top_row"
+        android:layout_toRightOf="@id/encounter_left_icon" >
+
+        <TextView
+            android:id="@+id/encounter_name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Encounter name field?"
+            android:textColor="@drawable/gray"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
+</RelativeLayout>

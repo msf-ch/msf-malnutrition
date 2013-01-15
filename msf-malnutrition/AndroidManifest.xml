@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.msf.android"
+    android:versionCode="2"
+    android:versionName="1.01" >
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+    <application
+        android:name=".app.MSFClinicApp"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MSFStandard"
+        android:allowBackup="true" >
+        <activity
+            android:name=".activities.PreferencesActivity2"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.MSFIntroActivity"
+            android:label="@string/MSF_title"
+            android:noHistory="true"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".activities.LaunchScreenActivity"
+            android:label="@string/MSF_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DebugActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.SearchPatientActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.ShowRecentPatientsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.SearchEncounterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.ShowRecentEncountersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.HTMLFormActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HTMLFormPatientActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HTMLFormTestActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HTMLFormEncounterActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ViewPatientActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activities.ViewEncounterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activities.SelectFormActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activities.PreferencesActivity"
+            android:label="@string/title_activity_preferences" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.preference.PreferenceActivity" />
+        </activity>
+        <activity
+            android:name=".activities.malnutrition.HTMLFormHouseholdActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.malnutrition.HTMLFormChildActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.malnutrition.MalnutritionHomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activities.malnutrition.MalnutritionWorkflowActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- Disabled, don't need internet for back up right now
+        <service
+            android:name=".services.MSFBackupService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name=".services.InternetStatusReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="Internet status receiver" >
+            <intent-filter>
+                <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="org.msf.android.REMINDER_ACTION" />
+                <action android:name="org.msf.android.SCHEDULED_BACKUP" />
+            </intent-filter>
+        </receiver>
+        -->
+    </application>
+
+</manifest>

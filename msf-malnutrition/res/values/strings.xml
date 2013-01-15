@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2009 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations under
+the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Alexistranslate -->
+    <string name="malnutrition_backup_progressdialog_title">Data backup</string>
+    <string name="malnutrition_backup_progressdialog_saving_households">Saving households...</string>
+    <string name="malnutrition_backup_progressdialog_saving_children">Saving children...</string>
+    <string name="malnutrition_backup_progressdialog_uploading">Uploading files to server...</string>
+    <string name="malnutrition_periodic_reminder_title">Reminder from MSF</string>
+    <string name="malnutrition_periodic_reminder_message">Connect to wireless networks whenever possible!</string>
+
+    <!-- Application global -->
+    <string name="app_name">MSF Malnutrition</string>
+    <string name="MSF_title">MSF Malnutrition</string>
+
+    <!-- Preferences -->
+    <string name="preferences_openmrs_connection_category_title">OpenMRS Connection</string>
+    <string name="preferences_openmrs_connection_category_summary">Settings to configure connection to OpenMRS</string>
+    <string name="preferences_openmrs_server_title">OpenMRS Server URL</string>
+    <string name="preferences_openmrs_webservices_path_title">OpenMRS Webservices Path</string>
+    <string name="preferences_openmrs_login_title">OpenMRS Login</string>
+    <string name="preferences_openmrs_password_title">OpenMRS Password</string>
+    <string name="preferences_openmrs_server_key">openmrs_server</string>
+    <string name="preferences_openmrs_webservices_path_key">openmrs_webservices_path</string>
+    <string name="preferences_openmrs_login_key">openmrs_login</string>
+    <string name="preferences_openmrs_password_key">openmrs_password</string>
+    <string name="preferences_openmrs_server_default">http://ks11.ocg.msf.org:8080/openmrs/</string>
+    <string name="preferences_openmrs_webservices_path_default">ws/rest/</string>
+    <string name="preferences_openmrs_login_default">testPhoneAccount</string>
+    <string name="preferences_openmrs_password_default">Geneva9090</string>
+
+    <!-- MSF Intro -->
+    <string name="msf_intro_ok_button">Continue</string>
+    <string name="msf_intro_text">This application will be used in <b><u>Cholera Treatment Centres</u></b> and <b><u>Cholera Treatment Units</u></b>.\n\nUse the following form entry to input information about the patient, the severity of patients\' cholera, and various treatments that are administered.</string>
+
+    <!-- Launch Screen -->
+    <string name="report_problem">Report a problem/suggestion</string>
+    <string name="global_preferences_label">Global preferences</string>
+    <string name="lessons_cholera">View the cholera video</string>
+    <string name="test_gps_function">"Test GPS function"</string>
+
+    <!-- Malnutrition -->
+
+    <string name="malnutrition_workflow_households">Households</string>
+    <string name="malnutrition_workflow_occupants">Occupants</string>
+    <string name="malnutrition_workflow_observations">Observations</string>
+    <string name="malnutrition_home_help">Help!</string>
+    <string name="malnutrition_workflow_addnewchild">New child</string>
+    <string name="malnutrition_workflow_addnewchildmale">New male child</string>
+    <string name="malnutrition_workflow_addnewchildfemale">New female child</string>
+    <string name="malnutrition_preference_key_pollster_id">pollster_id</string>
+    <string name="malnutrition_preference_key_">pollster_id</string>
+    
+    <string name="malnutrition_months_old">months old</string>
+    <string name="malnutrition_verify_back_buttton">Back</string>
+    <string name="malnutrition_verify_complete_buttton">Finish</string>
+    <string name="malnutrition_verify_instructions1">Please verify that you have entered all child info before finishing:</string>
+    <string name="malnutrition_verify_males">Males recorded: </string>
+    <string name="malnutrition_verify_females">Females recorded: </string>
+    <string name="malnutrition_verify_confirmation_title">Confirmation of submission</string>
+    <string name="malnutrition_verify_confirmation_message">Are you sure you want to delete this record?</string>
+    <string name="malnutrition_verify_form_saved">Form saved!</string>
+    <string name="malnutrition_home_add_new_household_button">Add a new household</string>
+    <string name="malnutrition_home_search_previous_entries_button">Search previous entries</string>
+    <string name="malnutrition_home_export_data">Back up data</string>
+    <string name="malnutrition_home_addnewhousehold">Add new household</string>
+    <string name="malnutrition_home_searchpreviousentries">Search Previous Entries</string>
+    <string name="malnutrition_workflow_open_malnutrition_home">Malnutrition Project</string>
+    <string name="malnutrition_home_tab_1">Malnutrition</string>
+    <string name="malnutrition_home_tab_2">Online</string>
+    <string name="malnutrition_home_tab_3">Admin</string>
+    <string name="malnutrition_pollster_id_key">malnutrition_pollster_id</string>
+    <string name="form_value_true">True</string>
+    <string name="form_value_false">False</string>
+
+    <!-- Unsorted -->
+    <string name="openmrs">OpenMRS</string>
+    <string name="password">Password :</string>
+    <string name="search_hint">Enter patient name or ID</string>
+    <string name="search_enc">Enter patient name</string>
+    <string name="server">URL</string>
+    <string name="server_preferences">Change Settings</string>
+    <string name="username">Username</string>
+    <string name="view_patient">View Patient</string>
+    <string name="delete_patient">Delete Patient</string>
+    <string name="edit_patient">Edit Patient</string>
+    <string name="change_username">Edit Patient</string>
+    <string name="view_encounter">View encounter</string>
+    <string name="edit_encounter">Edit encounter</string>
+    <string name="delete_encounter">Delete encounter</string>
+    <string name="first_startup_pref">first_startup</string>
+    <string name="show_preferences_button_text">Show Preferences</string>
+    <string name="launch_screen_search_patients">Search OpenMRS</string>
+    <string name="resetDatabaseButton">Reset Phone\'s Database</string>
+    <string name="downloadConfig">Download OpenMRS Config</string>
+    <string name="givenNameLabel">"Given Name: "</string>
+    <string name="middleNameLabel">"Middle Name: "</string>
+    <string name="familyNameLabel">"Family Name: "</string>
+    <string name="birthdateLabel">Birthdate:</string>
+    <string name="register_new_patient">Register New Patient</string>
+    <string name="enter_new_encounter">New Encounter With Existing Patient</string>
+    <string name="search_local_encounters">Search Local Encounters</string>
+    <string name="search_local_patients">Search Stored Patients</string>
+    <string name="show_recent_patients">Recent Patients</string>
+    <string name="show_recent_encounters">Recent Encounters</string>
+    <string name="search_online_patients">Search Online Patients</string>
+    <string name="search_online_encounters">Search Online Encounters</string>
+    <string name="search_online_cohorts">Search Online Cohorts</string>
+    <string name="send_new_entries">Send New Patients and Encounters</string>
+    <string name="search">"Search: "</string>
+    <string name="select_form">"Select form"</string>
+    <string name="test_html_form_performance">"Test HTML performance"</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="form_loading">Please wait while the form is loading</string>
+    <string name="exit_form">Quit the form</string>
+    <string name="quit_form">Are you sure you want to quit the form? (all the data that are filled out will be unsaved)</string>
+    <string name="feature_unavailable">Function unavailable</string>
+    <string name="no_network_connection">No internet connection</string>
+    <string name="reset_database">Are you sure you want to reset the phone\'s database?</string>
+    <string name="reset_database_confirmation">Are you really sure you want to delete the ENTIRE database ? (you will lost ALL the datas stored on the phone)\n\nPassword :</string>
+    <string name="all_datas_deleted">All datas have been successfully deleted !</string>
+    <string name="wrong_password">Wrong password</string>
+    
+    <!-- Old, for reference -->
+    <!--
+         <string name="change_password">Change Password</string>
+    <string name="change_server">Change URL</string>
+    <string name="default_password">Geneva9090</string>
+    <string name="default_server">http://ks11.ocg.msf.org:8080/openmrs</string>
+    <string name="default_username">testPhoneAccount</string>
+    -->
+
+
+    <!--
+    <string name="debug_settings_category">Debug Settings</string>
+    <string name="reload_data_every_startup_pref">reload_data_every_startup</string>
+    <string name="reload_data_on_first_startup_pref">reload_data_on_first_startup</string>
+    -->
+
+
+    <!-- VALUES FOR THE CHILD HTML FORM -->
+    <!-- Values for h1 titles -->
+    <string name="h1_pageone">Child form (1/5)</string>
+    <string name="h1_pagetwo">Child form (2/5)</string>
+    <string name="h1_pagethree">Child form (3/5)</string>
+    <string name="h1_pagefour">Child form (4/5)</string>
+    <string name="h1_pagefive">Child form (5/5)</string>
+    <string name="h1_submitpage">Child form - Summary</string>
+    <string name="h1_submitpage_2">Child form completed</string>
+
+    <!-- Values for h2 titles -->
+    <string name="h2_child_survey_basic_informations">CHILD SURVEY BASIC INFORMATIONS</string>
+    <string name="h2_informations_about_child_family">INFORMATIONS ABOUT THE CHILD AND HIS FAMILY</string>
+    <string name="h2_informations_about_breastfeeding">INFORMATIONS ABOUT BREASTFEEDING</string>
+    <string name="h2_anthropometric_measurment">ANTHROPOMETRIC MEASUREMENT</string>
+    <string name="h2_morbidity_illness">MORBIDITY / ILLNESS</string>
+    <string name="h2_morbidity_illness_2">MORBIDITY / ILLNESS</string>
+
+    <!-- Values for the labels -->
+    <string name="lbl_suividat">Survey date</string>
+    <string name="lbl_under_suividat">Specify a date please</string>
+    <string name="lbl_zone">Responsability area</string>
+    <string name="lbl_under_zone">Enter the name of the responsability area</string>
+    <string name="lbl_enqnom">Pollster id</string>
+    <string name="lbl_under_enqnom">Specify a correct id please</string>
+    <string name="lbl_nozone">Area id</string>
+    <string name="lbl_under_nozone">Specify a correct id please</string>
+    <string name="lbl_menagn">Household id</string>
+    <string name="lbl_under_menagn">Specify a correct id please</string>
+    <string name="lbl_villagen">Village name</string>
+    <string name="lbl_under_villagen">Enter the village name please</string>
+    <string name="lbl_novillage">Village id</string>
+    <string name="lbl_under_novillage">Specify a correct id please</string>
+    <string name="lbl_enfantid">Child id</string>
+    <string name="lbl_under_enfantid">Specify a correct id please</string>
+    <string name="lbl_enfnom">Child\'s last (family) name</string>
+    <string name="lbl_under_enfnom">Enter the child\'s last (family) name please</string>
+    <string name="lbl_enfprenom">Child\'s first (given) name</string>
+    <string name="lbl_under_enfprenom">Enter the child\'s first (given) name</string>
+    <string name="lbl_enfage">Age of the child (in months)</string>
+    <string name="lbl_under_enfage">Enter a correct age please (must be between 5 and 25 months)</string>
+    <string name="lbl_naissor">How did you get the age?</string>
+    <string name="lbl_under_naissor">You have to specify an answer</string>
+    <string name="lbl_enfsex">Child\'s sex</string>
+    <string name="lbl_under_enfsex">Specify a correct id please</string>
+    <string name="lbl_mennom">Household chief\'s name</string>
+    <string name="lbl_under_mennom">Enter the household chief\'s name please</string>
+    <string name="lbl_localis">Location of child\'s house. Define where is the house in the village.</string>
+    <string name="lbl_under_localis">Enter some informations in this field</string>
+    <string name="lbl_vitavec">With whom does the child live usually?</string>
+    <string name="lbl_under_vitavec">Specify an answer please</string>
+    <string name="lbl_orphan">Is the child orphan?</string>
+    <string name="lbl_under_orphan">Specify an answer please</string>
+    <string name="lbl_coepouse">Number of concubines of the mother</string>
+    <string name="lbl_under_coepouse">Enter a correct number of concubines please</string>
+    <string name="lbl_maritstat">Marital status of the mother</string>
+    <string name="lbl_under_maritstat">Specify an answer please</string>
+    <string name="lbl_allaitna">Is the child being breastfed since birth?</string>
+    <string name="lbl_under_allaitna">Specify an answer please</string>
+    <string name="lbl_allaitag">Until which age has the child been exclusively breastfed? (in months)</string>
+    <string name="lbl_under_allaitag">Specify an answer please</string>
+    <string name="lbl_laitcont">Is the child currently breastfed?</string>
+    <string name="lbl_under_laitcont">Specify an answer please</string>
+    <string name="lbl_vaccinat">Has the child been vaccinated?</string>
+    <string name="lbl_under_vaccinat">Specify an answer please</string>
+    <string name="lbl_typvacc">Which vaccine did he receive ? See vaccination card if exists</string>
+    <string name="lbl_under_typvacc">Specify an answer please</string>
+    <string name="lbl_pbmesure">Muac (in mm)</string>
+    <string name="lbl_under_pbmesure">The value must be between 50 and 180mm</string>
+    <string name="lbl_oedem">Bilateral feet oedema</string>
+    <string name="lbl_under_oedem">Specify an answer please</string>
+    <string name="lbl_poids">Weight of the child (in kg)</string>
+    <string name="lbl_under_poids">The value must be between 2 and 20kg</string>
+    <string name="lbl_taille">Height of the child (in cm)</string>
+    <string name="lbl_under_taille">The value must be between 60 and 90cm</string>
+    <string name="lbl_malad">Has the child been sick since last visit?</string>
+    <string name="lbl_under_malad">Specify an answer please</string>
+    <string name="lbl_epcause">What were the symptoms/signs?</string>
+    <string name="lbl_under_epcause">Specify an answer please</string>
+    <string name="p_epcause">Write the signs that the person has described and then tick the cases</string>
+    <string name="lbl_eptemps">How long did the episode last?</string>
+    <string name="lbl_under_eptemps">Specify an answer please</string>
+    <string name="lbl_epsoin">Has something been done as the sickness appeared by you or one family member?</string>
+    <string name="lbl_under_epsoin">Specify an answer please</string>
+    <string name="lbl_epnorai">What were the reasons for doing nothing?</string>
+    <string name="lbl_under_epnorai">Specify an answer please</string>
+    <string name="lbl_eprecou">What was undertaken?</string>
+    <string name="lbl_under_eprecou">Specify an answer please</string>
+    <string name="lbl_admiss">Has the child been admitted to an hospital in a nutritionnal program for his disease?</string>
+    <string name="lbl_under_admiss">Specify an answer please</string>
+    <string name="lbl_progadm">In which program has he been admitted?</string>
+    <string name="lbl_under_progadm">Specify an answer please</string>
+    <string name="lbl_epevol">How did the child evolved after this process?</string>
+    <string name="lbl_under_epevol">Specify an answer please</string>
+    <string name="lbl_eprest">Is the child still sick today?</string>
+    <string name="lbl_under_eprest">Specify an answer please</string>
+    <string name="lbl_decision_1">Did you have to refer the child?</string>
+    <string name="lbl_under_decision_1">Specify an answer please</string>
+    <string name="lbl_decision_2">To which center did you refer him?</string>
+    <string name="lbl_under_decision_2">Specify an answer please</string>
+    <string name="lbl_progadm_2">Has the child been admitted in a nutriotionnal program since last visit?</string>
+    <string name="lbl_under_progadm_2">Specify an answer please</string>
+    <string name="lbl_typprog">In which type of program?</string>
+    <string name="lbl_under_typprog">Specify an answer please</string>
+
+    <!-- Values for radiobuttons inside fieldsets -->
+
+
+    <!-- Values who are buggy -->
+    <string name="birth_certificate">Birth certificate</string>
+    <string name="calendar_local_events">Calendar local events</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <!-- Values who are not buggy -->
+    <string name="at_nutritionnal_center_of_health_center">At nutritionnal center of health center</string>
+    <string name="at_nutritionnal_center_of_massakorys_hospital">At nutritionnal center of Massakory\'s hospital</string>
+    <string name="buy_drugs_at_market_private_pharmacy">Buy drugs at market/Private pharmacy</string>
+    <string name="buy_traditionnal_drugs_on_the_market">Buy traditionnal drugs on the market</string>
+    <string name="community_healthcare_worker">Community healthcare worker</string>
+    <string name="consult_community_health_worker">Consult community health worker</string>
+    <string name="consult_dr_choco">Consult Dr Choco</string>
+    <string name="consult_healer">Consult healer</string>
+    <string name="consult_health_center">Consult health center</string>
+    <string name="consult_marabut">Consult health center</string>
+    <string name="consult_private_doctor">Consult private doctor</string>
+    <string name="consulting_paramedical">Consulting paramedical</string>
+    <string name="divorced">Divorced</string>
+    <string name="dont_know">Don\'t know</string>
+    <string name="father">Father</string>
+    <string name="financial">Financial</string>
+    <string name="followed_by_community_healthcare_worker">Followed by community healthcare worker</string>
+    <string name="go_to_hospital">Go to hospital</string>
+    <string name="grand_mother">Grand Mother</string>
+    <string name="health_center">Health center</string>
+    <string name="health_center_too_far">Health center too far</string>
+    <string name="he_healed">He healed</string>
+    <string name="he_improved">He improved</string>
+    <string name="his_status_has_worsened">His status has worsened</string>
+    <string name="hospital">Hospital</string>
+    <string name="hospitalized_of_therapeutic_hospital_center_of_massakory">Hospitalized of therapeutic hospital center of Massakory</string>
+    <string name="maried">Maried</string>
+    <string name="measles">Measles</string>
+    <string name="monitoring_at_health_center">Monitoring at health center</string>
+    <string name="monitoring_by_community_healthcare_worker">Monitoring by community healthcare worker</string>
+    <string name="mother">Mother</string>
+    <string name="no">No</string>
+    <string name="no_change">No change</string>
+    <string name="no_time">No time</string>
+    <string name="no_transportation_means">No transportation means</string>
+    <string name="not_serious_enough_a_sickness">Not serious enough a sickness</string>
+    <string name="of_father">Of father</string>
+    <string name="of_mother">Of mother</string>
+    <string name="one_two_days">1-2 days</string>
+    <string name="on_going_treatment">Ongoing treatment</string>
+    <string name="other">Other</string>
+    <string name="pentalavent_two_three_injections">Pentalavent (2-3 injections)</string>
+    <string name="polio">Polio</string>
+    <string name="security_problems">Security problems</string>
+    <string name="separated">Separated</string>
+    <string name="superior_five_days">>5 days</string>
+    <string name="three_five_days">3-5 days</string>
+    <string name="too_serious_illness">Too serious illness</string>
+    <string name="using_drugs_already_at_home">Using drugs already at home</string>
+    <string name="widowed">Widowed</string>
+    <string name="yes">Yes</string>
+
+    <!-- Values for the grid view -->
+    <string name="abdominal_pain">Abdominal pain</string>
+    <string name="appetite_loss">Appetite loss</string>
+    <string name="bleeding">Bleeding</string>
+    <string name="breathing_difficulties">Breathing difficulties</string>
+    <string name="burn">Burn</string>
+    <string name="constipation">Constipation</string>
+    <string name="convulsion">Convulsion</string>
+    <string name="cough">Cough</string>
+    <string name="diarrhea">Diarrhea</string>
+    <string name="ear_problems">Ear problems</string>
+    <string name="eye_problems">Eye problems</string>
+    <string name="fever">Fever</string>
+    <string name="headache">Headache</string>
+    <string name="not_specified">Not specified</string>
+    <string name="problem_pain_to_urinate">Problem/pain to urinate</string>
+    <string name="throat_problems">Throat problems</string>
+    <string name="trauma">Trauma</string>
+    <string name="vomiting">Vomiting</string>
+    <string name="weight_loss">Weight loss</string>
+
+    <!-- Values for buttons -->
+    <string name="previousButton">Previous</string>
+    <string name="helpButton">Help</string>
+    <string name="nextButton">Next</string>
+    <string name="jumptostartButton">Jump to start</string>
+    <string name="submitchildButton">Store child</string>
+    <string name="submithouseholdButton">Store household</string>
+    <string name="reset">Reset</string>
+    <string name="novalue">No value</string>
+
+    <!-- Error messages -->
+    <string name="titleError">Error</string>
+    <string name="titleHelp">Help</string>
+    <string name="messageCorrectAnswers">Correct your answers before going to the next page.</string>
+    <string name="messageNumberChildrenIncorrect">Number total of children under 5 years old must be inferior or equals to the total number of persons in the household.</string>
+    <string name="messageNumberChildrenSexIncorrect">Number total of children with male or female sexe under 5 years old must be inferior or equals to the total number of persons of the same sex in the household.</string>
+    <string name="messageHelp">No help messages for this page.If you have a specific question, ask it directly to France Broillet.</string>
+    <string name="noanswergiven">No answer given</string>
+
+    <!-- Values Submit page -->
+    <string name="lbl_submitpage_review_child">Please review your answers for accuracy before storing the child\'s datas</string>
+
+    <!-- VALUES FOR THE HOUSEHOLD HTML FORM (WHO AREN'T IN THE CHLID FORM YET) -->
+    <!-- Values for h1 titles -->
+    <string name="h1_householdpageone">H form (1/8)</string>
+    <string name="h1_householdpagetwo">H form (2/8)</string>
+    <string name="h1_householdpagethree">H form (3/8)</string>
+    <string name="h1_householdpagefour">H form (4/8)</string>
+    <string name="h1_householdpagefive">H form (5/8)</string>
+    <string name="h1_householdpagesix">H form (6/8)</string>
+    <string name="h1_householdpageseven">H form (7/8)</string>
+    <string name="h1_householdpageeight">H form (8/8)</string>
+    <string name="h1_householdsubmitpage">H form - Summary</string>
+    <string name="h1_householdsubmitpage_2">H form completed</string>
+
+    <!-- Values for h2 titles -->
+    <string name="h2_household_survey_basic_informations">HOUSEHOLD SURVEY BASIC INFORMATION</string>
+    <string name="h2_household_water_access">WATER ACCESS</string>
+    <string name="h2_household_organisation">HOUSEHOLD ORGANISATION</string>
+    <string name="h2_household_language">HOUSEHOLD LANGUAGE</string>
+    <string name="h2_household_demographics">HOUSEHOLD DEMOGRAPHICS</string>
+    <string name="h2_property_land_ownership">PROPERTY-LAND OWNERSHIP</string>
+    <string name="h2_cash_income">CASH INCOME</string>
+    <string name="h2_expenditures">EXPENDITURES</string>
+    <string name="h2_agricultural_production">AGRICULTURAL PRODUCTION</string>
+    <string name="h2_agricultural_income_and_consumption">AGRICULTURAL INCOME AND PRODUCTION</string>
+    <string name="h2_alimentary_rations">ALIMENTARY RATIONS</string>
+    <string name="h2_issues_regarding_supplying_debts">ISSUES REGARDING SUPPLYING/DEBTS</string>
+
+    <!-- Values for the labels -->
+    <string name="lbl_nenfmen">Number of children in household in this survey:</string>
+    <string name="lbl_under_nenfmen">Enter a correct number please</string>
+    <string name="lbl_eauorigi">Where is the main source of drinking water for family members?</string>
+    <string name="lbl_under_eauorigi">Specify an answer please</string>
+    <string name="lbl_puitnum">How long does it take to go there to take water and come back?</string>
+    <string name="lbl_under_puitnum">Enter a correct number of minutes please</string>
+    <string name="lbl_cheffam">Who is in charge of the household?</string>
+    <string name="lbl_under_cheffam">Specify an answer please</string>
+    <string name="lbl_csidista">Walking time to nearest healthcare center?</string>
+    <string name="lbl_under_csidista">Specify an answer please</string>
+    <string name="lbl_educnive">What is the highest education level of the household chief?</string>
+    <string name="lbl_under_educnive">Specify an answer please</string>
+    <string name="lbl_educenf">Which school do your children attend?</string>
+    <string name="lbl_under_educenf">Specify an answer please</string>
+    <string name="lbl_menalang">Which language is spoken in the household?</string>
+    <string name="lbl_under_menalang">Specify an answer please</string>
+    <string name="lbl_menacara">What is the residential status of your family in the village?</string>
+    <string name="lbl_under_menacara">Specify an answer please</string>
+    <string name="lbl_champ">Do you own an area of arable land?</string>
+    <string name="lbl_under_champ">Specify an answer please</string>
+    <string name="lbl_surfcult">What is the surface of your arable land?</string>
+    <string name="lbl_under_surfcult">Specify an answer please</string>
+    <string name="lbl_cutlsm">Do you cultivate yourself the mand you own?</string>
+    <string name="lbl_under_cutlsm">>Specify an answer please</string>
+    <string name="lbl_qicult">Who cultivates your land?</string>
+    <string name="lbl_under_qicult">Specify an answer please</string>
+    <string name="lbl_emplch">Do you occasionnally employ people to help you cultivate your land?</string>
+    <string name="lbl_under_emplch">Specify an answer please</string>
+    <string name="lbl_emptim">How regulary do you employ people to help cultivate your land?</string>
+    <string name="lbl_under_emptim">Specify an answer please</string>
+    <string name="lbl_outils">Do you or your family own tools to cultivate land?</string>
+    <string name="lbl_under_outils">Specify an answer please</string>
+    <string name="lbl_machine"> Do you or your family own machines to cultivate land?</string>
+    <string name="lbl_under_machine">Specify an answer please</string>
+    <string name="lbl_cheptel">How many livestock do you own?</string>
+    <string name="lbl_under_cheptel">Specify an answer please</string>
+    <string name="lbl_transp">Does your family own one or several motorized transportation means?</string>
+    <string name="lbl_under_transp">Specify an answer please</string>
+    <string name="lbl_maison">Does your family own your house or are you rental?</string>
+    <string name="lbl_under_maison">Specify an answer please</string>
+    <string name="lbl_stock">Does your family own buildings for storage?</string>
+    <string name="lbl_under_stock">Specify an answer please</string>
+    <string name="lbl_revso">Which main activity is providing your income?</string>
+    <string name="lbl_under_revso">Specify an answer please</string>
+    <string name="lbl_comerc">Do you or your family trade?</string>
+    <string name="lbl_under_comerc">Specify an answer please</string>
+    <string name="lbl_emplo">Do you or your family have employees?</string>
+    <string name="lbl_under_emplo">Specify an answer please</string>
+    <string name="lbl_depens">What are the household expenditures per month by order of priority?</string>
+    <string name="lbl_under_depens">Specify an answer please</string>
+    <string name="lbl_cultyp">What do you grow on the land you own?</string>
+    <string name="lbl_under_cultyp">Specify an answer please</string>
+    <string name="lbl_recoltem">Did you have crops last 3 months?</string>
+    <string name="lbl_under_recoltem">Specify an answer please</string>
+    <string name="lbl_rectypem">Which food did you harvest?</string>
+    <string name="lbl_under_rectypem">Specify an answer please</string>
+    <string name="lbl_cultjad"> Do you cultivate gardens?</string>
+    <string name="lbl_under_cultjad">Specify an answer please</string>
+    <string name="lbl_recuti">What does the household do with its harvest?</string>
+    <string name="lbl_under_recuti">Specify an answer please</string>
+    <string name="lbl_consoma">What did your family consumed last 24 hours?</string>
+    <string name="lbl_under_consoma">Specify an answer please</string>
+    <string name="lbl_repnum">How many meals did the family take last 24 hours?</string>
+    <string name="lbl_under_repnum">Specify an answer please</string>
+    <string name="lbl_ratgfd">Did the household receive general meal rations last 3 months? (since 1st July)</string>
+    <string name="lbl_under_ratgfd">Specify an answer please</string>
+    <string name="lbl_ratcomp">What did you receive?</string>
+    <string name="lbl_under_ratcomp">Specify an answer please</string>
+    <string name="lbl_supnut">Did family member receive nutriotionnal supplements?</string>
+    <string name="lbl_under_supnut">Specify an answer please</string>
+    <string name="lbl_supnutyp">What type of supplement did they receive?</string>
+    <string name="lbl_under_supnutyp">Specify an answer please</string>
+    <string name="lbl_ratvente">Did you have to sell part of rations received?</string>
+    <string name="lbl_under_ratvente">Specify an answer please</string>
+    <string name="lbl_ratupart">Which food?</string>
+    <string name="lbl_under_ratupart">Specify an answer please</string>
+    <string name="lbl_mecadapt">What do you do in priority when you experience stockouts ?</string>
+    <string name="lbl_under_mecadapt">Specify an answer please</string>
+    <string name="lbl_aprodiff">Did you have difficulties supplying yourself last 3 months?</string>
+    <string name="lbl_under_aprodiff">Specify an answer please</string>
+    <string name="lbl_revsoSupply">If you had issues regarding the supply, what did you do?</string>
+    <string name="lbl_under_revsoSupply">Specify an answer please</string>
+    <string name="lbl_aprodiffMeans">Did your family adopt other means last days/weeks?</string>
+    <string name="lbl_under_aprodiffMeans">Specify an answer please</string>
+    <string name="lbl_dette">Does the household currently have debts?</string>
+    <string name="lbl_under_dette">Specify an answer please</string>
+
+    <!-- Values for radiobuttons inside fieldsets -->
+    <string name="drilled_well_with_manual_pump">Drilled well with manual pomp</string>
+    <string name="tip_well_or_protected">Tip well or protected</string>
+    <string name="not_protected_well">Not protected well</string>
+    <string name="river__oxbow_lake__pond">River / Oxbow lake / Pond</string>
+    <string name="rainwater">Rainwater</string>
+    <string name="other_source">Other source</string>
+    <string name="in_the_village">In the village</string>
+    <string name="less_than_thirty_minutes">Less than 30 minutes</string>
+    <string name="between_thirty_minutes_and_one_hour">Between 30 minutes and 1 hour</string>
+    <string name="between_one_and_two_hours">Between 1 and 2 hours</string>
+    <string name="more_than_two_hours">Between 1 and 2 hours</string>
+    <string name="primary">Primary</string>
+    <string name="secondary">Secondary</string>
+    <string name="koranic_school">Koranic school</string>
+    <string name="university">University</string>
+    <string name="none">None</string>
+    <string name="private_school">Private</string>
+    <string name="public_school">Public</string>
+    <string name="arab">Arab</string>
+    <string name="kanenmbu">Kanenmbu</string>
+    <string name="goran">Goran</string>
+    <string name="french">French</string>
+    <string name="fulbe">Fulbe</string>
+    <string name="nomad_onehundred_percent">Nomad 100%</string>
+    <string name="nomad_and_sedentary">Nomad and sedentary</string>
+    <string name="sedentary_onehundred_percent">Sedentary 100%</string>
+    <string name="from_time_to_time">Sedentary 100%</string>
+    <string name="all_the_time">Sedentary 100%</string>
+    <string name="motorbike">Motorbike</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="truck">Truck</string>
+    <string name="owner">Owner</string>
+    <string name="tenant">Tenant</string>
+    <string name="mil">Mil</string>
+    <string name="niebe">Niebe</string>
+    <string name="other_peas">Other peas</string>
+    <string name="corn_maize">Corn/Maize</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="rice">Rice</string>
+    <string name="peanuts">Peanuts</string>
+    <string name="bean">Bean</string>
+    <string name="bere_bere">Bere-bere</string>
+    <string name="consumption">Consumption</string>
+    <string name="conservation">Conservation</string>
+    <string name="sale_exchange_on_the_market">Sale/Exchange on the market</string>
+    <string name="repayment_of_debt">Repayment of debt</string>
+    <string name="ceremonial_contribution">Ceremonial contribution</string>
+    <string name="cereals">Cereals</string>
+    <string name="root_tubers">Root-tubers</string>
+    <string name="peas_lentils">Peas-lentils</string>
+    <string name="milk_dairy">Milk-dairy</string>
+    <string name="eggs">Eggs</string>
+    <string name="meat_gut_offal">Eggs</string>
+    <string name="fish_lake_products">Fish-lake products</string>
+    <string name="oil_lipid">Oil-lipid</string>
+    <string name="sugar_honey">Sugar-honey</string>
+    <string name="fruits_vegetables">Fruits-vegetables</string>
+    <string name="nuts">Nuts</string>
+    <string name="sorghum">Sorghum</string>
+    <string name="csb">CSB</string>
+    <string name="oil">Oil</string>
+    <string name="sugar">Sugar</string>
+    <string name="salt">Salt</string>
+    <string name="ppdoz">PPDOZ</string>
+    <string name="supplumpy_spp">Supplumpy/SPP</string>
+
+    <!-- Values for the grid view -->
+    <string name="total_number_of_persons_in_the_household">Total number of persons in the household</string>
+    <string name="number_of_children_under_five_years_old_present_in_the_household">Number of children under five years old present in the household</string>
+    <string name="number_of_persons_who_arrived_in_the_household_last_three_months">Number of persons who arrived in the household last three months</string>
+    <string name="number_of_persons_who_left_the_household_last_three_months">Number of persons who left in the household last three months</string>
+    <string name="number_of_persons_who_died_in_the_household_last_three_months">Number of persons who died in the household last three months</string>
+    <string name="number_of_children_under_twofour_months_who_died_last_three_months">Number of children under 24 months who died last three months</string>
+    <string name="camel">Camel</string>
+    <string name="bull">Bull</string>
+    <string name="cow">Cow</string>
+    <string name="sheep">Sheep</string>
+    <string name="goat">Goat</string>
+    <string name="poultry">Poultry</string>
+    <string name="horse">Horse</string>
+
+    <!-- Values for tds -->
+    <string name="agricultural_production_sales">Agricultural production sales</string>
+    <string name="loans">Loans</string>
+    <string name="working_for_money">Working for money</string>
+    <string name="money_for_transfer">Money for transfer</string>
+    <string name="unskilled_labor_manpower">Unskilled labor-manpower</string>
+    <string name="sale_of_livestock_beef_camel">Sale of livestock (beef-camel)</string>
+    <string name="sale_exchange_of_little_animals">Sale-exchange of little animals</string>
+    <string name="food">Food</string>
+    <string name="water">Water</string>
+    <string name="healthcare">Healthcare</string>
+    <string name="school_fees">School fees</string>
+    <string name="production_costs">Production costs</string>
+    <string name="personnal_effect">Personnal effect</string>
+    <string name="social_obligations">Social obligations</string>
+    <string name="rent">Rent</string>
+    <string name="transport">Transport</string>
+    <string name="payment_to_employee">Payment to employee</string>
+    <string name="count_on_cheaper_food_or_less_appreciated">Count on cheaper food or less appreciated</string>
+    <string name="borrow_food_with_help_from_parents">Borrow food, with help from parents</string>
+    <string name="collect_wild_foods_that_i_do_not_consume_usually">Collect wild foods that I do not consume usually</string>
+    <string name="harvest_immature_cultures">Harvest immature cultures</string>
+    <string name="consume_seed_stocks_held_for_future_agricultural_season">Consume seed stocks held for future agricultural season</string>
+    <string name="reduce_meal_portions">Reduce meal portions</string>
+    <string name="reduce_number_of_daily_meals">Reduce number of daily meals</string>
+    <string name="reduce_adults_consumption_so_that_children_can_eat">Reduce adults consumption so that children can eat</string>
+    <string name="reduce_spending_on_health_and_education">Reduce spending on health and education</string>
+    <string name="use_savings_to_buy_food">Use savings to buy food</string>
+    <string name="beg">Beg</string>
+    <string name="sell_household_articles_kitchen_utensil_blanket">Sell household articles (kitchen utensil, blanket)</string>
+    <string name="sell_household_supplies">Sell household supplies</string>
+    <string name="sell_poultry">Sell poultry</string>
+    <string name="sell_little_animalsgoats_sheeps">Sell little animals,goats, sheeps</string>
+    <string name="sell_large_animals__herd">Sell large animals,  herd</string>
+    <string name="sell_breeding_livestock">Sell breeding livestock</string>
+    <string name="borrow_money_from_parents_or_neighbors">Borrow money from parents or neighbors</string>
+    <string name="family_member_moving_to_seek_work">Family member moving to seek work</string>
+
+    <!-- Values Submit page -->
+    <string name="lbl_submitpage_review_household">Please review your answers for accuracy before storing the household\'s datas</string>
+    <string name="malnutrition_continue_from_child_entry">Entry complete</string>
+    <string name="malnutrition_child_entry_form_household_chief_label">Household Chief:</string>
+    <string name="malnutrition_child_entry_form_household_id">Household ID:</string>
+    <string name="malnutrition_child_entry_form_village_label">Village:</string>
+
+</resources>
