@@ -16,7 +16,7 @@ import org.msf.android.database.ClinicAdapterManager;
 import org.msf.android.fragments.AbstractLaunchScreenFragment;
 import org.msf.android.fragments.GridViewFragment;
 import org.msf.android.fragments.malnutrition.MalnutritionHomeFragment;
-import org.msf.android.managers.GPSManager;
+import org.msf.android.managers.malnutrition.GPSManager;
 import org.msf.android.network.CheckNetworkAvailable;
 import org.msf.android.rest.RestBatchTask;
 import org.msf.android.tasks.DownloadConfigTask;
@@ -529,13 +529,6 @@ public class LaunchScreenActivity extends FragmentActivity {
 							
 
 						}
-
-						if (map.get("description") == getString(R.string.test_html_form_performance)) {
-							Intent lpaIntent = new Intent(
-									LaunchScreenActivity.this,
-									HTMLFormTestActivity.class);
-							LaunchScreenActivity.this.startActivity(lpaIntent);
-						}
 						if (map.get("description") == getString(R.string.test_gps_function)) {
 							GPSManager gps = new GPSManager(
 									LaunchScreenActivity.this);
@@ -708,12 +701,6 @@ public class LaunchScreenActivity extends FragmentActivity {
 	public void webFormButtonClicked(View view) {
 		Intent lpaIntent = new Intent(LaunchScreenActivity.this,
 				HTMLFormActivity.class);
-		LaunchScreenActivity.this.startActivity(lpaIntent);
-	}
-
-	public void webFormPatientButtonClicked(View view) {
-		Intent lpaIntent = new Intent(LaunchScreenActivity.this,
-				HTMLFormPatientActivity.class);
 		LaunchScreenActivity.this.startActivity(lpaIntent);
 	}
 

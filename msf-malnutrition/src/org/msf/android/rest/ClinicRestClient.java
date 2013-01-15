@@ -18,7 +18,7 @@ import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
 import org.apache.commons.io.IOUtils;
-import org.msf.android.net.OpenMRSConnectionManager;
+import org.msf.android.managers.OpenMRSConnectionManager;
 import org.msf.android.openmrs.Concept;
 import org.msf.android.openmrs.ConceptClass;
 import org.msf.android.openmrs.Encounter;

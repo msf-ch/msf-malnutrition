@@ -182,12 +182,13 @@ public boolean onContextItemSelected(MenuItem item) {
 		  return true;
 		  
 	  case R.id.edit_patient:
-		  Intent i = new Intent(getApplicationContext(),
-					HTMLFormPatientActivity.class);
-			i.putExtra("_id", info.id);
-			i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-			startActivity(i);
-		  return true;
+		  throw new UnsupportedOperationException("Cannot edit patients yet");
+//		  Intent i = new Intent(getApplicationContext(),
+//					HTMLFormPatientActivity.class);
+//			i.putExtra("_id", info.id);
+//			i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//			startActivity(i);
+//		  return true;
 		  
 	  case R.id.delete_patient:
 		  adb.setTitle("Confirmation");

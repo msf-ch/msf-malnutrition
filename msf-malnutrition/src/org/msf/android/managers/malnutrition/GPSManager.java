@@ -1,4 +1,4 @@
-package org.msf.android.managers;
+package org.msf.android.managers.malnutrition;
 
 import org.msf.android.listeners.GPSListener;
 

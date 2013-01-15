@@ -13,6 +13,7 @@ import org.msf.android.database.ClinicAdapter;
 import org.msf.android.database.ClinicAdapterManager;
 import org.msf.android.htmlforms.ReducedFormData;
 import org.msf.android.htmlforms.ReducedObs;
+import org.msf.android.managers.malnutrition.MalnutritionWorkflowManager;
 import org.msf.android.openmrs.malnutrition.MalnutritionHousehold;
 import org.msf.android.openmrs.malnutrition.MalnutritionObservation;
 import org.msf.android.rest.DefaultMapperFactory;
@@ -28,7 +29,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.j256.ormlite.dao.Dao;
 
-public class HouseholdInterface {
+public class HouseholdBridge {
 
 	/* Relevant IDs for constructing household */
 	public static String ID_HOUSEHOLD_CHIEF = "mennom"; // store as first name
@@ -53,11 +54,11 @@ public class HouseholdInterface {
 
 	/*Constructors*/
 	
-	public HouseholdInterface(MalnutritionWorkflowManager workflowManager) {
+	public HouseholdBridge(MalnutritionWorkflowManager workflowManager) {
 		this(workflowManager, null);
 	}
 
-	public HouseholdInterface(MalnutritionWorkflowManager workflowManager, MalnutritionHousehold household) {
+	public HouseholdBridge(MalnutritionWorkflowManager workflowManager, MalnutritionHousehold household) {
 		mapper = DefaultMapperFactory.getDefaultMapper();
 
 		this.setHousehold(household);

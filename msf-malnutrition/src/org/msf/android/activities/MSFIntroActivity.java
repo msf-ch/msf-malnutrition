@@ -1,7 +1,7 @@
 package org.msf.android.activities;
 
 import org.msf.android.R;
-import org.msf.android.net.OpenMRSConnectionManager;
+import org.msf.android.managers.OpenMRSConnectionManager;
 import org.msf.android.utilities.MSFCommonUtils;
 
 import android.app.Activity;

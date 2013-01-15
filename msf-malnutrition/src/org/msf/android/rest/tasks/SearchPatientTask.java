@@ -2,7 +2,7 @@ package org.msf.android.rest.tasks;
 
 import java.util.List;
 
-import org.msf.android.net.OpenMRSConnectionManager;
+import org.msf.android.managers.OpenMRSConnectionManager;
 import org.msf.android.openmrs.Ref;
 import org.msf.android.rest.ClinicRestClient;
 import org.msf.android.rest.SearchResults;

@@ -6,9 +6,9 @@ import java.util.List;
 import org.msf.android.R;
 import org.msf.android.htmlforms.ReducedFormData;
 import org.msf.android.htmlforms.ReducedObs;
-import org.msf.android.htmlforms.malnutrition.ChildInterface;
-import org.msf.android.htmlforms.malnutrition.HouseholdInterface;
-import org.msf.android.htmlforms.malnutrition.MalnutritionWorkflowManager;
+import org.msf.android.htmlforms.malnutrition.ChildBridge;
+import org.msf.android.htmlforms.malnutrition.HouseholdBridge;
+import org.msf.android.managers.malnutrition.MalnutritionWorkflowManager;
 import org.msf.android.openmrs.malnutrition.MalnutritionChild;
 import org.msf.android.utilities.MSFCommonUtils;
 
@@ -83,16 +83,16 @@ public class MalnutritionWorkflowActivity extends FragmentActivity implements
 					ReducedFormData testRfd = new ReducedFormData();
 					testRfd.getObs().add(
 							new ReducedObs(
-									HouseholdInterface.ID_HOUSEHOLD_CHIEF,
+									HouseholdBridge.ID_HOUSEHOLD_CHIEF,
 									"Roberto Wilkie"));
 					testRfd.getObs().add(
-							new ReducedObs(HouseholdInterface.ID_HOUSEHOLD_ID,
+							new ReducedObs(HouseholdBridge.ID_HOUSEHOLD_ID,
 									"2460"));
 					testRfd.getObs().add(
-							new ReducedObs(HouseholdInterface.ID_SURVEY_DATE,
+							new ReducedObs(HouseholdBridge.ID_SURVEY_DATE,
 									"04/28/2012"));
 					testRfd.getObs().add(
-							new ReducedObs(HouseholdInterface.ID_VILLAGE_NAME,
+							new ReducedObs(HouseholdBridge.ID_VILLAGE_NAME,
 									"Mill Valley"));
 
 					String testFormData;
@@ -110,35 +110,35 @@ public class MalnutritionWorkflowActivity extends FragmentActivity implements
 
 					ReducedFormData testChild1 = new ReducedFormData();
 					testChild1.getObs().add(
-							new ReducedObs(ChildInterface.ID_AGE, "15"));
+							new ReducedObs(ChildBridge.ID_AGE, "15"));
 					testChild1.getObs().add(
-							new ReducedObs(ChildInterface.ID_GIVEN_NAME,
+							new ReducedObs(ChildBridge.ID_GIVEN_NAME,
 									"Nicholas"));
 					testChild1.getObs().add(
-							new ReducedObs(ChildInterface.ID_FAMILY_NAME,
+							new ReducedObs(ChildBridge.ID_FAMILY_NAME,
 									"Wilkie"));
 					testChild1.getObs().add(
-							new ReducedObs(ChildInterface.ID_GENDER,
+							new ReducedObs(ChildBridge.ID_GENDER,
 									MalnutritionChild.GENDER_MALE));
 					testChild1.getObs()
-							.add(new ReducedObs(ChildInterface.ID_ID_NUMBER,
+							.add(new ReducedObs(ChildBridge.ID_ID_NUMBER,
 									"24601"));
 					testChildren.add(testChild1);
 
 					ReducedFormData testChild2 = new ReducedFormData();
 					testChild2.getObs().add(
-							new ReducedObs(ChildInterface.ID_AGE, "13"));
+							new ReducedObs(ChildBridge.ID_AGE, "13"));
 					testChild2.getObs().add(
-							new ReducedObs(ChildInterface.ID_GIVEN_NAME,
+							new ReducedObs(ChildBridge.ID_GIVEN_NAME,
 									"Elisabeth"));
 					testChild2.getObs().add(
-							new ReducedObs(ChildInterface.ID_FAMILY_NAME,
+							new ReducedObs(ChildBridge.ID_FAMILY_NAME,
 									"Wilkie"));
 					testChild2.getObs().add(
-							new ReducedObs(ChildInterface.ID_GENDER,
+							new ReducedObs(ChildBridge.ID_GENDER,
 									MalnutritionChild.GENDER_FEMALE));
 					testChild2.getObs()
-							.add(new ReducedObs(ChildInterface.ID_ID_NUMBER,
+							.add(new ReducedObs(ChildBridge.ID_ID_NUMBER,
 									"24602"));
 					testChildren.add(testChild2);
 

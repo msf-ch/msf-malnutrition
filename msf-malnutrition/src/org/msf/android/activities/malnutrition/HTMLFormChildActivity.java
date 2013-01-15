@@ -1,8 +1,8 @@
 package org.msf.android.activities.malnutrition;
 
 import org.msf.android.R;
-import org.msf.android.htmlforms.malnutrition.ChildInterface;
-import org.msf.android.htmlforms.malnutrition.MalnutritionWorkflowManager;
+import org.msf.android.htmlforms.malnutrition.ChildBridge;
+import org.msf.android.managers.malnutrition.MalnutritionWorkflowManager;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -85,7 +85,7 @@ public class HTMLFormChildActivity extends Activity{
 		// fix a bug with rendering
 		wv.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 		
-//		wv.addJavascriptInterface(new ChildInterface(new MalnutritionWorkflowManager(null)), "MSF");
+//		wv.addJavascriptInterface(new ChildBridge(new MalnutritionWorkflowManager(null)), "MSF");
 
 		wv.loadUrl(URLForm);			
 	}

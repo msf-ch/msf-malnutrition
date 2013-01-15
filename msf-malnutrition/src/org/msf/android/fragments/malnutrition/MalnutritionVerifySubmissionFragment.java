@@ -6,7 +6,7 @@ import org.msf.android.R;
 import org.msf.android.activities.malnutrition.MalnutritionWorkflowActivity;
 import org.msf.android.database.ClinicAdapter;
 import org.msf.android.database.ClinicAdapterManager;
-import org.msf.android.htmlforms.malnutrition.MalnutritionWorkflowManager;
+import org.msf.android.managers.malnutrition.MalnutritionWorkflowManager;
 import org.msf.android.openmrs.malnutrition.MalnutritionChild;
 import org.msf.android.utilities.MSFCommonUtils;
 

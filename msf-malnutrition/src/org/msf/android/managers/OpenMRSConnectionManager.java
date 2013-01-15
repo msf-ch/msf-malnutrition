@@ -1,4 +1,4 @@
-package org.msf.android.net;
+package org.msf.android.managers;
 
 import org.msf.android.R;
 import org.msf.android.app.MSFClinicApp;

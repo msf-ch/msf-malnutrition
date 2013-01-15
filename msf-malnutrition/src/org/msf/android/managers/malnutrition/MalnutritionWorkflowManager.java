@@ -1,10 +1,12 @@
-package org.msf.android.htmlforms.malnutrition;
+package org.msf.android.managers.malnutrition;
 
 import org.msf.android.R;
 import org.msf.android.activities.malnutrition.MalnutritionWorkflowActivity;
 import org.msf.android.fragments.malnutrition.MalnutritionChildSummaryFragment;
 import org.msf.android.fragments.malnutrition.MalnutritionFormFragment;
 import org.msf.android.fragments.malnutrition.MalnutritionVerifySubmissionFragment;
+import org.msf.android.htmlforms.malnutrition.ChildBridge;
+import org.msf.android.htmlforms.malnutrition.HouseholdBridge;
 import org.msf.android.openmrs.malnutrition.MalnutritionHousehold;
 
 import android.content.Context;
@@ -28,8 +30,8 @@ public class MalnutritionWorkflowManager implements LocationListener {
 
 	private MalnutritionWorkflowActivity workflowActivity;
 
-	private HouseholdInterface householdInterface;
-	private ChildInterface childInterface;
+	private HouseholdBridge householdInterface;
+	private ChildBridge childInterface;
 
 	private MalnutritionHousehold household;
 
@@ -58,7 +60,7 @@ public class MalnutritionWorkflowManager implements LocationListener {
 
 	public void startHouseholdForm() {
 		if (getHouseholdInterface() == null) {
-			setHouseholdInterface(new HouseholdInterface(this));
+			setHouseholdInterface(new HouseholdBridge(this));
 		}
 
 		MalnutritionFormFragment formFragment = new MalnutritionFormFragment();
@@ -105,7 +107,7 @@ public class MalnutritionWorkflowManager implements LocationListener {
 	}
 
 	public void startNewChildForm() {
-		setChildInterface(new ChildInterface(this, getHouseholdInterface()
+		setChildInterface(new ChildBridge(this, getHouseholdInterface()
 				.getHousehold()));
 		MalnutritionFormFragment childFormFragment = new MalnutritionFormFragment();
 		FragmentTransaction transaction = workflowActivity
@@ -201,19 +203,19 @@ public class MalnutritionWorkflowManager implements LocationListener {
 		this.childSummaryFinished = childSummaryFinished;
 	}
 
-	public HouseholdInterface getHouseholdInterface() {
+	public HouseholdBridge getHouseholdInterface() {
 		return householdInterface;
 	}
 
-	public void setHouseholdInterface(HouseholdInterface householdInterface) {
+	public void setHouseholdInterface(HouseholdBridge householdInterface) {
 		this.householdInterface = householdInterface;
 	}
 
-	public ChildInterface getChildInterface() {
+	public ChildBridge getChildInterface() {
 		return childInterface;
 	}
 
-	public void setChildInterface(ChildInterface childInterface) {
+	public void setChildInterface(ChildBridge childInterface) {
 		this.childInterface = childInterface;
 	}
 

@@ -192,14 +192,15 @@ public boolean onContextItemSelected(MenuItem item) {
 		  
 	  case R.id.edit_patient:
 		  if(!mySelectedPatient.isSentToRemoteServer()){
-		  Intent i = new Intent(getApplicationContext(),
-					HTMLFormPatientActivity.class);
-			i.putExtra("_id", mySelectedPatient.getDatabaseId());
-			i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-			startActivity(i);
+			  throw new UnsupportedOperationException("Don't have the ability to edit patients.");
+//		  Intent i = new Intent(getApplicationContext(),
+//					HTMLFormPatientActivity.class);
+//			i.putExtra("_id", mySelectedPatient.getDatabaseId());
+//			i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//			startActivity(i);
 		  }
 		  else {
-      		Toast t = Toast.makeText(getApplicationContext(), "Can't edit this patient, he's already stored on the OpenMRS server.", Toast.LENGTH_LONG);
+      		Toast t = Toast.makeText(getApplicationContext(), "Can't edit this patient, already stored on the OpenMRS server.", Toast.LENGTH_LONG);
       		t.show();
       	}
 		  return true;

@@ -14,6 +14,7 @@ import org.msf.android.database.ClinicAdapter;
 import org.msf.android.database.ClinicAdapterManager;
 import org.msf.android.htmlforms.ReducedFormData;
 import org.msf.android.htmlforms.ReducedObs;
+import org.msf.android.managers.malnutrition.MalnutritionWorkflowManager;
 import org.msf.android.openmrs.malnutrition.MalnutritionChild;
 import org.msf.android.openmrs.malnutrition.MalnutritionHousehold;
 import org.msf.android.openmrs.malnutrition.MalnutritionObservation;
@@ -30,7 +31,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.j256.ormlite.dao.Dao;
 
-public class ChildInterface {
+public class ChildBridge {
 
 	/* Relevant IDs for constructing household */
 	public static String ID_GIVEN_NAME = "enfprenom"; // store as first name
@@ -61,12 +62,12 @@ public class ChildInterface {
 
 	/* Constructors */
 
-	public ChildInterface(MalnutritionWorkflowManager workflowManager, MalnutritionHousehold household) {
+	public ChildBridge(MalnutritionWorkflowManager workflowManager, MalnutritionHousehold household) {
 		this(workflowManager, null, household);
 		setValuesForChildForm();
 	}
 
-	public ChildInterface(MalnutritionWorkflowManager workflowManager,
+	public ChildBridge(MalnutritionWorkflowManager workflowManager,
 			MalnutritionChild child, MalnutritionHousehold household) {
 		mapper = DefaultMapperFactory.getDefaultMapper();
 
