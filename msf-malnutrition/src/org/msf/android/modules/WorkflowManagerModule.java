@@ -18,7 +18,7 @@ public class WorkflowManagerModule extends AbstractModule {
 	 */
 	@Override
 	protected void configure() {
-		bind(MalnutritionWorkflowManager.class).to(MalnutritionWorkflowManager.class);
+		bind(MalnutritionWorkflowManager.class);
 	}
 
 }
