@@ -36,7 +36,7 @@ public class HouseholdBridge {
 	public static String ID_VILLAGE_NAME = "villagen";
 	public static String ID_SURVEY_DATE = "suividat";
 	public static String ID_HOUSEHOLD_ID = "menagn";
-	
+
 	private double longitude = Double.MAX_VALUE;
 	private double latitude = Double.MAX_VALUE;
 
@@ -47,63 +47,71 @@ public class HouseholdBridge {
 	private ReducedFormData formData;
 	private MalnutritionHousehold household;
 	private Map<String, MalnutritionObservation> obs;
-	
+
 	private MalnutritionWorkflowManager workflowManager;
-	
+
 	private Toast toastMessage;
 
-	/*Constructors*/
-	
+	/* Constructors */
+
 	public HouseholdBridge(MalnutritionWorkflowManager workflowManager) {
 		this(workflowManager, null);
 	}
 
-	public HouseholdBridge(MalnutritionWorkflowManager workflowManager, MalnutritionHousehold household) {
+	public HouseholdBridge(MalnutritionWorkflowManager workflowManager,
+			MalnutritionHousehold household) {
 		mapper = DefaultMapperFactory.getDefaultMapper();
 
 		this.setHousehold(household);
 		this.workflowManager = workflowManager;
-		
+
 		setFormData(new ReducedFormData());
 	}
 
-	
-	/*Interface Methods*/
+	/* Interface Methods */
 	@JavascriptInterface
-	public void storeData(String data) throws JsonParseException,
+	public void storeData(final String data) throws JsonParseException,
 			JsonMappingException, IOException {
-		try {
-			System.out.println("Form result string: " + data);
-
-			ReducedFormData result = mapper.readValue(data,
-					new TypeReference<ReducedFormData>() {
-					});
-			setFormData(result);
-
-			parseFormToHousehold();
-			storeHousehold(getHousehold());
-			
-			parseObs();
-			storeObs();
-		} catch (Exception ex) {
-			ex.printStackTrace();
-
-			Context context = MSFClinicApp.getAppContext();
-			CharSequence text = "Error: " + ex.getMessage();
-			int duration = Toast.LENGTH_LONG;
-
-			Toast toast = Toast.makeText(context, text, duration);
-			toast.show();
-		}
-		
-		workflowManager.finishHouseholdForm();
+		Thread t = new Thread() {
+			public void run() {
+				storeDataInternal(data);
+			}
+		};
+		t.start();
 	}
 	
+	private void storeDataInternal(final String data) {
+			try {
+				System.out.println("Form result string: " + data);
+
+				ReducedFormData result = mapper.readValue(data,
+						new TypeReference<ReducedFormData>() {
+						});
+				setFormData(result);
+
+				parseFormToHousehold();
+				storeHousehold(getHousehold());
+
+				parseObs();
+				storeObs();
+			} catch (Exception ex) {
+				ex.printStackTrace();
+
+				Context context = MSFClinicApp.getApplication();
+				CharSequence text = "Error: " + ex.getMessage();
+				int duration = Toast.LENGTH_LONG;
+
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
+			}
+			workflowManager.finishHouseholdForm();
+	}
+
 	@JavascriptInterface
 	public String getStringValue(String key) {
 		try {
 			int resId = R.string.class.getDeclaredField(key).getInt(null);
-			String result = MSFClinicApp.getAppContext().getString(resId);
+			String result = MSFClinicApp.getApplication().getString(resId);
 			return result;
 		} catch (Exception e) {
 			return NO_FIELD_FOUND_ERROR_MESSAGE;
@@ -112,31 +120,33 @@ public class HouseholdBridge {
 
 	@JavascriptInterface
 	public void showAlertMessage(String title, String message) {
-		//This is not working
-		/*AlertDialog.Builder adb = new AlertDialog.Builder(MSFClinicApp.getAppContext());
-		adb.setTitle(title);
-		adb.setMessage(message);
-		adb.setPositiveButton("Ok", null);
-        adb.show();*/
-		
-		//Prefer showing a Toast
-		if(toastMessage !=null)
+		// This is not working
+		/*
+		 * AlertDialog.Builder adb = new
+		 * AlertDialog.Builder(MSFClinicApp.getAppContext());
+		 * adb.setTitle(title); adb.setMessage(message);
+		 * adb.setPositiveButton("Ok", null); adb.show();
+		 */
+
+		// Prefer showing a Toast
+		if (toastMessage != null)
 			toastMessage.cancel();
-		
-		toastMessage = Toast.makeText(MSFClinicApp.getAppContext(), message, Toast.LENGTH_LONG);
+
+		toastMessage = Toast.makeText(MSFClinicApp.getApplication(), message,
+				Toast.LENGTH_LONG);
 		toastMessage.show();
 	}
 
-		@JavascriptInterface()
+	@JavascriptInterface()
 	public String serializeData() throws JsonGenerationException,
 			JsonMappingException, IOException {
 		return mapper.writeValueAsString(getFormData());
 	}
-	
-	
-	/*Worker methods*/
 
-	public static void storeHousehold(MalnutritionHousehold mHousehold) throws SQLException {
+	/* Worker methods */
+
+	public static void storeHousehold(MalnutritionHousehold mHousehold)
+			throws SQLException {
 		ClinicAdapter ca = ClinicAdapterManager.lockAndRetrieveClinicAdapter();
 
 		try {
@@ -148,13 +158,13 @@ public class HouseholdBridge {
 	}
 
 	private void parseFormToHousehold() {
-		if(getHousehold() == null) {
+		if (getHousehold() == null) {
 			setHousehold(new MalnutritionHousehold());
 		}
-		
+
 		getHousehold().latitude = latitude;
 		getHousehold().longitude = longitude;
-		
+
 		List<ReducedObs> obs = formData.getObs();
 
 		for (ReducedObs ob : obs) {
@@ -162,12 +172,12 @@ public class HouseholdBridge {
 				System.out.println("Null ob!");
 				continue;
 			}
-			
+
 			if (ob.concept == null) {
 				System.out.println("Null ob concept, value is: " + ob.value);
 				continue;
 			}
-			
+
 			if (ob.concept.equals(ID_HOUSEHOLD_CHIEF)) {
 				getHousehold().householdChief = ob.value;
 			} else if (ob.concept.equals(ID_VILLAGE_NAME)) {
@@ -179,12 +189,12 @@ public class HouseholdBridge {
 			}
 		}
 	}
-	
+
 	private void parseObs() {
 		if (obs == null) {
 			obs = new HashMap<String, MalnutritionObservation>();
 		}
-		
+
 		for (ReducedObs rObs : getFormData().getObs()) {
 			if (obs.containsKey(rObs.concept)) {
 				obs.get(rObs.concept).value = rObs.value;
@@ -196,24 +206,25 @@ public class HouseholdBridge {
 			}
 		}
 	}
-	
+
 	private void storeObs() throws SQLException {
 		ClinicAdapter ca = ClinicAdapterManager.lockAndRetrieveClinicAdapter();
 
-		Dao<MalnutritionObservation, Long> oDao = ca.getMalnutritionObservationDao();
+		Dao<MalnutritionObservation, Long> oDao = ca
+				.getMalnutritionObservationDao();
 		Iterator<MalnutritionObservation> obsIterator = obs.values().iterator();
-		
+
 		MalnutritionObservation currentObs;
 		while (obsIterator.hasNext()) {
 			currentObs = obsIterator.next();
 			currentObs.household = household;
 			oDao.createOrUpdate(currentObs);
 		}
-		
+
 		ClinicAdapterManager.unlock();
 	}
-	
-	/*Getters and setters*/
+
+	/* Getters and setters */
 
 	public ReducedFormData getFormData() {
 		return formData;

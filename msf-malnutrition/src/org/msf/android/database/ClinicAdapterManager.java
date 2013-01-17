@@ -41,7 +41,7 @@ public class ClinicAdapterManager {
 		releaseResources();
 		try {
 			DaoManager.clearDaoCache();
-			ca = new ClinicAdapter(MSFClinicApp.getAppContext());
+			ca = new ClinicAdapter(MSFClinicApp.getApplication());
 		} catch (SQLException e) {
 			// TODO Handle failure somehow... fix db?
 			e.printStackTrace();

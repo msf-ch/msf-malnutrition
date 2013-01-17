@@ -227,7 +227,7 @@ public class Location extends OpenMRSObject {
 		List<LocationTag> result = new ArrayList<LocationTag>();
 		ClinicAdapter ca = null;
 		try {
-			ca = new ClinicAdapter(MSFClinicApp.getAppContext());
+			ca = new ClinicAdapter(MSFClinicApp.getApplication());
 			for (String tagUuid : getTags()) {
 				List<LocationTag> tagsFromDb = ca.getLocationTagDao()
 						.queryBuilder().selectColumns("uuid", "name").where()

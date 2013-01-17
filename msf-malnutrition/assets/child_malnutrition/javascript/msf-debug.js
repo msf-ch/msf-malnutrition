@@ -41,3 +41,14 @@ function getHouseholdChiefName() {
 function getVillageName() {
 	return "Village name";
 }
+
+function forceNextPage() {
+	var activePage = $.mobile.activePage;
+	if (activePage.attr('id') == $("div:jqmData(role='page')").last().attr('id')) {
+		//if we're at the last page, submit
+		submit(activePage);
+	} else {
+		var nextPage = $.mobile.activePage.next("div:jqmData(role='page')");
+		$.mobile.changePage( "#" + nextPage.attr('id'));
+	}
+}

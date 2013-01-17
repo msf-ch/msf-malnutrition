@@ -12,11 +12,12 @@ import org.msf.android.managers.malnutrition.MalnutritionWorkflowManager;
 import org.msf.android.openmrs.malnutrition.MalnutritionChild;
 import org.msf.android.utilities.MSFCommonUtils;
 
+import roboguice.RoboGuice;
+import roboguice.activity.RoboFragmentActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +25,10 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class MalnutritionWorkflowActivity extends FragmentActivity implements
+public class MalnutritionWorkflowActivity extends RoboFragmentActivity implements
 		OnGlobalLayoutListener {
+	
 	private MalnutritionWorkflowManager manager;
-
 	private ViewGroup rootLayout;
 
 	@Override
@@ -42,7 +43,7 @@ public class MalnutritionWorkflowActivity extends FragmentActivity implements
 	}
 
 	public void initializeWorkflow() {
-		setManager(new MalnutritionWorkflowManager(this));
+		setManager(RoboGuice.getInjector(this).getInstance(MalnutritionWorkflowManager.class));
 		getManager().initialize();
 	}
 
@@ -99,7 +100,7 @@ public class MalnutritionWorkflowActivity extends FragmentActivity implements
 					try {
 						testFormData = new ObjectMapper()
 								.writeValueAsString(testRfd);
-						getManager().getHouseholdInterface().storeData(
+						getManager().getHouseholdBridge().storeData(
 								testFormData);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
@@ -150,13 +151,13 @@ public class MalnutritionWorkflowActivity extends FragmentActivity implements
 								.writeValueAsString(testChild2);
 
 						getManager().startNewChildForm();
-						getManager().getChildInterface().storeData(
+						getManager().getChildBridge().storeData(
 								testChildSerialized1);
 
 						Thread.sleep(1000);
 
 						getManager().startNewChildForm();
-						getManager().getChildInterface().storeData(
+						getManager().getChildBridge().storeData(
 								testChildSerialized2);
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -205,6 +206,7 @@ public class MalnutritionWorkflowActivity extends FragmentActivity implements
 	}
 
 	public void setManager(MalnutritionWorkflowManager manager) {
+		manager.setWorkflowActivity(this);
 		this.manager = manager;
 	}
 }

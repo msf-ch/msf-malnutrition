@@ -14,9 +14,10 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Looper;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.Toast;
+
+import com.google.inject.Inject;
 
 public class MalnutritionWorkflowManager implements LocationListener {
 
@@ -30,8 +31,8 @@ public class MalnutritionWorkflowManager implements LocationListener {
 
 	private MalnutritionWorkflowActivity workflowActivity;
 
-	private HouseholdBridge householdInterface;
-	private ChildBridge childInterface;
+	private HouseholdBridge householdBridge;
+	private ChildBridge childBridge;
 
 	private MalnutritionHousehold household;
 
@@ -44,8 +45,15 @@ public class MalnutritionWorkflowManager implements LocationListener {
 
 	private boolean fillingChildSummary = false;
 
+	@Inject
+	public MalnutritionWorkflowManager() {
+	}
+	
 	public MalnutritionWorkflowManager(MalnutritionWorkflowActivity activity) {
-		// access all layers
+		setWorkflowActivity(activity);
+	}
+	
+	public void setWorkflowActivity(MalnutritionWorkflowActivity activity) {
 		this.workflowActivity = activity;
 	}
 
@@ -59,8 +67,8 @@ public class MalnutritionWorkflowManager implements LocationListener {
 	}
 
 	public void startHouseholdForm() {
-		if (getHouseholdInterface() == null) {
-			setHouseholdInterface(new HouseholdBridge(this));
+		if (getHouseholdBridge() == null) {
+			setHouseholdBridge(new HouseholdBridge(this));
 		}
 
 		MalnutritionFormFragment formFragment = new MalnutritionFormFragment();
@@ -72,14 +80,14 @@ public class MalnutritionWorkflowManager implements LocationListener {
 		transaction.commit();
 
 		formFragment.initializeWebView(HOUSEHOLD_FORM_URL,
-				getHouseholdInterface());
+				getHouseholdBridge());
 
 		householdFormStarted = true;
 	}
 
 	public void finishHouseholdForm() {
-		if (getHouseholdInterface().getHousehold() != null) {
-			setHousehold(getHouseholdInterface().getHousehold());
+		if (getHouseholdBridge().getHousehold() != null) {
+			setHousehold(getHouseholdBridge().getHousehold());
 		}
 		householdFormFinished = true;
 
@@ -107,7 +115,7 @@ public class MalnutritionWorkflowManager implements LocationListener {
 	}
 
 	public void startNewChildForm() {
-		setChildInterface(new ChildBridge(this, getHouseholdInterface()
+		setChildBridge(new ChildBridge(this, getHouseholdBridge()
 				.getHousehold()));
 		MalnutritionFormFragment childFormFragment = new MalnutritionFormFragment();
 		FragmentTransaction transaction = workflowActivity
@@ -121,7 +129,7 @@ public class MalnutritionWorkflowManager implements LocationListener {
 		transaction.commit();
 
 		childFormFragment
-				.initializeWebView(CHILD_FORM_URL, getChildInterface());
+				.initializeWebView(CHILD_FORM_URL, getChildBridge());
 		setFillingChildSummary(true);
 	}
 
@@ -203,20 +211,20 @@ public class MalnutritionWorkflowManager implements LocationListener {
 		this.childSummaryFinished = childSummaryFinished;
 	}
 
-	public HouseholdBridge getHouseholdInterface() {
-		return householdInterface;
+	public HouseholdBridge getHouseholdBridge() {
+		return householdBridge;
 	}
 
-	public void setHouseholdInterface(HouseholdBridge householdInterface) {
-		this.householdInterface = householdInterface;
+	public void setHouseholdBridge(HouseholdBridge householdInterface) {
+		this.householdBridge = householdInterface;
 	}
 
-	public ChildBridge getChildInterface() {
-		return childInterface;
+	public ChildBridge getChildBridge() {
+		return childBridge;
 	}
 
-	public void setChildInterface(ChildBridge childInterface) {
-		this.childInterface = childInterface;
+	public void setChildBridge(ChildBridge childBridge) {
+		this.childBridge = childBridge;
 	}
 
 	public boolean isFillingChildSummary() {
@@ -236,8 +244,8 @@ public class MalnutritionWorkflowManager implements LocationListener {
 		// + location.getLatitude(), Toast.LENGTH_LONG).show();
 		try {
 
-			getHouseholdInterface().setLatitude(location.getLatitude());
-			getHouseholdInterface().setLongitude(location.getLongitude());
+			getHouseholdBridge().setLatitude(location.getLatitude());
+			getHouseholdBridge().setLongitude(location.getLongitude());
 
 			mLocationManager.removeUpdates(this);
 		} catch (Exception e) {

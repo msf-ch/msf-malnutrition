@@ -122,7 +122,7 @@ public class HtmlFormEncounterInterface {
 
 			new HtmlFormEncounterManager().storeEncounterFromForm(getFormData().getEncounter(), getFormData().getObs(), this.patient, isNew);
 
-			Context context = MSFClinicApp.getAppContext();
+			Context context = MSFClinicApp.getApplication();
 			CharSequence text;
 			if(isNew){
 			text = "Encounter for "
@@ -141,7 +141,7 @@ public class HtmlFormEncounterInterface {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 
-			Context context = MSFClinicApp.getAppContext();
+			Context context = MSFClinicApp.getApplication();
 			CharSequence text = "Error: " + ex.getMessage();
 			int duration = Toast.LENGTH_LONG;
 

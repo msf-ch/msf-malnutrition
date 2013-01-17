@@ -119,12 +119,12 @@ public class PatientListAdapter extends CursorAdapter implements SectionIndexer 
 			String uuid = cursor.getString(uuidIdx);
 			if (uuid == null || uuid.isEmpty()) {
 				imageView.setColorFilter(MSFCommonUtils.GRAYSCALE_FILTER);
-				imageView.setImageDrawable(MSFClinicApp.getAppContext()
+				imageView.setImageDrawable(MSFClinicApp.getApplication()
 						.getResources().getDrawable(R.drawable.memorycard24));
 			} else {
 				imageView.setColorFilter(MSFCommonUtils.COLOR_FILTER);
 				imageView
-						.setImageDrawable(MSFClinicApp.getAppContext()
+						.setImageDrawable(MSFClinicApp.getApplication()
 								.getResources()
 								.getDrawable(R.drawable.openmrs_icon_24));
 			}

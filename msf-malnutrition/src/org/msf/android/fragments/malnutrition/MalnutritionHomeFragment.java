@@ -73,7 +73,7 @@ public class MalnutritionHomeFragment extends AbstractLaunchScreenFragment imple
 			if(message!=null)
 				message.cancel();
 			
-			message = Toast.makeText(MSFClinicApp.getAppContext(), getString(R.string.feature_unavailable), Toast.LENGTH_SHORT);
+			message = Toast.makeText(MSFClinicApp.getApplication(), getString(R.string.feature_unavailable), Toast.LENGTH_SHORT);
 			message.show();
 			
 		} else if (tag.equals(EXPORT_CSV_TAG)) {

@@ -1,12 +1,17 @@
 package org.msf.android.app;
 
+import org.msf.android.modules.FormModule;
+
+import roboguice.RoboGuice;
 import android.app.Application;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.google.inject.Module;
+import com.google.inject.Stage;
+
 public class MSFClinicApp extends Application {
-	private static Context context;
+	private static Application application;
 
 	public MSFClinicApp() {
 		super();
@@ -14,15 +19,15 @@ public class MSFClinicApp extends Application {
 	
     public void onCreate(){
     	super.onCreate();
-    	MSFClinicApp.context = getApplicationContext();
+    	MSFClinicApp.application = this;
     }
 
-    public static Context getAppContext() {
-    	return context;
+    public static Application getApplication() {
+    	return application;
     }
     
     public static SharedPreferences getAppPreferences() {
-    	SharedPreferences result = PreferenceManager.getDefaultSharedPreferences(getAppContext());
+    	SharedPreferences result = PreferenceManager.getDefaultSharedPreferences(getApplication());
     	return result;
     }
 }

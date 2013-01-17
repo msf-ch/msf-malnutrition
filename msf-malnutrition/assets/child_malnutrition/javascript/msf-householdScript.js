@@ -860,7 +860,12 @@ function load() {
 }
 
 function submit(e) {
-	MSF.storeData(JSON.stringify(formData));
+	var result = JSON.stringify(formData);
+	if (result == undefined || result == null || result == '') {
+		result = "{}";
+	}
+	console.log(result);
+	MSF.storeData(result);
 }
 
 function jumptostart(e) {

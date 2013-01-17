@@ -1,7 +1,11 @@
 package org.msf.android.fragments.malnutrition;
 
 import org.msf.android.R;
+import org.msf.android.htmlforms.CustomWebChromeClient;
+import org.msf.android.htmlforms.CustomWebViewClient;
 
+import roboguice.RoboGuice;
+import roboguice.inject.InjectView;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,24 +20,34 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
 public class MalnutritionFormFragment extends Fragment implements
 		View.OnClickListener {
 
 	public static final boolean HIDE_NATIVE_NAVIGATION_BUTTONS = true;
 
-	ImageButton leftButton;
-	private String LEFT_BUTTON_TAG = "LEFT_BUTTON_TAG";
-
-	ImageButton rightButton;
-	private String RIGHT_BUTTON_TAG = "RIGHT_BUTTON_TAG";
-
-	private WebView webView;
+	@InjectView(R.id.malnutrition_html_left_button)
+	private ImageButton leftButton;
+	@InjectView(R.id.malnutrition_html_right_button)
+	private ImageButton rightButton;
+	@InjectView(R.id.malnutrition_form_webview_container)
 	private ViewGroup webViewContainer;
+	private WebView webView;
+	
+	private String LEFT_BUTTON_TAG = "LEFT_BUTTON_TAG";
+	private String RIGHT_BUTTON_TAG = "RIGHT_BUTTON_TAG";
 
 	private String urlToInitialize;
 	private Object javascriptInterfaceToInitialize;
 
 	private ProgressDialog dialog;
+	
+	@Inject
+	private Provider<WebViewClient> webViewClientProvider;
+	@Inject
+	private Provider<WebChromeClient> webChromeClientProvider;
 
 	public MalnutritionFormFragment() {
 		super();
@@ -44,6 +58,7 @@ public class MalnutritionFormFragment extends Fragment implements
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+	    RoboGuice.getInjector(getActivity()).injectMembersWithoutViews(this);
 	}
 
 	@Override
@@ -52,28 +67,33 @@ public class MalnutritionFormFragment extends Fragment implements
 		View result = inflater.inflate(R.layout.malnutrition_form_fragment,
 				null);
 
-		ViewGroup browserButtons = (ViewGroup) result
-				.findViewById(R.id.browserButtons);
+		if (HIDE_NATIVE_NAVIGATION_BUTTONS) {
+			result.findViewById(R.id.browserButtons).setVisibility(View.GONE);
+		}
 
-		leftButton = (ImageButton) browserButtons
-				.findViewById(R.id.malnutrition_html_left_button);
-		rightButton = (ImageButton) browserButtons
-				.findViewById(R.id.malnutrition_html_right_button);
+//		ViewGroup browserButtons = (ViewGroup) result
+//				.findViewById(R.id.browserButtons);
+//		leftButton = (ImageButton) browserButtons
+//				.findViewById(R.id.malnutrition_html_left_button);
+//		rightButton = (ImageButton) browserButtons
+//				.findViewById(R.id.malnutrition_html_right_button);
+//
+//		webViewContainer = (ViewGroup) result
+//				.findViewById(R.id.malnutrition_form_webview_container);
+
+		return result;
+	}
+	
+	@Override
+	public void onViewCreated(View view, Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+	    RoboGuice.getInjector(getActivity()).injectViewMembers(this); 
 
 		leftButton.setTag(LEFT_BUTTON_TAG);
 		rightButton.setTag(RIGHT_BUTTON_TAG);
 
 		leftButton.setOnClickListener(this);
 		rightButton.setOnClickListener(this);
-
-		if (HIDE_NATIVE_NAVIGATION_BUTTONS) {
-			result.findViewById(R.id.browserButtons).setVisibility(View.GONE);
-		}
-
-		webViewContainer = (ViewGroup) result
-				.findViewById(R.id.malnutrition_form_webview_container);
-
-		return result;
 	}
 
 	@Override
@@ -91,8 +111,8 @@ public class MalnutritionFormFragment extends Fragment implements
 
 		if (webView == null) {
 			webView = new WebView(getActivity());
-			webView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
-					LayoutParams.FILL_PARENT));
+			webView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,
+					LayoutParams.MATCH_PARENT));
 		}
 
 		webViewContainer.addView(webView);
@@ -110,12 +130,6 @@ public class MalnutritionFormFragment extends Fragment implements
 		dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		dialog.setCancelable(false);
 		dialog.show();
-	}
-
-	private void initializeWebView(Bundle savedInstanceState,
-			Object javascriptInterface) {
-		initializeWebviewComponents(javascriptInterface);
-		getWebView().restoreState(savedInstanceState);
 	}
 
 	public void initializeWebView(String url, Object javascriptInterface) {
@@ -136,35 +150,17 @@ public class MalnutritionFormFragment extends Fragment implements
 	private void initializeWebviewComponents(Object javascriptInterface) {
 		showProgressBar();
 		// fix weird recursive-loop bug in WebView
-		getWebView().setWebViewClient(new WebViewClient() {
-			@Override
-			public boolean shouldOverrideUrlLoading(WebView view, String url) {
-				view.loadUrl(url);
-				return true;
-			}
+		WebViewClient webViewClient = webViewClientProvider.get();
+		if (webViewClient instanceof CustomWebViewClient) {
+			((CustomWebViewClient)webViewClient).setProgressDialog(dialog);
+		}
+		getWebView().setWebViewClient(webViewClient);
 
-			public void onPageFinished(WebView view, String url) {
-				if (dialog != null) {
-					dialog.dismiss();
-				}
-			}
-		});
-
-		getWebView().setWebChromeClient(new WebChromeClient() {
-
-			public void onProgressChanged(WebView view, int progress) {
-				if (dialog != null) {
-					dialog.setProgress(progress);
-				}
-			}
-
-			public boolean onConsoleMessage(ConsoleMessage cm) {
-				Log.d("MyApplication",
-						cm.message() + " -- From line " + cm.lineNumber()
-								+ " of " + cm.sourceId());
-				return true;
-			}
-		});
+		WebChromeClient webChromeClient = webChromeClientProvider.get();
+		if (webChromeClient instanceof CustomWebChromeClient) {
+			((CustomWebChromeClient)webChromeClient).setProgressDialog(dialog);
+		}
+		getWebView().setWebChromeClient(webChromeClient);
 
 		// give ourselves a ton of permissions
 		getWebView().getSettings().setJavaScriptEnabled(true);

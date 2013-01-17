@@ -3,6 +3,8 @@ package org.msf.android.htmlforms.malnutrition;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -49,11 +51,11 @@ public class ChildBridge {
 	private Map<String, MalnutritionObservation> obs;
 
 	private MalnutritionWorkflowManager workflowManager;
-	
+
 	private Toast toastMessage;
-	
+
 	private MalnutritionHousehold household;
-	
+
 	/* Values to return to the child form */
 	private String areaName;
 	private String idPollster;
@@ -62,7 +64,8 @@ public class ChildBridge {
 
 	/* Constructors */
 
-	public ChildBridge(MalnutritionWorkflowManager workflowManager, MalnutritionHousehold household) {
+	public ChildBridge(MalnutritionWorkflowManager workflowManager,
+			MalnutritionHousehold household) {
 		this(workflowManager, null, household);
 		setValuesForChildForm();
 	}
@@ -100,7 +103,7 @@ public class ChildBridge {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 
-			Context context = MSFClinicApp.getAppContext();
+			Context context = MSFClinicApp.getApplication();
 			CharSequence text = "Error: " + ex.getMessage();
 			int duration = Toast.LENGTH_LONG;
 
@@ -115,7 +118,7 @@ public class ChildBridge {
 	public String getStringValue(String key) {
 		try {
 			int resId = R.string.class.getDeclaredField(key).getInt(null);
-			String result = MSFClinicApp.getAppContext().getString(resId);
+			String result = MSFClinicApp.getApplication().getString(resId);
 			return result;
 		} catch (Exception e) {
 			return NO_FIELD_FOUND_ERROR_MESSAGE;
@@ -124,17 +127,19 @@ public class ChildBridge {
 
 	@JavascriptInterface
 	public void showAlertMessage(String title, String message) {
-		//This is not working
-		/*AlertDialog.Builder adb = new AlertDialog.Builder(MSFClinicApp.getAppContext());
-		adb.setTitle(title);
-		adb.setMessage(message);
-		adb.setPositiveButton("Ok", null);
-        adb.show();*/
-		//Prefer showing a Toast
-		if(toastMessage !=null)
+		// This is not working
+		/*
+		 * AlertDialog.Builder adb = new
+		 * AlertDialog.Builder(MSFClinicApp.getAppContext());
+		 * adb.setTitle(title); adb.setMessage(message);
+		 * adb.setPositiveButton("Ok", null); adb.show();
+		 */
+		// Prefer showing a Toast
+		if (toastMessage != null)
 			toastMessage.cancel();
-		
-		toastMessage = Toast.makeText(MSFClinicApp.getAppContext(), message, Toast.LENGTH_LONG);
+
+		toastMessage = Toast.makeText(MSFClinicApp.getApplication(), message,
+				Toast.LENGTH_LONG);
 		toastMessage.show();
 	}
 
@@ -150,7 +155,7 @@ public class ChildBridge {
 		ClinicAdapter ca = ClinicAdapterManager.lockAndRetrieveClinicAdapter();
 		try {
 			mChild.household = workflowManager.getHousehold();
-			
+
 			Dao<MalnutritionChild, Long> cDao = ca.getChildDao();
 			cDao.createOrUpdate(mChild);
 		} finally {
@@ -243,54 +248,62 @@ public class ChildBridge {
 	}
 
 	/* Getters for the household */
-	
-	public String getHouseholdChiefName(){
+
+	@JavascriptInterface
+	public String getHouseholdChiefName() {
 		return this.household.householdChief;
 	}
-	
-	public String getHouseholdId(){
+
+	@JavascriptInterface
+	public String getHouseholdId() {
 		return this.household.householdId;
 	}
-	
-	public String getSurveyDate(){
+
+	@JavascriptInterface
+	public String getSurveyDate() {
 		return this.household.surveyDate;
 	}
-	
-	public String getVillageName(){
+
+	@JavascriptInterface
+	public String getVillageName() {
 		return this.household.village;
 	}
-	
-	public String getAreaName(){
+
+	@JavascriptInterface
+	public String getAreaName() {
 		return this.areaName;
 	}
-	
-	public String getIdArea(){
+
+	@JavascriptInterface
+	public String getIdArea() {
 		return this.idArea;
 	}
-	
-	public String getIdPollster(){
+
+	@JavascriptInterface
+	public String getIdPollster() {
 		return this.idPollster;
 	}
-	
-	public String getIdVillage(){
+
+	@JavascriptInterface
+	public String getIdVillage() {
 		return this.idVillage;
 	}
-	
-	public void setValuesForChildForm(){
-		ArrayList <MalnutritionObservation> obsList = new ArrayList<MalnutritionObservation>(this.household.obs);
-		for(int i = 0; i<obsList.size();i++){
-			MalnutritionObservation malobs = obsList.get(i);
-			String concept = malobs.concept;
-			String value = malobs.value;
-			
-			if(concept.equals("novillage"))
-				this.idVillage = value;
-			if(concept.equals("zone"))
-				this.areaName = value;
-			if(concept.equals("nozone"))
-				this.idArea = value;
-			if(concept.equals("enqnom"))
-				this.idPollster = value;
+
+	public void setValuesForChildForm() {
+		if (this.household.obs != null) {
+			for (MalnutritionObservation malobs : this.household.obs) {
+				String concept = malobs.concept;
+				String value = malobs.value;
+
+				if (concept.equals("novillage"))
+					this.idVillage = value;
+				if (concept.equals("zone"))
+					this.areaName = value;
+				if (concept.equals("nozone"))
+					this.idArea = value;
+				if (concept.equals("enqnom"))
+					this.idPollster = value;
+			}
 		}
 	}
 	/*

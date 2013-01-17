@@ -66,7 +66,7 @@ public class HtmlFormInterface {
 
 			new HtmlFormManager().submitCholeraForm(getFormData());
 
-			Context context = MSFClinicApp.getAppContext();
+			Context context = MSFClinicApp.getApplication();
 			CharSequence text = "Patient " + result.getPatient().familyName
 					+ ", " + result.getPatient().givenName
 					+ " stored on the phone!";
@@ -77,7 +77,7 @@ public class HtmlFormInterface {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 
-			Context context = MSFClinicApp.getAppContext();
+			Context context = MSFClinicApp.getApplication();
 			CharSequence text = "Error: " + ex.getMessage();
 			int duration = Toast.LENGTH_LONG;
 

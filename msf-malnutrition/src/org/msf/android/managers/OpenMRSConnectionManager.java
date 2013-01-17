@@ -38,7 +38,7 @@ public class OpenMRSConnectionManager {
 
 	public static OpenMRSConnectionManager getDefaultOpenMRSConnectionManager() {
 		return getDefaultOpenMRSConnectionManager(MSFClinicApp
-					.getAppContext());
+					.getApplication());
 	}
 
 	public String getBaseURL() {
