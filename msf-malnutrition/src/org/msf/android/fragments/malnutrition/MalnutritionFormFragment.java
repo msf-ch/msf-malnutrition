@@ -71,6 +71,10 @@ public class MalnutritionFormFragment extends Fragment implements
 			result.findViewById(R.id.browserButtons).setVisibility(View.GONE);
 		}
 
+		
+		// NUT-6: Just a test commit for verifying if the link between Github and Jira ticket works.
+		// The following buttons have been all hidden from the form.
+		
 //		ViewGroup browserButtons = (ViewGroup) result
 //				.findViewById(R.id.browserButtons);
 //		leftButton = (ImageButton) browserButtons
