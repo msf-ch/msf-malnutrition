@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="msf_form.xsl"?>
+<htmlform>
+  <title>Child Survey</title>
+  <pages>
+    <page id="suivienfant" header="Child Form 1/5">
+		<table>
+			<td>
+				<labeledNode>
+				<tr><labelText>The first label</labelText></tr>
+				<tr><textEntry /></tr>
+				</labeledNode>
+			</td>
+		</table>
+    </page>
+    <page id="suivienfant2" header="Information Suivi Enfant">
+    </page>
+  </pages>
+</htmlform>
