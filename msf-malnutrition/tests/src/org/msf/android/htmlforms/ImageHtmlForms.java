@@ -35,13 +35,17 @@ public class ImageHtmlForms extends
 		ActivityInstrumentationTestCase2<MalnutritionWorkflowActivity> {
 
 	public static final int WAIT_BEFORE_CAPTURE_PICTURE = 3000;
-	public static final int TIMEOUT_FOR_MAIN_THREAD_WAIT = 60000;
+	public static final int TIMEOUT_FOR_MAIN_THREAD_WAIT = 1500000;
+	
+	public static final String MALNUTRITION_HOUSEHOLD_LABEL = "malnutrition-household";
+	public static final String MALNUTRITION_CHILD_LABEL = "malnutrition-child";
+	
 
 	MalnutritionWorkflowActivity mwActivity;
 	private int page = 0;
 	private boolean doneTestingForms = false;
 	
-	private String picFileName = "malnutrition-household";
+	private String currentStage = "malnutrition-household";
 
 	/**
 	 * 
@@ -92,11 +96,6 @@ public class ImageHtmlForms extends
 	// Override the FormModule with this
 	public class PictureCaptureModule extends AbstractModule {
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see com.google.inject.AbstractModule#configure()
-		 */
 		@Override
 		protected void configure() {
 		}
@@ -104,14 +103,6 @@ public class ImageHtmlForms extends
 		@Provides
 		public WebChromeClient provideWebChromeClient() {
 			WebChromeClient result = new WebChromeClient() {
-
-				/*
-				 * (non-Javadoc)
-				 * 
-				 * @see
-				 * android.webkit.WebChromeClient#onProgressChanged(android.
-				 * webkit.WebView, int)
-				 */
 				@Override
 				public void onProgressChanged(final WebView view,
 						int newProgress) {
@@ -145,6 +136,8 @@ public class ImageHtmlForms extends
 				@Override
 				public void onPageFinished(final WebView view, String url) {
 					super.onPageFinished(view, url);
+					
+					fillValues(view);
 					view.postDelayed(new Runnable() {
 
 						@Override
@@ -157,6 +150,36 @@ public class ImageHtmlForms extends
 				}
 			};
 			return result;
+		}
+		
+		public void fillValues(WebView view) {
+			if (currentStage.equals(MALNUTRITION_HOUSEHOLD_LABEL)) {
+				assignStringValue(view, "suividat", "01/23/2013");
+				assignStringValue(view, "zone", "West Marin");
+				assignStringValue(view, "enqnom", "02");
+				assignStringValue(view, "nozone", "04");
+				assignStringValue(view, "menagn", "1234");
+				assignStringValue(view, "villagen", "Mill Valley");
+				assignStringValue(view, "novillage", "23");
+				assignStringValue(view, "nenfmen", "2");
+				assignStringValue(view, "mennom", "Robert Wilkie");
+			} else if (currentStage.equals(MALNUTRITION_CHILD_LABEL)) {
+				assignStringValue(view, "enfantid", "1");
+				assignStringValue(view, "enfnom", "Wilkie");
+				assignStringValue(view, "enfprenom", "Nicholas");
+				assignStringValue(view, "lbl_enfage", "20");
+				assignStringValue(view, "enfsex", "male");
+			}
+		}
+		
+		public void assignStringValue(WebView view, String id, String value) {
+			view.loadUrl("javascript:$(\"#" + id +"\").val('"+ value + "');");
+		}
+		
+		public void assignSelectValue(WebView view, String selectId, String idOfSelectedOption) {
+			view.loadUrl("javascript:{var e = $(\"#" + selectId +"\");" +
+					"e.val('" + idOfSelectedOption + "').attr('selected', true).siblings('option').removeAttr('selected');" +
+							"e.selectmenu(\"refresh\", true);");
 		}
 
 		public void takePicture(WebView view) {
@@ -175,7 +198,7 @@ public class ImageHtmlForms extends
 						Environment
 								.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_PICTURES),
 						"malnutrition-forms/");
-				File outputFile = new File(filesDir, picFileName + ++page + ".jpg");
+				File outputFile = new File(filesDir, currentStage + ++page + ".jpg");
 				fos = new FileOutputStream(outputFile);
 				if (fos != null) {
 					b.compress(Bitmap.CompressFormat.JPEG, 100, fos);
@@ -196,11 +219,6 @@ public class ImageHtmlForms extends
 
 	public class WorkflowHijackModule extends AbstractModule {
 
-		/*
-		 * (non-Javadoc)
-		 * 
-		 * @see com.google.inject.AbstractModule#configure()
-		 */
 		@Override
 		protected void configure() {
 		}
@@ -208,39 +226,38 @@ public class ImageHtmlForms extends
 		@Provides
 		public MalnutritionWorkflowManager provideMalnutritionWorkflowManager() {
 			MalnutritionWorkflowManager result = new MalnutritionWorkflowManager() {
-				/*
-				 * (non-Javadoc)
-				 * 
-				 * @see
-				 * org.msf.android.managers.malnutrition.MalnutritionWorkflowManager
-				 * #finishHouseholdForm()
-				 */
+				@Override
+				public void startHouseholdForm() {
+					currentStage = MALNUTRITION_HOUSEHOLD_LABEL;
+					page = 0;
+					
+					super.startHouseholdForm();
+				}
+				
 				@Override
 				public void finishHouseholdForm() {
 					super.finishHouseholdForm();
-
-					picFileName = "malnutrition-child";
-					page = 0;
 					
 					startNewChildForm();
 				}
+				
+				@Override
+				public void startNewChildForm() {
+					currentStage = MALNUTRITION_CHILD_LABEL;
+					page = 0;
+					
+					super.startNewChildForm();
+				}
 
-				/*
-				 * (non-Javadoc)
-				 * 
-				 * @see
-				 * org.msf.android.managers.malnutrition.MalnutritionWorkflowManager
-				 * #finishNewChildForm()
-				 */
 				@Override
 				public void finishNewChildForm() {
 					super.finishNewChildForm();
 
-					startReview();
-					finishReview();
+					//startReview();
+					//finishReview();
 					
-					//Sooo sloppy!
-					doneTestingForms = true;
+					//Signal to listener thread that we're ready to be done
+					//doneTestingForms = true;
 				}
 			};
 			return result;

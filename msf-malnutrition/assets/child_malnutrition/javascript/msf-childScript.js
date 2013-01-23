@@ -1013,7 +1013,7 @@ $("#pagetwo").live('pageinit', function(e) {
 $("#pagethree").live('pageinit', function(e) {
 	$("#typvaccfields").hide();
 	
-	$(":input[@name='vaccinat']").live('change',function(event) {  
+	$("input[name='vaccinat']").live('change',function(event) {  
         var val = $('input[name=vaccinat]:checked').val();
         if(val == 'yes')
     		$("#typvaccfields").show("normal");
@@ -1060,7 +1060,7 @@ $("#pagefive").live('pageinit', function(e) {
 	$("#decisionsfields").hide();
 	$("#typprogfields").hide();
 	
-	$(":input[@name='epsoin']").live('change',function(event) {  
+	$("input[name='epsoin']").live('change',function(event) {  
         var val = $('input[name=epsoin]:checked').val();
         if(val == 'no'){
     		$("#epnoraifields").show("normal");
@@ -1076,7 +1076,7 @@ $("#pagefive").live('pageinit', function(e) {
         }
 	});
 	
-	$(":input[@name='admiss']").live('change',function(event) {  
+	$("input[name='admiss']").live('change',function(event) {  
         var val = $('input[name=admiss]:checked').val();
         if(val == 'yes')
         	$("#progadmepevolfields").show("normal");
@@ -1084,7 +1084,7 @@ $("#pagefive").live('pageinit', function(e) {
         	$("#progadmepevolfields").hide("normal");
 	});
 	
-	$(":input[@name='eprest']").live('change',function(event) {  
+	$("input[name='eprest']").live('change',function(event) {  
         var val = $('input[name=eprest]:checked').val();
         if(val == 'yes')
         	$("#decisionsfields").show("normal");
@@ -1092,7 +1092,7 @@ $("#pagefive").live('pageinit', function(e) {
         	$("#decisionsfields").hide("normal");
 	});
 	
-	$(":input[@name='progadm_2']").live('change',function(event) {  
+	$("input[name='progadm_2']").live('change',function(event) {  
         var val = $('input[name=progadm_2]:checked').val();
         if(val == 'yes')
         	$("#typprogfields").show("normal");

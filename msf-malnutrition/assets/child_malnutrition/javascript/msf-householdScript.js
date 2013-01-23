@@ -1163,7 +1163,7 @@ $("#pagefour").live('pageinit', function(e) {
 	$("#emptimfields").hide();
 	
 	
-	$(":input[@name='champ']").live('change',function(event) {  
+	$(":input[name='champ']").live('change',function(event) {  
         var val = $('input[name=champ]:checked').val();
         if(val == 'yes')
     		$("#surfcultfield").show("normal");
@@ -1171,7 +1171,7 @@ $("#pagefour").live('pageinit', function(e) {
     		$("#surfcultfield").hide("normal");
 	});
 	
-	$(":input[@name='cutlsm']").live('change',function(event) {  
+	$(":input[name='cutlsm']").live('change',function(event) {  
         var val = $('input[name=cutlsm]:checked').val();
         if(val == 'no')
     		$("#qicultfield").show("normal");
@@ -1179,7 +1179,7 @@ $("#pagefour").live('pageinit', function(e) {
     		$("#qicultfield").hide("normal");
 	});
 	
-	$(":input[@name='emplch']").live('change',function(event) {  
+	$(":input[name='emplch']").live('change',function(event) {  
         var val = $('input[name=emplch]:checked').val();
         if(val == 'yes')
     		$("#emptimfields").show("normal");
@@ -1333,7 +1333,7 @@ $("#pagesix").live('pageinit', function(e) {
 	$("#rectypemfields").hide();
 	
 	
-	$(":input[@name='recoltem']").live('change',function(event) {  
+	$(":input[name='recoltem']").live('change',function(event) {  
         var val = $('input[name=recoltem]:checked').val();
         if(val == 'yes')
     		$("#rectypemfields").show("normal");
@@ -1365,7 +1365,7 @@ $("#pageseven").live('pageinit', function(e) {
 	$("#supnutypfields").hide();
 	$("#ratupartfields").hide();
 	
-	$(":input[@name='ratgfd']").live('change',function(event) {  
+	$(":input[name='ratgfd']").live('change',function(event) {  
         var val = $('input[name=ratgfd]:checked').val();
         if(val == 'yes')
     		$("#ratcompfields").show("normal");
@@ -1373,7 +1373,7 @@ $("#pageseven").live('pageinit', function(e) {
     		$("#ratcompfields").hide("normal");
 	});
 	
-	$(":input[@name='supnut']").live('change',function(event) {  
+	$(":input[name='supnut']").live('change',function(event) {  
         var val = $('input[name=supnut]:checked').val();
         if(val == 'yes')
     		$("#supnutypfields").show("normal");
@@ -1381,7 +1381,7 @@ $("#pageseven").live('pageinit', function(e) {
     		$("#supnutypfields").hide("normal");
 	});
 	
-	$(":input[@name='ratvente']").live('change',function(event) {  
+	$(":input[name='ratvente']").live('change',function(event) {  
         var val = $('input[name=ratvente]:checked').val();
         if(val == 'yes')
     		$("#ratupartfields").show("normal");
@@ -1451,7 +1451,7 @@ $("#pageeight").live('pageinit', function(e) {
 	
 	$("#revsoSupplyfields").hide();
 
-	$(":input[@name='aprodiff']").live('change',function(event) {  
+	$(":input[name='aprodiff']").live('change',function(event) {  
         var val = $('input[name=aprodiff]:checked').val();
         if(val == 'yes')
     		$("#revsoSupplyfields").show("normal");
