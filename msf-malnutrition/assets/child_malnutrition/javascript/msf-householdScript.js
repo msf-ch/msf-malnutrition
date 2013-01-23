@@ -50,11 +50,11 @@ $(document).ready(function(e) {
 	footerNav.remove();
 	
 	//Add events to footer nav buttons
-	$("a:[action='next']").click(next);
-	$("a:[action='help']").click(help);
-	$("a:[action='prev']").click(prev);
-	$("a:[action='jumptostart']").click(jumptostart);
-	$("a:[action='submit']").click(submit);
+	$("a[action='next']").click(next);
+	$("a[action='help']").click(help);
+	$("a[action='prev']").click(prev);
+	$("a[action='jumptostart']").click(jumptostart);
+	$("a[action='submit']").click(submit);
 	$("form").submit(function(e) {next(e); return false;});	
 	
 	resolveJellyBeanIssueInput();
